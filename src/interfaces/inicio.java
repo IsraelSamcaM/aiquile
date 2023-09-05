@@ -54,7 +54,21 @@ public final class inicio extends javax.swing.JFrame {
         panel_centros = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         panel_viviendas = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        dirVivienda = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_viviendas = new javax.swing.JTable();
+        jLabel10 = new javax.swing.JLabel();
+        n_vivienda = new javax.swing.JLabel();
+        jefe_familia = new javax.swing.JLabel();
+        n_habitaciones = new javax.swing.JLabel();
+        telVivienda = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         panel_brigadas = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         panel_insecticidas = new javax.swing.JPanel();
@@ -104,8 +118,8 @@ public final class inicio extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/prueba2.png"))); // NOI18N
-        jButton9.setText("USUARIOS      ");
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user-.png"))); // NOI18N
+        jButton9.setText("USUARIOS     ");
         jButton9.setActionCommand("USUARIOS     ");
         jButton9.setAlignmentY(0.0F);
         jButton9.setAutoscrolls(true);
@@ -131,8 +145,8 @@ public final class inicio extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 204, 204));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton8.setText("VIVIENDAS         ");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/vivienda.png"))); // NOI18N
+        jButton8.setText("VIVIENDAS     ");
         jButton8.setActionCommand(" VIVIENDAS         ");
         jButton8.setAlignmentY(0.0F);
         jButton8.setAutoscrolls(true);
@@ -151,17 +165,19 @@ public final class inicio extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        menu.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 200, 30));
+        menu.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 220, 30));
 
         jButton10.setBackground(new java.awt.Color(0, 204, 204));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton10.setText("BRIGADAS");
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user.png"))); // NOI18N
+        jButton10.setText("BRIGADAS     ");
         jButton10.setAlignmentY(0.0F);
         jButton10.setAutoscrolls(true);
         jButton10.setBorder(null);
         jButton10.setContentAreaFilled(false);
+        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton10.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -173,12 +189,12 @@ public final class inicio extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        menu.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 200, 30));
+        menu.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 220, 30));
 
         jButton11.setBackground(new java.awt.Color(0, 204, 204));
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/centro_salud.png"))); // NOI18N
         jButton11.setText("CENTROS DE SALUD     ");
         jButton11.setActionCommand("CENTROS DE SALUD     ");
         jButton11.setAlignmentY(0.0F);
@@ -203,12 +219,14 @@ public final class inicio extends javax.swing.JFrame {
         jButton12.setBackground(new java.awt.Color(0, 204, 204));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton12.setText("INSECTICIDAS");
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/insec.png"))); // NOI18N
+        jButton12.setText("INSECTICIDAS     ");
         jButton12.setAlignmentY(0.0F);
         jButton12.setAutoscrolls(true);
         jButton12.setBorder(null);
         jButton12.setContentAreaFilled(false);
+        jButton12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -220,17 +238,19 @@ public final class inicio extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        menu.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 200, 30));
+        menu.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 220, 30));
 
         jButton13.setBackground(new java.awt.Color(0, 204, 204));
         jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(51, 51, 51));
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton13.setText("FORMULARIOS");
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/form.png"))); // NOI18N
+        jButton13.setText("FORMULARIOS     ");
         jButton13.setAlignmentY(0.0F);
         jButton13.setAutoscrolls(true);
         jButton13.setBorder(null);
         jButton13.setContentAreaFilled(false);
+        jButton13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton13.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -242,17 +262,19 @@ public final class inicio extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        menu.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 200, 30));
+        menu.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 220, 30));
 
         jButton15.setBackground(new java.awt.Color(0, 204, 204));
         jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton15.setText("REPORTE DIARIO");
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/diario.png"))); // NOI18N
+        jButton15.setText("REPORTE DIARIO     ");
         jButton15.setAlignmentY(0.0F);
         jButton15.setAutoscrolls(true);
         jButton15.setBorder(null);
         jButton15.setContentAreaFilled(false);
+        jButton15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton15.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton15.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -264,17 +286,19 @@ public final class inicio extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        menu.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 200, 30));
+        menu.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 210, 30));
 
         jButton16.setBackground(new java.awt.Color(0, 204, 204));
         jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton16.setText("REPORTE MENSUAL");
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mensual.png"))); // NOI18N
+        jButton16.setText("REPORTE MENSUAL     ");
         jButton16.setAlignmentY(0.0F);
         jButton16.setAutoscrolls(true);
         jButton16.setBorder(null);
         jButton16.setContentAreaFilled(false);
+        jButton16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton16.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -286,7 +310,7 @@ public final class inicio extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        menu.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 200, 30));
+        menu.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 220, 30));
 
         jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -357,10 +381,76 @@ public final class inicio extends javax.swing.JFrame {
         panel_viviendas.setBackground(new java.awt.Color(255, 255, 255));
         panel_viviendas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("PANEL_VIVIENDAS");
-        panel_viviendas.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        dirVivienda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dirVivienda.setForeground(new java.awt.Color(102, 102, 102));
+        dirVivienda.setText("Dirección: ");
+        panel_viviendas.add(dirVivienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
+
+        tabla_viviendas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tabla_viviendas);
+
+        panel_viviendas.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 760, 240));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel10.setText("VIVIENDAS");
+        panel_viviendas.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
+
+        n_vivienda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        n_vivienda.setForeground(new java.awt.Color(102, 102, 102));
+        n_vivienda.setText("Número de Vivienda:");
+        panel_viviendas.add(n_vivienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
+
+        jefe_familia.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jefe_familia.setForeground(new java.awt.Color(102, 102, 102));
+        jefe_familia.setText("Jefe de Familia:");
+        panel_viviendas.add(jefe_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+
+        n_habitaciones.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        n_habitaciones.setForeground(new java.awt.Color(102, 102, 102));
+        n_habitaciones.setText("Número de Habitaciones:");
+        panel_viviendas.add(n_habitaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
+
+        telVivienda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        telVivienda.setForeground(new java.awt.Color(102, 102, 102));
+        telVivienda.setText("Tel/Cel de Referencia:");
+        panel_viviendas.add(telVivienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, -1, -1));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        panel_viviendas.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 160, -1));
+        panel_viviendas.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 550, -1));
+        panel_viviendas.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 520, -1));
+        panel_viviendas.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 160, -1));
+        panel_viviendas.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 550, -1));
+
+        jButton2.setBackground(new java.awt.Color(51, 153, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setText("NUEVO");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        panel_viviendas.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 90, 30));
+
+        jButton3.setBackground(new java.awt.Color(51, 153, 255));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton3.setText("NUEVO");
+        panel_viviendas.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 90, 30));
 
         jPanel1.add(panel_viviendas, "card2");
 
@@ -403,7 +493,7 @@ public final class inicio extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(0, 153, 153));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("PANEL_FORMUALIO");
+        jLabel8.setText("PANEL_DIARIO");
         panel_rdiario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, -1, -1));
 
         jPanel1.add(panel_rdiario, "card2");
@@ -559,6 +649,14 @@ public final class inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -616,27 +714,39 @@ public final class inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel dirVivienda;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JLabel jefe_familia;
     private interfaces.PanelRound menu;
+    private javax.swing.JLabel n_habitaciones;
+    private javax.swing.JLabel n_vivienda;
     private interfaces.PanelRound panelRound2;
     private javax.swing.JPanel panel_brigadas;
     private javax.swing.JPanel panel_centros;
@@ -646,5 +756,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JPanel panel_rmensual;
     private javax.swing.JPanel panel_usuario;
     private javax.swing.JPanel panel_viviendas;
+    private javax.swing.JTable tabla_viviendas;
+    private javax.swing.JLabel telVivienda;
     // End of variables declaration//GEN-END:variables
 }
