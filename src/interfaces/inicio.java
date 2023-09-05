@@ -104,13 +104,16 @@ public final class inicio extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/prueba2.png"))); // NOI18N
+        jButton9.setText("USUARIOS      ");
+        jButton9.setActionCommand("USUARIOS     ");
         jButton9.setAlignmentY(0.0F);
         jButton9.setAutoscrolls(true);
         jButton9.setBorder(null);
         jButton9.setContentAreaFilled(false);
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton9.setLabel("        USUARIOS");
+        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton9.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton9.setName(""); // NOI18N
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,17 +126,20 @@ public final class inicio extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        menu.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 200, 30));
+        menu.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 220, 30));
 
         jButton8.setBackground(new java.awt.Color(0, 204, 204));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton8.setText("          VIVIENDAS");
+        jButton8.setText("VIVIENDAS         ");
+        jButton8.setActionCommand(" VIVIENDAS         ");
         jButton8.setAlignmentY(0.0F);
         jButton8.setAutoscrolls(true);
         jButton8.setBorder(null);
         jButton8.setContentAreaFilled(false);
+        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -173,11 +179,14 @@ public final class inicio extends javax.swing.JFrame {
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton11.setText("CENTROS DE SALUD");
+        jButton11.setText("CENTROS DE SALUD     ");
+        jButton11.setActionCommand("CENTROS DE SALUD     ");
         jButton11.setAlignmentY(0.0F);
         jButton11.setAutoscrolls(true);
         jButton11.setBorder(null);
         jButton11.setContentAreaFilled(false);
+        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton11.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -189,7 +198,7 @@ public final class inicio extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        menu.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 200, 30));
+        menu.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 220, 30));
 
         jButton12.setBackground(new java.awt.Color(0, 204, 204));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -282,7 +291,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu.png"))); // NOI18N
         jButton4.setAlignmentY(0.0F);
         jButton4.setAutoscrolls(true);
         jButton4.setBorder(null);
@@ -301,12 +310,12 @@ public final class inicio extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        menu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 50, 30));
+        menu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 50, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DashBoard ");
-        menu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        menu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         panelRound2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 670));
 
