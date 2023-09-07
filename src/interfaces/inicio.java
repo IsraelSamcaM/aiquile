@@ -51,14 +51,76 @@ public final class inicio extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         panel_usuario = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        panel_tabla_usuario = new javax.swing.JTabbedPane();
+        panel_añadir_ = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        panel_datos = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton6 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
         panel_centros = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        panel_tabla_centro = new javax.swing.JTabbedPane();
+        panel_añadir_1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
+        panel_datos1 = new javax.swing.JPanel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jTextField4 = new javax.swing.JTextField();
+        jButton21 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
         panel_viviendas = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         panel_brigadas = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         panel_insecticidas = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        panel_tabla_insect = new javax.swing.JTabbedPane();
+        panel_añadir_2 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jTextField6 = new javax.swing.JTextField();
+        panel_datos2 = new javax.swing.JPanel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jTextField13 = new javax.swing.JTextField();
+        jButton28 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
         panel_formularios = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         panel_rdiario = new javax.swing.JPanel();
@@ -104,16 +166,15 @@ public final class inicio extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/prueba2.png"))); // NOI18N
-        jButton9.setText("USUARIOS      ");
+        jButton9.setText("USUARIOS");
+        jButton9.setToolTipText("");
         jButton9.setActionCommand("USUARIOS     ");
         jButton9.setAlignmentY(0.0F);
         jButton9.setAutoscrolls(true);
         jButton9.setBorder(null);
         jButton9.setContentAreaFilled(false);
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton9.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton9.setName(""); // NOI18N
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,20 +187,18 @@ public final class inicio extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        menu.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 220, 30));
+        menu.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 200, 30));
 
         jButton8.setBackground(new java.awt.Color(0, 204, 204));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton8.setText("VIVIENDAS         ");
+        jButton8.setText("VIVIENDAS");
         jButton8.setActionCommand(" VIVIENDAS         ");
         jButton8.setAlignmentY(0.0F);
         jButton8.setAutoscrolls(true);
         jButton8.setBorder(null);
         jButton8.setContentAreaFilled(false);
-        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,7 +215,6 @@ public final class inicio extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(0, 204, 204));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
         jButton10.setText("BRIGADAS");
         jButton10.setAlignmentY(0.0F);
         jButton10.setAutoscrolls(true);
@@ -178,15 +236,12 @@ public final class inicio extends javax.swing.JFrame {
         jButton11.setBackground(new java.awt.Color(0, 204, 204));
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
-        jButton11.setText("CENTROS DE SALUD     ");
-        jButton11.setActionCommand("CENTROS DE SALUD     ");
+        jButton11.setText("CENTROS DE SALUD");
         jButton11.setAlignmentY(0.0F);
         jButton11.setAutoscrolls(true);
         jButton11.setBorder(null);
         jButton11.setContentAreaFilled(false);
-        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton11.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -198,12 +253,11 @@ public final class inicio extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        menu.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 220, 30));
+        menu.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 200, 30));
 
         jButton12.setBackground(new java.awt.Color(0, 204, 204));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
         jButton12.setText("INSECTICIDAS");
         jButton12.setAlignmentY(0.0F);
         jButton12.setAutoscrolls(true);
@@ -225,7 +279,6 @@ public final class inicio extends javax.swing.JFrame {
         jButton13.setBackground(new java.awt.Color(0, 204, 204));
         jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(51, 51, 51));
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
         jButton13.setText("FORMULARIOS");
         jButton13.setAlignmentY(0.0F);
         jButton13.setAutoscrolls(true);
@@ -247,7 +300,6 @@ public final class inicio extends javax.swing.JFrame {
         jButton15.setBackground(new java.awt.Color(0, 204, 204));
         jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
         jButton15.setText("REPORTE DIARIO");
         jButton15.setAlignmentY(0.0F);
         jButton15.setAutoscrolls(true);
@@ -269,7 +321,6 @@ public final class inicio extends javax.swing.JFrame {
         jButton16.setBackground(new java.awt.Color(0, 204, 204));
         jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu_96345.png"))); // NOI18N
         jButton16.setText("REPORTE MENSUAL");
         jButton16.setAlignmentY(0.0F);
         jButton16.setAutoscrolls(true);
@@ -291,7 +342,6 @@ public final class inicio extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu.png"))); // NOI18N
         jButton4.setAlignmentY(0.0F);
         jButton4.setAutoscrolls(true);
         jButton4.setBorder(null);
@@ -339,7 +389,139 @@ public final class inicio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("PANEL_USUARIO");
-        panel_usuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        panel_usuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 220, 30));
+
+        panel_añadir_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setText("NOMBRE");
+        panel_añadir_.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 420, 40));
+
+        jLabel14.setText("CI");
+        panel_añadir_.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 200, 40));
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 420, 40));
+
+        jLabel16.setText("CARGO");
+        panel_añadir_.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 200, 40));
+
+        jButton2.setText("GUARDAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 180, 70));
+
+        jButton3.setText("NUEVO");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 180, 70));
+
+        jButton5.setText("ELIMINAR");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 180, 70));
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 420, 40));
+
+        jLabel19.setText("CONTRASEÑA");
+        panel_añadir_.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 200, 40));
+
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+
+        panel_tabla_usuario.addTab("AÑADIR", panel_añadir_);
+
+        panel_datos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "TIPO" }));
+        panel_datos.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 150, 40));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        panel_datos.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 480, 40));
+
+        jButton1.setText("BUSCAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        panel_datos.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 160, 40));
+
+        jTable1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE USUARIOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        panel_datos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 810, 410));
+
+        jButton6.setText("EDITAR");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        panel_datos.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 190, 60));
+
+        jButton14.setText("ELIMINAR");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        panel_datos.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 145, 60));
+
+        jButton17.setText("IMPRIMIR USUARIOS");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        panel_datos.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, -1, 60));
+
+        panel_tabla_usuario.addTab("LISTA DE USUARIOS", panel_datos);
+
+        panel_usuario.add(panel_tabla_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 850, 630));
 
         jPanel1.add(panel_usuario, "card2");
 
@@ -350,7 +532,129 @@ public final class inicio extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("PANEL_CENTROS");
-        panel_centros.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, -1, -1));
+        panel_centros.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, -1, -1));
+
+        panel_añadir_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setText("NOMBRE ESTABLECIMIENTO");
+        panel_añadir_1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
+
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+
+        jLabel17.setText("RED DE SALUD");
+        panel_añadir_1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
+
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+
+        jLabel18.setText("DIRECCION ESTABLECIMIENTO");
+        panel_añadir_1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
+
+        jButton18.setText("GUARDAR");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
+
+        jButton19.setText("NUEVO");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
+
+        jButton20.setText("ELIMINAR");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
+
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+
+        panel_tabla_centro.addTab("AÑADIR", panel_añadir_1);
+
+        panel_datos1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "RED DE SALUD", "DIRECCION" }));
+        panel_datos1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
+
+        jButton21.setText("BUSCAR");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
+
+        jTable2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE ESTABLECIMIENTOS DE SALUD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        panel_datos1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 830, 410));
+
+        jButton22.setText("EDITAR");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
+
+        jButton23.setText("ELIMINAR");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
+
+        jButton24.setText("IMPRIMIR ESTABLECIMIENTOS");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
+
+        panel_tabla_centro.addTab("LISTA DE ESTABLECIMIENTOS", panel_datos1);
+
+        panel_centros.add(panel_tabla_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 850, 630));
 
         jPanel1.add(panel_centros, "card2");
 
@@ -381,8 +685,130 @@ public final class inicio extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(0, 153, 153));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel6.setText("PANEL_INSEC");
-        panel_insecticidas.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        jLabel6.setText("PANEL_INSECTICIDAS");
+        panel_insecticidas.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 260, 30));
+
+        panel_añadir_2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setText("NOMBRE INSECTICIDA");
+        panel_añadir_2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
+
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+
+        jLabel20.setText("NUM DE LOTE");
+        panel_añadir_2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
+
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+
+        jLabel21.setText("DOSIS");
+        panel_añadir_2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
+
+        jButton25.setText("GUARDAR");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
+
+        jButton26.setText("NUEVO");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
+
+        jButton27.setText("ELIMINAR");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+
+        panel_tabla_insect.addTab("AÑADIR", panel_añadir_2);
+
+        panel_datos2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "NUM LOTE" }));
+        panel_datos2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
+
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField13ActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
+
+        jButton28.setText("BUSCAR");
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
+
+        jTable3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE INSECTICIDAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        panel_datos2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 830, 410));
+
+        jButton29.setText("EDITAR");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
+
+        jButton30.setText("ELIMINAR");
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
+
+        jButton31.setText("IMPRIMIR ESTABLECIMIENTOS");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
+
+        panel_tabla_insect.addTab("LISTA DE INSECTICIDAS", panel_datos2);
+
+        panel_insecticidas.add(panel_tabla_insect, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 850, 630));
 
         jPanel1.add(panel_insecticidas, "card2");
 
@@ -403,7 +829,7 @@ public final class inicio extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(0, 153, 153));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("PANEL_FORMUALIO");
+        jLabel8.setText("PANEL_DIARIO");
         panel_rdiario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, -1, -1));
 
         jPanel1.add(panel_rdiario, "card2");
@@ -415,12 +841,13 @@ public final class inicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 1081, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -492,7 +919,7 @@ public final class inicio extends javax.swing.JFrame {
         gestionarBtn(jButton12,btns );
         gestionarBtnOpaque( btns);
         JPanel[] pnl = {panel_brigadas,panel_usuario,panel_formularios,panel_centros,panel_rdiario,panel_rmensual,panel_viviendas};
-        moverMenu.gestionarPnl(panel_rdiario, pnl);
+        moverMenu.gestionarPnl(panel_insecticidas, pnl);
         moverMenu.realizarMov(menu);
     }//GEN-LAST:event_jButton12ActionPerformed
 
@@ -559,6 +986,142 @@ public final class inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton31ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -616,18 +1179,52 @@ public final class inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -636,14 +1233,42 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private interfaces.PanelRound menu;
     private interfaces.PanelRound panelRound2;
+    private javax.swing.JPanel panel_añadir_;
+    private javax.swing.JPanel panel_añadir_1;
+    private javax.swing.JPanel panel_añadir_2;
     private javax.swing.JPanel panel_brigadas;
     private javax.swing.JPanel panel_centros;
+    private javax.swing.JPanel panel_datos;
+    private javax.swing.JPanel panel_datos1;
+    private javax.swing.JPanel panel_datos2;
     private javax.swing.JPanel panel_formularios;
     private javax.swing.JPanel panel_insecticidas;
     private javax.swing.JPanel panel_rdiario;
     private javax.swing.JPanel panel_rmensual;
+    private javax.swing.JTabbedPane panel_tabla_centro;
+    private javax.swing.JTabbedPane panel_tabla_insect;
+    private javax.swing.JTabbedPane panel_tabla_usuario;
     private javax.swing.JPanel panel_usuario;
     private javax.swing.JPanel panel_viviendas;
     // End of variables declaration//GEN-END:variables
