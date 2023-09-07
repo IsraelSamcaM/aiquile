@@ -389,11 +389,11 @@ public final class inicio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("PANEL_USUARIO");
-        panel_usuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 220, 30));
+        panel_usuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 220, 30));
 
         panel_añadir_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setText("NOMBRE");
+        jLabel10.setText("NOMBRE DE USUARIO");
         panel_añadir_.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -532,7 +532,7 @@ public final class inicio extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("PANEL_CENTROS");
-        panel_centros.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, -1, -1));
+        panel_centros.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 200, -1));
 
         panel_añadir_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

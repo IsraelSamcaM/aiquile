@@ -502,7 +502,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="490" y="0" width="220" height="30"/>
+                      <AbsoluteConstraints x="830" y="0" width="220" height="30"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -530,7 +530,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel10">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="NOMBRE"/>
+                            <Property name="text" type="java.lang.String" value="NOMBRE DE USUARIO"/>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -816,7 +816,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="850" y="0" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="850" y="0" width="200" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
