@@ -123,6 +123,84 @@ public final class inicio extends javax.swing.JFrame {
         jButton31 = new javax.swing.JButton();
         panel_formularios = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jComboBox10 = new javax.swing.JComboBox<>();
+        jComboBox11 = new javax.swing.JComboBox<>();
+        jComboBox12 = new javax.swing.JComboBox<>();
+        jComboBox16 = new javax.swing.JComboBox<>();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jTextField22 = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jComboBox14 = new javax.swing.JComboBox<>();
+        jComboBox15 = new javax.swing.JComboBox<>();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jTextField24 = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        jTextField27 = new javax.swing.JTextField();
+        jLabel46 = new javax.swing.JLabel();
+        jTextField25 = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        jTextField28 = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        jTextField29 = new javax.swing.JTextField();
+        jTextField30 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jTextField31 = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jTextField26 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        jTextField32 = new javax.swing.JTextField();
+        jLabel53 = new javax.swing.JLabel();
+        margen5 = new javax.swing.JTextField();
+        margen1 = new javax.swing.JTextField();
+        margen2 = new javax.swing.JTextField();
+        jTextField37 = new javax.swing.JTextField();
+        jTextField38 = new javax.swing.JTextField();
+        jTextField39 = new javax.swing.JTextField();
+        jTextField40 = new javax.swing.JTextField();
+        jTextField41 = new javax.swing.JTextField();
+        margen = new javax.swing.JTextField();
+        margen3 = new javax.swing.JTextField();
+        jComboBox13 = new javax.swing.JComboBox<>();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
         panel_rdiario = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -818,8 +896,339 @@ public final class inicio extends javax.swing.JFrame {
         jLabel7.setBackground(new java.awt.Color(0, 153, 153));
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("PANEL_FORMUALIO");
-        panel_formularios.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, -1, -1));
+        jLabel7.setText("PLANILLA DIARIA DE ROSIADO RR1-CH-MA");
+        panel_formularios.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setText("COMUNIDAD:");
+        panel_formularios.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 100, 30));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setText("SEDES:");
+        panel_formularios.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 50, 30));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel22.setText("RED DE SALUD:");
+        panel_formularios.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 110, 30));
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel23.setText("E. SALUD:");
+        panel_formularios.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 70, 30));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel24.setText("MUNICIPIO:");
+        panel_formularios.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, 90, 30));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 90, -1));
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 130, -1));
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 100, -1));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 100, -1));
+
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 60, 120, -1));
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel25.setText("DOSIS:");
+        panel_formularios.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 50, 30));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel26.setText("NOMBRE ROCIADOR:");
+        panel_formularios.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 150, 30));
+
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel27.setText("NOMBRE JEFE DE BRIGADA:");
+        panel_formularios.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 190, 30));
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel28.setText("INSECTICIDA UTILIZADO:");
+        panel_formularios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 170, 30));
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel29.setText("CICLO DEL ROCIADO:");
+        panel_formularios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, 150, 30));
+
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 380, -1));
+
+        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
+
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 210, -1));
+
+        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox16, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 450, 140, -1));
+        panel_formularios.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 90, -1));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel30.setText("FECHA DEL ROSIADO:");
+        panel_formularios.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 150, 30));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel31.setText("DIA:");
+        panel_formularios.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 40, 30));
+        panel_formularios.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 60, -1));
+
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel32.setText("MES:");
+        panel_formularios.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 40, 30));
+        panel_formularios.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 80, -1));
+
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel33.setText("AÑO:");
+        panel_formularios.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 40, 30));
+        panel_formularios.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 90, -1));
+
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel34.setText("LOTE DE INSECTICIDA:");
+        panel_formularios.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 150, 30));
+        panel_formularios.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 140, -1));
+
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel35.setText("OBSERVACIONES:");
+        panel_formularios.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 140, 30));
+        panel_formularios.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 530, 730, -1));
+
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel36.setText("N° CASA CV:");
+        panel_formularios.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 90, 30));
+
+        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField20ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 90, 30));
+
+        jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel37.setText("NOMBRE Y APELLIDO DE JEFE DE FAMILIA:");
+        panel_formularios.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 280, 30));
+
+        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField21ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 280, 30));
+
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel38.setText("N° HABITACIONES PROTEGIDAS:");
+        panel_formularios.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 220, 30));
+
+        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField22ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 220, 30));
+
+        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("ROSIADO");
+        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1000, 30));
+
+        jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel40.setText("CERRADA/RENUENTE");
+        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 160, 30));
+
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("INTRADOMICILIO N° DE HABITACIONES ");
+        jLabel41.setToolTipText("");
+        jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 370, 30));
+
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel42.setText("PERIDOMICILIO");
+        jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 30));
+
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 350, 140, -1));
+
+        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 160, 30));
+
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel43.setText("ROCIADAS");
+        panel_formularios.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 50, 30));
+        panel_formularios.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 70, 30));
+
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel44.setText("NO ROCIADAS");
+        panel_formularios.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 50, 30));
+        panel_formularios.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 60, 30));
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel45.setText("TOTAL");
+        panel_formularios.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 50, 30));
+        panel_formularios.add(jTextField27, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 70, 30));
+
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel46.setText("CORRALES");
+        panel_formularios.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, -1, 30));
+        panel_formularios.add(jTextField25, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 70, 30));
+
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel47.setText("GALLINEROS");
+        panel_formularios.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 30));
+        panel_formularios.add(jTextField28, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 60, 30));
+
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel48.setText("CONEJERAS");
+        panel_formularios.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 250, 50, 30));
+        panel_formularios.add(jTextField29, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 250, 70, 30));
+        panel_formularios.add(jTextField30, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 70, 30));
+
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel49.setText("ZARJO O TROJE");
+        panel_formularios.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 50, 30));
+        panel_formularios.add(jTextField31, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 290, 70, 30));
+
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel50.setText("OTROS");
+        panel_formularios.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 290, 50, 30));
+
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel51.setText("N° DE CARGAS:");
+        panel_formularios.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 110, 30));
+        panel_formularios.add(jTextField26, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 90, -1));
+
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel52.setText("EN ML. O GR.:");
+        panel_formularios.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 110, 30));
+        panel_formularios.add(jTextField32, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 90, -1));
+
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel53.setText("CONFORMIDAD:");
+        panel_formularios.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 110, 30));
+
+        margen5.setEditable(false);
+        margen5.setBackground(new java.awt.Color(255, 255, 255));
+        margen5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        margen5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                margen5ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(margen5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        margen1.setEditable(false);
+        margen1.setBackground(new java.awt.Color(255, 255, 255));
+        margen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        margen1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                margen1ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(margen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1000, 70));
+
+        margen2.setEditable(false);
+        margen2.setBackground(new java.awt.Color(255, 255, 255));
+        margen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        margen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                margen2ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(margen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 530, 50));
+
+        jTextField37.setEditable(false);
+        jTextField37.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField37ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField37, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        jTextField38.setEditable(false);
+        jTextField38.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField38ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField38, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        jTextField39.setEditable(false);
+        jTextField39.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField39ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField39, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        jTextField40.setEditable(false);
+        jTextField40.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField40ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField40, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        jTextField41.setEditable(false);
+        jTextField41.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField41ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jTextField41, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        margen.setEditable(false);
+        margen.setBackground(new java.awt.Color(255, 255, 255));
+        margen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        margen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                margenActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(margen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 1000, 180));
+
+        margen3.setEditable(false);
+        margen3.setBackground(new java.awt.Color(255, 255, 255));
+        margen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        margen3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                margen3ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(margen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 1000, 280));
+
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(jComboBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
+
+        jButton32.setText("NUEVA PLANILLA");
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, -1, -1));
+
+        jButton33.setText("GUARDAR");
+        panel_formularios.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
+
+        jButton34.setText("LIMPIAR");
+        panel_formularios.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, -1, -1));
 
         jPanel1.add(panel_formularios, "card2");
 
@@ -1122,6 +1531,62 @@ public final class inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton31ActionPerformed
 
+    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField20ActionPerformed
+
+    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField21ActionPerformed
+
+    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField22ActionPerformed
+
+    private void margen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_margen5ActionPerformed
+
+    private void margen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_margen1ActionPerformed
+
+    private void margen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_margen2ActionPerformed
+
+    private void jTextField37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField37ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField37ActionPerformed
+
+    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField38ActionPerformed
+
+    private void jTextField39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField39ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField39ActionPerformed
+
+    private void jTextField40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField40ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField40ActionPerformed
+
+    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField41ActionPerformed
+
+    private void margenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_margenActionPerformed
+
+    private void margen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_margen3ActionPerformed
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton32ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1204,6 +1669,9 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -1211,13 +1679,27 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox10;
+    private javax.swing.JComboBox<String> jComboBox11;
+    private javax.swing.JComboBox<String> jComboBox12;
+    private javax.swing.JComboBox<String> jComboBox13;
+    private javax.swing.JComboBox<String> jComboBox14;
+    private javax.swing.JComboBox<String> jComboBox15;
+    private javax.swing.JComboBox<String> jComboBox16;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -1225,9 +1707,41 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1244,14 +1758,43 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
+    private javax.swing.JTextField jTextField26;
+    private javax.swing.JTextField jTextField27;
+    private javax.swing.JTextField jTextField28;
+    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField30;
+    private javax.swing.JTextField jTextField31;
+    private javax.swing.JTextField jTextField32;
+    private javax.swing.JTextField jTextField37;
+    private javax.swing.JTextField jTextField38;
+    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField40;
+    private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField margen;
+    private javax.swing.JTextField margen1;
+    private javax.swing.JTextField margen2;
+    private javax.swing.JTextField margen3;
+    private javax.swing.JTextField margen5;
     private interfaces.PanelRound menu;
     private interfaces.PanelRound panelRound2;
     private javax.swing.JPanel panel_añadir_;
