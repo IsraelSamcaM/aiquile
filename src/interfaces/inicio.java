@@ -52,157 +52,153 @@ public final class inicio extends javax.swing.JFrame {
         panel_rmensual = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         panel_usuario = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        ivn_jl_panelusr_form = new javax.swing.JLabel();
         panel_tabla_usuario = new javax.swing.JTabbedPane();
         panel_añadir_ = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        ivn_jl_1_usuarios = new javax.swing.JLabel();
+        ivn_ci_usr = new javax.swing.JTextField();
+        ivn_jl_2_usuarios = new javax.swing.JLabel();
+        ivn_cargo_usr = new javax.swing.JTextField();
+        ivn_jl_3_usuarios = new javax.swing.JLabel();
+        ivn_btn_guardar_usr = new javax.swing.JButton();
+        ivn_btn_nuevo_usr = new javax.swing.JButton();
+        btn_eliminarPanel_usr = new javax.swing.JButton();
+        inv_nombre_usr = new javax.swing.JTextField();
+        ivn_jl_4_usuarios = new javax.swing.JLabel();
+        ivn_contra_usr = new javax.swing.JTextField();
         panel_datos = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ivn_cb_nombre_usr = new javax.swing.JComboBox<>();
+        ivn_entrada_panel_usuario = new javax.swing.JTextField();
+        ivn_btn_usr_buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        ivn_tabla_lista_usr = new javax.swing.JTable();
+        ivn_btn_editar_usrPanel = new javax.swing.JButton();
+        ivn_btn_eliminar_usrPanel = new javax.swing.JButton();
+        ivn_btn_imprimir_usrPanel = new javax.swing.JButton();
         panel_centros = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        ivn_jl_panelcentros_form = new javax.swing.JLabel();
         panel_tabla_centro = new javax.swing.JTabbedPane();
         panel_añadir_1 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jt_redSalud = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jt_direccion = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jt_nombreEst = new javax.swing.JTextField();
+        ivn_jl_1_centros = new javax.swing.JLabel();
+        ivn_red_salud_centro = new javax.swing.JTextField();
+        ivn_jl_2_centros = new javax.swing.JLabel();
+        ivn_direccion_centro = new javax.swing.JTextField();
+        ivn_jl_3_centros = new javax.swing.JLabel();
+        ivn_btn_guardar_centro = new javax.swing.JButton();
+        ivn_btn_nuevo_centro = new javax.swing.JButton();
+        ivn_btn_eliminar_centro = new javax.swing.JButton();
+        ivn_nombre_centro = new javax.swing.JTextField();
         panel_datos1 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField4 = new javax.swing.JTextField();
-        jButton21 = new javax.swing.JButton();
+        ivn_cb_lista_centros = new javax.swing.JComboBox<>();
+        ivn_entrada_centroPanel = new javax.swing.JTextField();
+        ivn_buscar_centro = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
+        ivn_tabla_lista_centros = new javax.swing.JTable();
+        ivn_btn_editar_centroPanel = new javax.swing.JButton();
+        ivn_btn_eliminar_centroPanel = new javax.swing.JButton();
+        ivn_btn_imprimir_centrosPanel = new javax.swing.JButton();
         panel_viviendas = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         panel_brigadas = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         panel_insecticidas = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        ivn_jl_panelInsecticida_insecticidas = new javax.swing.JLabel();
         panel_tabla_insect = new javax.swing.JTabbedPane();
         panel_añadir_2 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
+        ivn_jl_1_insecticidas = new javax.swing.JLabel();
+        ivn_num_lote_insecticida = new javax.swing.JTextField();
+        ivn_jl_2_insecticidas = new javax.swing.JLabel();
+        ivn_lote_insecticida = new javax.swing.JTextField();
+        ivn_jl_3_insecticidas = new javax.swing.JLabel();
+        ivn_bt_guardar_insecticida = new javax.swing.JButton();
+        ivn_bt_nuevo_insecticida = new javax.swing.JButton();
+        ivn_bt_eliminar_insecticida = new javax.swing.JButton();
+        ivn_nombre_insecticida = new javax.swing.JTextField();
         panel_datos2 = new javax.swing.JPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jTextField13 = new javax.swing.JTextField();
-        jButton28 = new javax.swing.JButton();
+        ivn_cb_lista_insecticida = new javax.swing.JComboBox<>();
+        ivn_entrada_insecticida = new javax.swing.JTextField();
+        ivn_bt_buscar_insecticida = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
+        ivn_lista_insecticidas = new javax.swing.JTable();
+        ivn_bt_editar_insecticidaPanel = new javax.swing.JButton();
+        ivn_bt_eliminar_insecticidaPanel = new javax.swing.JButton();
+        ivn_bt_imprimir_insecticidaPanel = new javax.swing.JButton();
         panel_formularios = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jComboBox11 = new javax.swing.JComboBox<>();
-        jComboBox12 = new javax.swing.JComboBox<>();
-        jComboBox16 = new javax.swing.JComboBox<>();
-        jTextField14 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        jLabel32 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jLabel35 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jLabel36 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        jTextField21 = new javax.swing.JTextField();
-        jLabel38 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jComboBox14 = new javax.swing.JComboBox<>();
-        jComboBox15 = new javax.swing.JComboBox<>();
-        jLabel43 = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
-        jLabel44 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
-        jLabel45 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
-        jLabel46 = new javax.swing.JLabel();
-        jTextField25 = new javax.swing.JTextField();
-        jLabel47 = new javax.swing.JLabel();
-        jTextField28 = new javax.swing.JTextField();
-        jLabel48 = new javax.swing.JLabel();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jLabel49 = new javax.swing.JLabel();
-        jTextField31 = new javax.swing.JTextField();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jTextField26 = new javax.swing.JTextField();
-        jLabel52 = new javax.swing.JLabel();
-        jTextField32 = new javax.swing.JTextField();
-        jLabel53 = new javax.swing.JLabel();
-        margen5 = new javax.swing.JTextField();
-        margen1 = new javax.swing.JTextField();
-        margen2 = new javax.swing.JTextField();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField41 = new javax.swing.JTextField();
-        margen = new javax.swing.JTextField();
-        margen3 = new javax.swing.JTextField();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
+        titulo_planilla_form = new javax.swing.JLabel();
+        ivn_jl_5_form = new javax.swing.JLabel();
+        ivn_jl_1_form = new javax.swing.JLabel();
+        ivn_jl_2_form = new javax.swing.JLabel();
+        ivn_jl_3_form = new javax.swing.JLabel();
+        ivn_jl_4_form = new javax.swing.JLabel();
+        ivn_cb_comunidad_form = new javax.swing.JComboBox<>();
+        ivn_cb_cedes_form = new javax.swing.JComboBox<>();
+        ivn_cb_red_salud_form = new javax.swing.JComboBox<>();
+        ivn_cb_est_salud_form = new javax.swing.JComboBox<>();
+        ivn_cb_minicipio_form = new javax.swing.JComboBox<>();
+        ivn_jl_31_form = new javax.swing.JLabel();
+        ivn_jl_24_form = new javax.swing.JLabel();
+        ivn_jl_32_form = new javax.swing.JLabel();
+        ivn_jl_25_form = new javax.swing.JLabel();
+        ivn_jl_33_form = new javax.swing.JLabel();
+        ivn_cb_rosiador_form = new javax.swing.JComboBox<>();
+        ivn_cb_jefe_brigada_form = new javax.swing.JComboBox<>();
+        ivn_cb_insecticida_form = new javax.swing.JComboBox<>();
+        ivn_dosis_form = new javax.swing.JTextField();
+        ivn_jl_26_form = new javax.swing.JLabel();
+        ivn_jl_27_form = new javax.swing.JLabel();
+        ivn_dia_form = new javax.swing.JTextField();
+        ivn_jl_28_form = new javax.swing.JLabel();
+        ivn_mes_form = new javax.swing.JTextField();
+        ivn_jl_29_form = new javax.swing.JLabel();
+        ivn_año_form = new javax.swing.JTextField();
+        ivn_jl_34_form = new javax.swing.JLabel();
+        ivn_lote_insecticida_form = new javax.swing.JTextField();
+        ivn_jl_30_form = new javax.swing.JLabel();
+        ivn_jl_6_form = new javax.swing.JLabel();
+        ivn_num_casaViv_form = new javax.swing.JTextField();
+        ivn_jl_7_form = new javax.swing.JLabel();
+        ivn_nombre_jefeFamilia_form = new javax.swing.JTextField();
+        ivn_jl_8_form = new javax.swing.JLabel();
+        ivn_num_habit_form = new javax.swing.JTextField();
+        ivn_jl_9_form = new javax.swing.JLabel();
+        ivn_jl_10_form = new javax.swing.JLabel();
+        ivn_jl_11_form = new javax.swing.JLabel();
+        ivn_jl_12_form = new javax.swing.JLabel();
+        ivn_cb_conformidad_form = new javax.swing.JComboBox<>();
+        ivn_cb_cerrada_renuente_form = new javax.swing.JComboBox<>();
+        ivn_jl_13_form = new javax.swing.JLabel();
+        ivn_num_rociados_form = new javax.swing.JTextField();
+        ivn_jl_14_form = new javax.swing.JLabel();
+        ivn_num_no_rociados_form = new javax.swing.JTextField();
+        ivn_jl_15_form = new javax.swing.JLabel();
+        ivn_total_rosiados_form = new javax.swing.JTextField();
+        ivn_jl_16_form = new javax.swing.JLabel();
+        ivn_num_corrales_form = new javax.swing.JTextField();
+        ivn_jl_17_form = new javax.swing.JLabel();
+        ivn_num_gallineros_form = new javax.swing.JTextField();
+        ivn_jl_18_form = new javax.swing.JLabel();
+        ivn_num_conejos_form = new javax.swing.JTextField();
+        ivn_num_zarjos_form = new javax.swing.JTextField();
+        ivn_jl_19_form = new javax.swing.JLabel();
+        ivn_num_otros_form = new javax.swing.JTextField();
+        ivn_jl_20_form = new javax.swing.JLabel();
+        ivn_jl_21_form = new javax.swing.JLabel();
+        ivn_num_cargas_form = new javax.swing.JTextField();
+        ivn_jl_22_form = new javax.swing.JLabel();
+        ivn_ml_gr_form = new javax.swing.JTextField();
+        ivn_jl_23_form = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        ivn_obs_form = new javax.swing.JTextArea();
+        ivn_margen1 = new javax.swing.JTextField();
+        ivn_margen2 = new javax.swing.JTextField();
+        ivn_margen5 = new javax.swing.JTextField();
+        ivn_ciclo_rosiado_form = new javax.swing.JTextField();
+        ivn_bn_buscar_casa_form = new javax.swing.JButton();
+        ivn_margen = new javax.swing.JTextField();
+        ivn_margen3 = new javax.swing.JTextField();
+        ivn_bn_nueva_form = new javax.swing.JButton();
+        ivn_bn_guardar_form = new javax.swing.JButton();
+        ivn_bn_limpiar_form = new javax.swing.JButton();
         panel_rdiario = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -466,101 +462,101 @@ public final class inicio extends javax.swing.JFrame {
         panel_usuario.setBackground(new java.awt.Color(255, 255, 255));
         panel_usuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("PANEL_USUARIO");
-        panel_usuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 220, 30));
+        ivn_jl_panelusr_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ivn_jl_panelusr_form.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_panelusr_form.setText("PANEL_USUARIO");
+        panel_usuario.add(ivn_jl_panelusr_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 220, 30));
 
         panel_añadir_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setText("NOMBRE DE USUARIO");
-        panel_añadir_.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
+        ivn_jl_1_usuarios.setText("NOMBRE DE USUARIO");
+        panel_añadir_.add(ivn_jl_1_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        ivn_ci_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                ivn_ci_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 420, 40));
+        panel_añadir_.add(ivn_ci_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 420, 40));
 
-        jLabel14.setText("CI");
-        panel_añadir_.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 200, 40));
+        ivn_jl_2_usuarios.setText("CI");
+        panel_añadir_.add(ivn_jl_2_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 200, 40));
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        ivn_cargo_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                ivn_cargo_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 420, 40));
+        panel_añadir_.add(ivn_cargo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 420, 40));
 
-        jLabel16.setText("CARGO");
-        panel_añadir_.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 200, 40));
+        ivn_jl_3_usuarios.setText("CARGO");
+        panel_añadir_.add(ivn_jl_3_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 200, 40));
 
-        jButton2.setText("GUARDAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_guardar_usr.setText("GUARDAR");
+        ivn_btn_guardar_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ivn_btn_guardar_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 180, 70));
+        panel_añadir_.add(ivn_btn_guardar_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 180, 70));
 
-        jButton3.setText("NUEVO");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_nuevo_usr.setText("NUEVO");
+        ivn_btn_nuevo_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ivn_btn_nuevo_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 180, 70));
+        panel_añadir_.add(ivn_btn_nuevo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 180, 70));
 
-        jButton5.setText("ELIMINAR");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btn_eliminarPanel_usr.setText("ELIMINAR");
+        btn_eliminarPanel_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btn_eliminarPanel_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 180, 70));
+        panel_añadir_.add(btn_eliminarPanel_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 180, 70));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        inv_nombre_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                inv_nombre_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 420, 40));
+        panel_añadir_.add(inv_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 420, 40));
 
-        jLabel19.setText("CONTRASEÑA");
-        panel_añadir_.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 200, 40));
+        ivn_jl_4_usuarios.setText("CONTRASEÑA");
+        panel_añadir_.add(ivn_jl_4_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 200, 40));
 
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        ivn_contra_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                ivn_contra_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+        panel_añadir_.add(ivn_contra_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
 
         panel_tabla_usuario.addTab("AÑADIR", panel_añadir_);
 
         panel_datos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "TIPO" }));
-        panel_datos.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 150, 40));
+        ivn_cb_nombre_usr.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "TIPO" }));
+        panel_datos.add(ivn_cb_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 150, 40));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        ivn_entrada_panel_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ivn_entrada_panel_usuarioActionPerformed(evt);
             }
         });
-        panel_datos.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 480, 40));
+        panel_datos.add(ivn_entrada_panel_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 480, 40));
 
-        jButton1.setText("BUSCAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_usr_buscar.setText("BUSCAR");
+        ivn_btn_usr_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ivn_btn_usr_buscarActionPerformed(evt);
             }
         });
-        panel_datos.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 160, 40));
+        panel_datos.add(ivn_btn_usr_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 160, 40));
 
-        jTable1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE USUARIOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        ivn_tabla_lista_usr.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE USUARIOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        ivn_tabla_lista_usr.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -571,33 +567,33 @@ public final class inicio extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(ivn_tabla_lista_usr);
 
         panel_datos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 810, 410));
 
-        jButton6.setText("EDITAR");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_editar_usrPanel.setText("EDITAR");
+        ivn_btn_editar_usrPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                ivn_btn_editar_usrPanelActionPerformed(evt);
             }
         });
-        panel_datos.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 190, 60));
+        panel_datos.add(ivn_btn_editar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 190, 60));
 
-        jButton14.setText("ELIMINAR");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_eliminar_usrPanel.setText("ELIMINAR");
+        ivn_btn_eliminar_usrPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                ivn_btn_eliminar_usrPanelActionPerformed(evt);
             }
         });
-        panel_datos.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 145, 60));
+        panel_datos.add(ivn_btn_eliminar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 145, 60));
 
-        jButton17.setText("IMPRIMIR USUARIOS");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_imprimir_usrPanel.setText("IMPRIMIR USUARIOS");
+        ivn_btn_imprimir_usrPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                ivn_btn_imprimir_usrPanelActionPerformed(evt);
             }
         });
-        panel_datos.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, -1, 60));
+        panel_datos.add(ivn_btn_imprimir_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, -1, 60));
 
         panel_tabla_usuario.addTab("LISTA DE USUARIOS", panel_datos);
 
@@ -608,92 +604,92 @@ public final class inicio extends javax.swing.JFrame {
         panel_centros.setBackground(new java.awt.Color(255, 255, 255));
         panel_centros.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setBackground(new java.awt.Color(102, 153, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("PANEL_CENTROS");
-        panel_centros.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 200, -1));
+        ivn_jl_panelcentros_form.setBackground(new java.awt.Color(102, 153, 255));
+        ivn_jl_panelcentros_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ivn_jl_panelcentros_form.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_panelcentros_form.setText("PANEL_CENTROS");
+        panel_centros.add(ivn_jl_panelcentros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 200, -1));
 
         panel_añadir_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setText("NOMBRE ESTABLECIMIENTO");
-        panel_añadir_1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
+        ivn_jl_1_centros.setText("NOMBRE ESTABLECIMIENTO");
+        panel_añadir_1.add(ivn_jl_1_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
 
-        jt_redSalud.addActionListener(new java.awt.event.ActionListener() {
+        ivn_red_salud_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_redSaludActionPerformed(evt);
+                ivn_red_salud_centroActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jt_redSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+        panel_añadir_1.add(ivn_red_salud_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
 
-        jLabel17.setText("RED DE SALUD");
-        panel_añadir_1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
+        ivn_jl_2_centros.setText("RED DE SALUD");
+        panel_añadir_1.add(ivn_jl_2_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
 
-        jt_direccion.addActionListener(new java.awt.event.ActionListener() {
+        ivn_direccion_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_direccionActionPerformed(evt);
+                ivn_direccion_centroActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jt_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+        panel_añadir_1.add(ivn_direccion_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
 
-        jLabel18.setText("DIRECCION ESTABLECIMIENTO");
-        panel_añadir_1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
+        ivn_jl_3_centros.setText("DIRECCION ESTABLECIMIENTO");
+        panel_añadir_1.add(ivn_jl_3_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
 
-        jButton18.setText("GUARDAR");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_guardar_centro.setText("GUARDAR");
+        ivn_btn_guardar_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                ivn_btn_guardar_centroActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
+        panel_añadir_1.add(ivn_btn_guardar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
 
-        jButton19.setText("NUEVO");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_nuevo_centro.setText("NUEVO");
+        ivn_btn_nuevo_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                ivn_btn_nuevo_centroActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
+        panel_añadir_1.add(ivn_btn_nuevo_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
 
-        jButton20.setText("ELIMINAR");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_eliminar_centro.setText("ELIMINAR");
+        ivn_btn_eliminar_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                ivn_btn_eliminar_centroActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
+        panel_añadir_1.add(ivn_btn_eliminar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
 
-        jt_nombreEst.addActionListener(new java.awt.event.ActionListener() {
+        ivn_nombre_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_nombreEstActionPerformed(evt);
+                ivn_nombre_centroActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jt_nombreEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+        panel_añadir_1.add(ivn_nombre_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
 
         panel_tabla_centro.addTab("AÑADIR", panel_añadir_1);
 
         panel_datos1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "RED DE SALUD", "DIRECCION" }));
-        panel_datos1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
+        ivn_cb_lista_centros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "RED DE SALUD", "DIRECCION" }));
+        panel_datos1.add(ivn_cb_lista_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        ivn_entrada_centroPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                ivn_entrada_centroPanelActionPerformed(evt);
             }
         });
-        panel_datos1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
+        panel_datos1.add(ivn_entrada_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
 
-        jButton21.setText("BUSCAR");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
+        ivn_buscar_centro.setText("BUSCAR");
+        ivn_buscar_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
+                ivn_buscar_centroActionPerformed(evt);
             }
         });
-        panel_datos1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
+        panel_datos1.add(ivn_buscar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
 
-        jTable2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE ESTABLECIMIENTOS DE SALUD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        ivn_tabla_lista_centros.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE ESTABLECIMIENTOS DE SALUD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        ivn_tabla_lista_centros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -704,33 +700,33 @@ public final class inicio extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(ivn_tabla_lista_centros);
 
         panel_datos1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 830, 410));
 
-        jButton22.setText("EDITAR");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_editar_centroPanel.setText("EDITAR");
+        ivn_btn_editar_centroPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                ivn_btn_editar_centroPanelActionPerformed(evt);
             }
         });
-        panel_datos1.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
+        panel_datos1.add(ivn_btn_editar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
 
-        jButton23.setText("ELIMINAR");
-        jButton23.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_eliminar_centroPanel.setText("ELIMINAR");
+        ivn_btn_eliminar_centroPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton23ActionPerformed(evt);
+                ivn_btn_eliminar_centroPanelActionPerformed(evt);
             }
         });
-        panel_datos1.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
+        panel_datos1.add(ivn_btn_eliminar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
 
-        jButton24.setText("IMPRIMIR ESTABLECIMIENTOS");
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_imprimir_centrosPanel.setText("IMPRIMIR ESTABLECIMIENTOS");
+        ivn_btn_imprimir_centrosPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
+                ivn_btn_imprimir_centrosPanelActionPerformed(evt);
             }
         });
-        panel_datos1.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
+        panel_datos1.add(ivn_btn_imprimir_centrosPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
 
         panel_tabla_centro.addTab("LISTA DE ESTABLECIMIENTOS", panel_datos1);
 
@@ -762,92 +758,92 @@ public final class inicio extends javax.swing.JFrame {
         panel_insecticidas.setBackground(new java.awt.Color(255, 255, 255));
         panel_insecticidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel6.setText("PANEL_INSECTICIDAS");
-        panel_insecticidas.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 260, 30));
+        ivn_jl_panelInsecticida_insecticidas.setBackground(new java.awt.Color(0, 153, 153));
+        ivn_jl_panelInsecticida_insecticidas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ivn_jl_panelInsecticida_insecticidas.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_panelInsecticida_insecticidas.setText("PANEL_INSECTICIDAS");
+        panel_insecticidas.add(ivn_jl_panelInsecticida_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 260, 30));
 
         panel_añadir_2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setText("NOMBRE INSECTICIDA");
-        panel_añadir_2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
+        ivn_jl_1_insecticidas.setText("NOMBRE INSECTICIDA");
+        panel_añadir_2.add(ivn_jl_1_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        ivn_num_lote_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                ivn_num_lote_insecticidaActionPerformed(evt);
             }
         });
-        panel_añadir_2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+        panel_añadir_2.add(ivn_num_lote_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
 
-        jLabel20.setText("NUM DE LOTE");
-        panel_añadir_2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
+        ivn_jl_2_insecticidas.setText("NUM DE LOTE");
+        panel_añadir_2.add(ivn_jl_2_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
 
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        ivn_lote_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                ivn_lote_insecticidaActionPerformed(evt);
             }
         });
-        panel_añadir_2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+        panel_añadir_2.add(ivn_lote_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
 
-        jLabel21.setText("DOSIS");
-        panel_añadir_2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
+        ivn_jl_3_insecticidas.setText("DOSIS");
+        panel_añadir_2.add(ivn_jl_3_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
 
-        jButton25.setText("GUARDAR");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_guardar_insecticida.setText("GUARDAR");
+        ivn_bt_guardar_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
+                ivn_bt_guardar_insecticidaActionPerformed(evt);
             }
         });
-        panel_añadir_2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
+        panel_añadir_2.add(ivn_bt_guardar_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
 
-        jButton26.setText("NUEVO");
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_nuevo_insecticida.setText("NUEVO");
+        ivn_bt_nuevo_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                ivn_bt_nuevo_insecticidaActionPerformed(evt);
             }
         });
-        panel_añadir_2.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
+        panel_añadir_2.add(ivn_bt_nuevo_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
 
-        jButton27.setText("ELIMINAR");
-        jButton27.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_eliminar_insecticida.setText("ELIMINAR");
+        ivn_bt_eliminar_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton27ActionPerformed(evt);
+                ivn_bt_eliminar_insecticidaActionPerformed(evt);
             }
         });
-        panel_añadir_2.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
+        panel_añadir_2.add(ivn_bt_eliminar_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        ivn_nombre_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                ivn_nombre_insecticidaActionPerformed(evt);
             }
         });
-        panel_añadir_2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+        panel_añadir_2.add(ivn_nombre_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
 
         panel_tabla_insect.addTab("AÑADIR", panel_añadir_2);
 
         panel_datos2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "NUM LOTE" }));
-        panel_datos2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
+        ivn_cb_lista_insecticida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "NUM LOTE" }));
+        panel_datos2.add(ivn_cb_lista_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
 
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        ivn_entrada_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                ivn_entrada_insecticidaActionPerformed(evt);
             }
         });
-        panel_datos2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
+        panel_datos2.add(ivn_entrada_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
 
-        jButton28.setText("BUSCAR");
-        jButton28.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_buscar_insecticida.setText("BUSCAR");
+        ivn_bt_buscar_insecticida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton28ActionPerformed(evt);
+                ivn_bt_buscar_insecticidaActionPerformed(evt);
             }
         });
-        panel_datos2.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
+        panel_datos2.add(ivn_bt_buscar_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
 
-        jTable3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE INSECTICIDAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        ivn_lista_insecticidas.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE INSECTICIDAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        ivn_lista_insecticidas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -858,33 +854,33 @@ public final class inicio extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(ivn_lista_insecticidas);
 
         panel_datos2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 830, 410));
 
-        jButton29.setText("EDITAR");
-        jButton29.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_editar_insecticidaPanel.setText("EDITAR");
+        ivn_bt_editar_insecticidaPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton29ActionPerformed(evt);
+                ivn_bt_editar_insecticidaPanelActionPerformed(evt);
             }
         });
-        panel_datos2.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
+        panel_datos2.add(ivn_bt_editar_insecticidaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
 
-        jButton30.setText("ELIMINAR");
-        jButton30.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_eliminar_insecticidaPanel.setText("ELIMINAR");
+        ivn_bt_eliminar_insecticidaPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton30ActionPerformed(evt);
+                ivn_bt_eliminar_insecticidaPanelActionPerformed(evt);
             }
         });
-        panel_datos2.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
+        panel_datos2.add(ivn_bt_eliminar_insecticidaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
 
-        jButton31.setText("IMPRIMIR ESTABLECIMIENTOS");
-        jButton31.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bt_imprimir_insecticidaPanel.setText("IMPRIMIR ESTABLECIMIENTOS");
+        ivn_bt_imprimir_insecticidaPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton31ActionPerformed(evt);
+                ivn_bt_imprimir_insecticidaPanelActionPerformed(evt);
             }
         });
-        panel_datos2.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
+        panel_datos2.add(ivn_bt_imprimir_insecticidaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
 
         panel_tabla_insect.addTab("LISTA DE INSECTICIDAS", panel_datos2);
 
@@ -895,347 +891,306 @@ public final class inicio extends javax.swing.JFrame {
         panel_formularios.setBackground(new java.awt.Color(255, 255, 255));
         panel_formularios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("PLANILLA DIARIA DE ROSIADO RR1-CH-MA");
-        panel_formularios.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
+        titulo_planilla_form.setBackground(new java.awt.Color(0, 153, 153));
+        titulo_planilla_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        titulo_planilla_form.setForeground(new java.awt.Color(102, 102, 102));
+        titulo_planilla_form.setText("PLANILLA DIARIA DE ROSIADO RR1-CH-MA");
+        panel_formularios.add(titulo_planilla_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel13.setText("COMUNIDAD:");
-        panel_formularios.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 100, 30));
+        ivn_jl_5_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_5_form.setText("COMUNIDAD:");
+        panel_formularios.add(ivn_jl_5_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 100, 30));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel15.setText("SEDES:");
-        panel_formularios.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 50, 30));
+        ivn_jl_1_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_1_form.setText("SEDES:");
+        panel_formularios.add(ivn_jl_1_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 50, 30));
 
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel22.setText("RED DE SALUD:");
-        panel_formularios.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 110, 30));
+        ivn_jl_2_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_2_form.setText("RED DE SALUD:");
+        panel_formularios.add(ivn_jl_2_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 110, 30));
 
-        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel23.setText("E. SALUD:");
-        panel_formularios.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 70, 30));
+        ivn_jl_3_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_3_form.setText("E. SALUD:");
+        panel_formularios.add(ivn_jl_3_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 70, 30));
 
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel24.setText("MUNICIPIO:");
-        panel_formularios.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, 90, 30));
+        ivn_jl_4_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_4_form.setText("MUNICIPIO:");
+        panel_formularios.add(ivn_jl_4_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, 90, 30));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 90, -1));
+        ivn_cb_comunidad_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_comunidad_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 90, -1));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 130, -1));
+        ivn_cb_cedes_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_cedes_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 130, -1));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 100, -1));
+        ivn_cb_red_salud_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_red_salud_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 100, -1));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 100, -1));
+        ivn_cb_est_salud_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_est_salud_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 100, -1));
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 60, 120, -1));
+        ivn_cb_minicipio_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_minicipio_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 60, 120, -1));
 
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel25.setText("DOSIS:");
-        panel_formularios.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 50, 30));
+        ivn_jl_31_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_31_form.setText("DOSIS:");
+        panel_formularios.add(ivn_jl_31_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 50, 30));
 
-        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel26.setText("NOMBRE ROCIADOR:");
-        panel_formularios.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 150, 30));
+        ivn_jl_24_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_24_form.setText("NOMBRE ROCIADOR:");
+        panel_formularios.add(ivn_jl_24_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 150, 30));
 
-        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel27.setText("NOMBRE JEFE DE BRIGADA:");
-        panel_formularios.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 190, 30));
+        ivn_jl_32_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_32_form.setText("NOMBRE JEFE DE BRIGADA:");
+        panel_formularios.add(ivn_jl_32_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 190, 30));
 
-        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel28.setText("INSECTICIDA UTILIZADO:");
-        panel_formularios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 170, 30));
+        ivn_jl_25_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_25_form.setText("INSECTICIDA UTILIZADO:");
+        panel_formularios.add(ivn_jl_25_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 170, 30));
 
-        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel29.setText("CICLO DEL ROCIADO:");
-        panel_formularios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, 150, 30));
+        ivn_jl_33_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_33_form.setText("CICLO DEL ROCIADO:");
+        panel_formularios.add(ivn_jl_33_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, 150, 30));
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 380, -1));
+        ivn_cb_rosiador_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_rosiador_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 380, -1));
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
+        ivn_cb_jefe_brigada_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_jefe_brigada_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 210, -1));
+        ivn_cb_insecticida_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_insecticida_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 210, -1));
+        panel_formularios.add(ivn_dosis_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 90, -1));
 
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox16, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 450, 140, -1));
-        panel_formularios.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 90, -1));
+        ivn_jl_26_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_26_form.setText("FECHA DEL ROSIADO:");
+        panel_formularios.add(ivn_jl_26_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 150, 30));
 
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel30.setText("FECHA DEL ROSIADO:");
-        panel_formularios.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 150, 30));
+        ivn_jl_27_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_27_form.setText("DIA:");
+        panel_formularios.add(ivn_jl_27_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 40, 30));
+        panel_formularios.add(ivn_dia_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 60, -1));
 
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel31.setText("DIA:");
-        panel_formularios.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 40, 30));
-        panel_formularios.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 60, -1));
+        ivn_jl_28_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_28_form.setText("MES:");
+        panel_formularios.add(ivn_jl_28_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 40, 30));
+        panel_formularios.add(ivn_mes_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 80, -1));
 
-        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel32.setText("MES:");
-        panel_formularios.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 40, 30));
-        panel_formularios.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 80, -1));
+        ivn_jl_29_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_29_form.setText("AÑO:");
+        panel_formularios.add(ivn_jl_29_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 40, 30));
+        panel_formularios.add(ivn_año_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 90, -1));
 
-        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel33.setText("AÑO:");
-        panel_formularios.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 40, 30));
-        panel_formularios.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 90, -1));
+        ivn_jl_34_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_34_form.setText("LOTE DE INSECTICIDA:");
+        panel_formularios.add(ivn_jl_34_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 150, 30));
+        panel_formularios.add(ivn_lote_insecticida_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 140, -1));
 
-        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel34.setText("LOTE DE INSECTICIDA:");
-        panel_formularios.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 150, 30));
-        panel_formularios.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 140, -1));
+        ivn_jl_30_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_30_form.setText("OBSERVACIONES:");
+        panel_formularios.add(ivn_jl_30_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 140, 30));
 
-        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel35.setText("OBSERVACIONES:");
-        panel_formularios.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 140, 30));
-        panel_formularios.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 530, 730, -1));
+        ivn_jl_6_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_6_form.setText("N° CASA CV:");
+        panel_formularios.add(ivn_jl_6_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 90, 30));
 
-        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel36.setText("N° CASA CV:");
-        panel_formularios.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 90, 30));
-
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        ivn_num_casaViv_form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                ivn_num_casaViv_formActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 90, 30));
+        panel_formularios.add(ivn_num_casaViv_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 90, 30));
 
-        jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel37.setText("NOMBRE Y APELLIDO DE JEFE DE FAMILIA:");
-        panel_formularios.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 280, 30));
+        ivn_jl_7_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_7_form.setText("NOMBRE Y APELLIDO DE JEFE DE FAMILIA:");
+        panel_formularios.add(ivn_jl_7_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 280, 30));
 
-        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+        ivn_nombre_jefeFamilia_form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField21ActionPerformed(evt);
+                ivn_nombre_jefeFamilia_formActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 280, 30));
+        panel_formularios.add(ivn_nombre_jefeFamilia_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 280, 30));
 
-        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel38.setText("N° HABITACIONES PROTEGIDAS:");
-        panel_formularios.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 220, 30));
+        ivn_jl_8_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_8_form.setText("N° HABITACIONES PROTEGIDAS:");
+        panel_formularios.add(ivn_jl_8_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 220, 30));
 
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+        ivn_num_habit_form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField22ActionPerformed(evt);
+                ivn_num_habit_formActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 220, 30));
+        panel_formularios.add(ivn_num_habit_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 220, 30));
 
-        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("ROSIADO");
-        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panel_formularios.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1000, 30));
+        ivn_jl_9_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_9_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_9_form.setText("ROSIADO");
+        ivn_jl_9_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_9_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1000, 30));
 
-        jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel40.setText("CERRADA/RENUENTE");
-        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panel_formularios.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 160, 30));
+        ivn_jl_10_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_10_form.setText("CERRADA/RENUENTE");
+        ivn_jl_10_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_10_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 160, 30));
 
-        jLabel41.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("INTRADOMICILIO N° DE HABITACIONES ");
-        jLabel41.setToolTipText("");
-        jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panel_formularios.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 370, 30));
+        ivn_jl_11_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_11_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_11_form.setText("INTRADOMICILIO N° DE HABITACIONES ");
+        ivn_jl_11_form.setToolTipText("");
+        ivn_jl_11_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_11_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 370, 30));
 
-        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel42.setText("PERIDOMICILIO");
-        jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panel_formularios.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 30));
+        ivn_jl_12_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_12_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_12_form.setText("PERIDOMICILIO");
+        ivn_jl_12_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_12_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 30));
 
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 350, 140, -1));
+        ivn_cb_conformidad_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_conformidad_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 350, 140, -1));
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 160, 30));
+        ivn_cb_cerrada_renuente_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_cerrada_renuente_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 160, 30));
 
-        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel43.setText("ROCIADAS");
-        panel_formularios.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 50, 30));
-        panel_formularios.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 70, 30));
+        ivn_jl_13_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_13_form.setText("ROCIADAS");
+        panel_formularios.add(ivn_jl_13_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 50, 30));
+        panel_formularios.add(ivn_num_rociados_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 70, 30));
 
-        jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel44.setText("NO ROCIADAS");
-        panel_formularios.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 50, 30));
-        panel_formularios.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 60, 30));
+        ivn_jl_14_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_14_form.setText("NO ROCIADAS");
+        panel_formularios.add(ivn_jl_14_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 50, 30));
+        panel_formularios.add(ivn_num_no_rociados_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 60, 30));
 
-        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel45.setText("TOTAL");
-        panel_formularios.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 50, 30));
-        panel_formularios.add(jTextField27, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 70, 30));
+        ivn_jl_15_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_15_form.setText("TOTAL");
+        panel_formularios.add(ivn_jl_15_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 50, 30));
+        panel_formularios.add(ivn_total_rosiados_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 70, 30));
 
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel46.setText("CORRALES");
-        panel_formularios.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, -1, 30));
-        panel_formularios.add(jTextField25, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 70, 30));
+        ivn_jl_16_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_16_form.setText("CORRALES");
+        panel_formularios.add(ivn_jl_16_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, -1, 30));
+        panel_formularios.add(ivn_num_corrales_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 70, 30));
 
-        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel47.setText("GALLINEROS");
-        panel_formularios.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 30));
-        panel_formularios.add(jTextField28, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 60, 30));
+        ivn_jl_17_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_17_form.setText("GALLINEROS");
+        panel_formularios.add(ivn_jl_17_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 30));
+        panel_formularios.add(ivn_num_gallineros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 60, 30));
 
-        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel48.setText("CONEJERAS");
-        panel_formularios.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 250, 50, 30));
-        panel_formularios.add(jTextField29, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 250, 70, 30));
-        panel_formularios.add(jTextField30, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 70, 30));
+        ivn_jl_18_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_18_form.setText("CONEJERAS");
+        panel_formularios.add(ivn_jl_18_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 250, 50, 30));
+        panel_formularios.add(ivn_num_conejos_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 250, 70, 30));
+        panel_formularios.add(ivn_num_zarjos_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 70, 30));
 
-        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel49.setText("ZARJO O TROJE");
-        panel_formularios.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 50, 30));
-        panel_formularios.add(jTextField31, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 290, 70, 30));
+        ivn_jl_19_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_19_form.setText("ZARJO O TROJE");
+        panel_formularios.add(ivn_jl_19_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 50, 30));
+        panel_formularios.add(ivn_num_otros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 290, 70, 30));
 
-        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel50.setText("OTROS");
-        panel_formularios.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 290, 50, 30));
+        ivn_jl_20_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_20_form.setText("OTROS");
+        panel_formularios.add(ivn_jl_20_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 290, 50, 30));
 
-        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel51.setText("N° DE CARGAS:");
-        panel_formularios.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 110, 30));
-        panel_formularios.add(jTextField26, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 90, -1));
+        ivn_jl_21_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_21_form.setText("N° DE CARGAS:");
+        panel_formularios.add(ivn_jl_21_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 110, 30));
+        panel_formularios.add(ivn_num_cargas_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 90, -1));
 
-        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel52.setText("EN ML. O GR.:");
-        panel_formularios.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 110, 30));
-        panel_formularios.add(jTextField32, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 90, -1));
+        ivn_jl_22_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_22_form.setText("EN ML. O GR.:");
+        panel_formularios.add(ivn_jl_22_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 110, 30));
+        panel_formularios.add(ivn_ml_gr_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 90, -1));
 
-        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel53.setText("CONFORMIDAD:");
-        panel_formularios.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 110, 30));
+        ivn_jl_23_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_23_form.setText("CONFORMIDAD:");
+        panel_formularios.add(ivn_jl_23_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 110, 30));
 
-        margen5.setEditable(false);
-        margen5.setBackground(new java.awt.Color(255, 255, 255));
-        margen5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        margen5.addActionListener(new java.awt.event.ActionListener() {
+        ivn_obs_form.setColumns(20);
+        ivn_obs_form.setRows(5);
+        jScrollPane4.setViewportView(ivn_obs_form);
+
+        panel_formularios.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 740, 40));
+
+        ivn_margen1.setEditable(false);
+        ivn_margen1.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                margen5ActionPerformed(evt);
+                ivn_margen1ActionPerformed(evt);
             }
         });
-        panel_formularios.add(margen5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+        panel_formularios.add(ivn_margen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1000, 70));
 
-        margen1.setEditable(false);
-        margen1.setBackground(new java.awt.Color(255, 255, 255));
-        margen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        margen1.addActionListener(new java.awt.event.ActionListener() {
+        ivn_margen2.setEditable(false);
+        ivn_margen2.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                margen1ActionPerformed(evt);
+                ivn_margen2ActionPerformed(evt);
             }
         });
-        panel_formularios.add(margen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1000, 70));
+        panel_formularios.add(ivn_margen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 530, 50));
 
-        margen2.setEditable(false);
-        margen2.setBackground(new java.awt.Color(255, 255, 255));
-        margen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        margen2.addActionListener(new java.awt.event.ActionListener() {
+        ivn_margen5.setEditable(false);
+        ivn_margen5.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                margen2ActionPerformed(evt);
+                ivn_margen5ActionPerformed(evt);
             }
         });
-        panel_formularios.add(margen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 530, 50));
+        panel_formularios.add(ivn_margen5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
 
-        jTextField37.setEditable(false);
-        jTextField37.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField37.addActionListener(new java.awt.event.ActionListener() {
+        ivn_ciclo_rosiado_form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField37ActionPerformed(evt);
+                ivn_ciclo_rosiado_formActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField37, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+        panel_formularios.add(ivn_ciclo_rosiado_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 450, 140, -1));
 
-        jTextField38.setEditable(false);
-        jTextField38.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField38.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bn_buscar_casa_form.setText("BUSCAR");
+        panel_formularios.add(ivn_bn_buscar_casa_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 110, 30));
+
+        ivn_margen.setEditable(false);
+        ivn_margen.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField38ActionPerformed(evt);
+                ivn_margenActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField38, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+        panel_formularios.add(ivn_margen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 1000, 180));
 
-        jTextField39.setEditable(false);
-        jTextField39.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField39.addActionListener(new java.awt.event.ActionListener() {
+        ivn_margen3.setEditable(false);
+        ivn_margen3.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField39ActionPerformed(evt);
+                ivn_margen3ActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField39, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+        panel_formularios.add(ivn_margen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 1000, 280));
 
-        jTextField40.setEditable(false);
-        jTextField40.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField40.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bn_nueva_form.setText("NUEVA PLANILLA");
+        ivn_bn_nueva_form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField40ActionPerformed(evt);
+                ivn_bn_nueva_formActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField40, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+        panel_formularios.add(ivn_bn_nueva_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, -1, -1));
 
-        jTextField41.setEditable(false);
-        jTextField41.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField41.addActionListener(new java.awt.event.ActionListener() {
+        ivn_bn_guardar_form.setText("GUARDAR");
+        ivn_bn_guardar_form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField41ActionPerformed(evt);
+                ivn_bn_guardar_formActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField41, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+        panel_formularios.add(ivn_bn_guardar_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
 
-        margen.setEditable(false);
-        margen.setBackground(new java.awt.Color(255, 255, 255));
-        margen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        margen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                margenActionPerformed(evt);
-            }
-        });
-        panel_formularios.add(margen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 1000, 180));
-
-        margen3.setEditable(false);
-        margen3.setBackground(new java.awt.Color(255, 255, 255));
-        margen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        margen3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                margen3ActionPerformed(evt);
-            }
-        });
-        panel_formularios.add(margen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 1000, 280));
-
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        panel_formularios.add(jComboBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
-
-        jButton32.setText("NUEVA PLANILLA");
-        jButton32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton32ActionPerformed(evt);
-            }
-        });
-        panel_formularios.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, -1, -1));
-
-        jButton33.setText("GUARDAR");
-        jButton33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton33ActionPerformed(evt);
-            }
-        });
-        panel_formularios.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
-
-        jButton34.setText("LIMPIAR");
-        panel_formularios.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, -1, -1));
+        ivn_bn_limpiar_form.setText("LIMPIAR");
+        panel_formularios.add(ivn_bn_limpiar_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, -1, -1));
 
         jPanel1.add(panel_formularios, "card2");
 
@@ -1399,215 +1354,199 @@ public final class inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void ivn_entrada_panel_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_panel_usuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_ivn_entrada_panel_usuarioActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void ivn_ci_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_ci_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_ivn_ci_usrActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void ivn_cargo_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cargo_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_ivn_cargo_usrActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ivn_btn_usr_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_usr_buscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ivn_btn_usr_buscarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ivn_btn_guardar_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ivn_btn_guardar_usrActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ivn_btn_nuevo_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_nuevo_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ivn_btn_nuevo_usrActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btn_eliminarPanel_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarPanel_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btn_eliminarPanel_usrActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void inv_nombre_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inv_nombre_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_inv_nombre_usrActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void ivn_btn_editar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_usrPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_ivn_btn_editar_usrPanelActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void ivn_btn_eliminar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_usrPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_ivn_btn_eliminar_usrPanelActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void ivn_btn_imprimir_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_imprimir_usrPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_ivn_btn_imprimir_usrPanelActionPerformed
 
-    private void jt_redSaludActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_redSaludActionPerformed
+    private void ivn_red_salud_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_red_salud_centroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jt_redSaludActionPerformed
+    }//GEN-LAST:event_ivn_red_salud_centroActionPerformed
 
-    private void jt_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_direccionActionPerformed
+    private void ivn_direccion_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_direccion_centroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jt_direccionActionPerformed
+    }//GEN-LAST:event_ivn_direccion_centroActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void ivn_btn_guardar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_centroActionPerformed
         // TODO add your handling code here:
         // llamar y llenar un objeto de centro de salud
         // llamar y llemar en bd usando DAO
         Centro centro = new Centro();
         
         centro.setId(12);
-        centro.setNombre(jt_nombreEst.getText());
-        centro.setRed_salud(jt_redSalud.getText());
-        centro.setDireccion(jt_direccion.getText());
+        centro.setNombre(ivn_nombre_centro.getText());
+        centro.setRed_salud(ivn_red_salud_centro.getText());
+        centro.setDireccion(ivn_direccion_centro.getText());
         
         CentroDAO centrodao = new CentroDAO();
         
         centrodao.insertarCentroSalud(centro);
         
         
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_ivn_btn_guardar_centroActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void ivn_btn_nuevo_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_nuevo_centroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_ivn_btn_nuevo_centroActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void ivn_btn_eliminar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_ivn_btn_eliminar_centroActionPerformed
 
-    private void jt_nombreEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_nombreEstActionPerformed
+    private void ivn_nombre_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_centroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jt_nombreEstActionPerformed
+    }//GEN-LAST:event_ivn_nombre_centroActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void ivn_entrada_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_centroPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_ivn_entrada_centroPanelActionPerformed
 
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+    private void ivn_buscar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_buscar_centroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
+    }//GEN-LAST:event_ivn_buscar_centroActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void ivn_btn_editar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_centroPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }//GEN-LAST:event_ivn_btn_editar_centroPanelActionPerformed
 
-    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+    private void ivn_btn_eliminar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton23ActionPerformed
+    }//GEN-LAST:event_ivn_btn_eliminar_centroPanelActionPerformed
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+    private void ivn_btn_imprimir_centrosPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_imprimir_centrosPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24ActionPerformed
+    }//GEN-LAST:event_ivn_btn_imprimir_centrosPanelActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void ivn_contra_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_contra_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_ivn_contra_usrActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void ivn_num_lote_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_lote_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_ivn_num_lote_insecticidaActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void ivn_lote_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_lote_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_ivn_lote_insecticidaActionPerformed
 
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+    private void ivn_bt_guardar_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_guardar_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+    }//GEN-LAST:event_ivn_bt_guardar_insecticidaActionPerformed
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+    private void ivn_bt_nuevo_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_nuevo_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26ActionPerformed
+    }//GEN-LAST:event_ivn_bt_nuevo_insecticidaActionPerformed
 
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+    private void ivn_bt_eliminar_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_eliminar_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton27ActionPerformed
+    }//GEN-LAST:event_ivn_bt_eliminar_insecticidaActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void ivn_nombre_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_ivn_nombre_insecticidaActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void ivn_entrada_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_ivn_entrada_insecticidaActionPerformed
 
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+    private void ivn_bt_buscar_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_buscar_insecticidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton28ActionPerformed
+    }//GEN-LAST:event_ivn_bt_buscar_insecticidaActionPerformed
 
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+    private void ivn_bt_editar_insecticidaPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_editar_insecticidaPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton29ActionPerformed
+    }//GEN-LAST:event_ivn_bt_editar_insecticidaPanelActionPerformed
 
-    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+    private void ivn_bt_eliminar_insecticidaPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_eliminar_insecticidaPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton30ActionPerformed
+    }//GEN-LAST:event_ivn_bt_eliminar_insecticidaPanelActionPerformed
 
-    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+    private void ivn_bt_imprimir_insecticidaPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_imprimir_insecticidaPanelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton31ActionPerformed
+    }//GEN-LAST:event_ivn_bt_imprimir_insecticidaPanelActionPerformed
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void ivn_num_casaViv_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_casaViv_formActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }//GEN-LAST:event_ivn_num_casaViv_formActionPerformed
 
-    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+    private void ivn_nombre_jefeFamilia_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_jefeFamilia_formActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField21ActionPerformed
+    }//GEN-LAST:event_ivn_nombre_jefeFamilia_formActionPerformed
 
-    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+    private void ivn_num_habit_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_habit_formActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField22ActionPerformed
+    }//GEN-LAST:event_ivn_num_habit_formActionPerformed
 
-    private void margen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen5ActionPerformed
+    private void ivn_margen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_margen5ActionPerformed
+    }//GEN-LAST:event_ivn_margen1ActionPerformed
 
-    private void margen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen1ActionPerformed
+    private void ivn_margen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_margen1ActionPerformed
+    }//GEN-LAST:event_ivn_margen2ActionPerformed
 
-    private void margen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen2ActionPerformed
+    private void ivn_margenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_margen2ActionPerformed
+    }//GEN-LAST:event_ivn_margenActionPerformed
 
-    private void jTextField37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField37ActionPerformed
+    private void ivn_margen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField37ActionPerformed
+    }//GEN-LAST:event_ivn_margen3ActionPerformed
 
-    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
+    private void ivn_bn_nueva_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bn_nueva_formActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField38ActionPerformed
+    }//GEN-LAST:event_ivn_bn_nueva_formActionPerformed
 
-    private void jTextField39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField39ActionPerformed
+    private void ivn_bn_guardar_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bn_guardar_formActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField39ActionPerformed
+    }//GEN-LAST:event_ivn_bn_guardar_formActionPerformed
 
-    private void jTextField40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField40ActionPerformed
+    private void ivn_ciclo_rosiado_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_ciclo_rosiado_formActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField40ActionPerformed
+    }//GEN-LAST:event_ivn_ciclo_rosiado_formActionPerformed
 
-    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
+    private void ivn_margen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField41ActionPerformed
-
-    private void margenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_margenActionPerformed
-
-    private void margen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_margen3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_margen3ActionPerformed
-
-    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton32ActionPerformed
-
-    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton33ActionPerformed
+    }//GEN-LAST:event_ivn_margen5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1666,157 +1605,152 @@ public final class inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_eliminarPanel_usr;
+    private javax.swing.JTextField inv_nombre_usr;
+    private javax.swing.JTextField ivn_año_form;
+    private javax.swing.JButton ivn_bn_buscar_casa_form;
+    private javax.swing.JButton ivn_bn_guardar_form;
+    private javax.swing.JButton ivn_bn_limpiar_form;
+    private javax.swing.JButton ivn_bn_nueva_form;
+    private javax.swing.JButton ivn_bt_buscar_insecticida;
+    private javax.swing.JButton ivn_bt_editar_insecticidaPanel;
+    private javax.swing.JButton ivn_bt_eliminar_insecticida;
+    private javax.swing.JButton ivn_bt_eliminar_insecticidaPanel;
+    private javax.swing.JButton ivn_bt_guardar_insecticida;
+    private javax.swing.JButton ivn_bt_imprimir_insecticidaPanel;
+    private javax.swing.JButton ivn_bt_nuevo_insecticida;
+    private javax.swing.JButton ivn_btn_editar_centroPanel;
+    private javax.swing.JButton ivn_btn_editar_usrPanel;
+    private javax.swing.JButton ivn_btn_eliminar_centro;
+    private javax.swing.JButton ivn_btn_eliminar_centroPanel;
+    private javax.swing.JButton ivn_btn_eliminar_usrPanel;
+    private javax.swing.JButton ivn_btn_guardar_centro;
+    private javax.swing.JButton ivn_btn_guardar_usr;
+    private javax.swing.JButton ivn_btn_imprimir_centrosPanel;
+    private javax.swing.JButton ivn_btn_imprimir_usrPanel;
+    private javax.swing.JButton ivn_btn_nuevo_centro;
+    private javax.swing.JButton ivn_btn_nuevo_usr;
+    private javax.swing.JButton ivn_btn_usr_buscar;
+    private javax.swing.JButton ivn_buscar_centro;
+    private javax.swing.JTextField ivn_cargo_usr;
+    private javax.swing.JComboBox<String> ivn_cb_cedes_form;
+    private javax.swing.JComboBox<String> ivn_cb_cerrada_renuente_form;
+    private javax.swing.JComboBox<String> ivn_cb_comunidad_form;
+    private javax.swing.JComboBox<String> ivn_cb_conformidad_form;
+    private javax.swing.JComboBox<String> ivn_cb_est_salud_form;
+    private javax.swing.JComboBox<String> ivn_cb_insecticida_form;
+    private javax.swing.JComboBox<String> ivn_cb_jefe_brigada_form;
+    private javax.swing.JComboBox<String> ivn_cb_lista_centros;
+    private javax.swing.JComboBox<String> ivn_cb_lista_insecticida;
+    private javax.swing.JComboBox<String> ivn_cb_minicipio_form;
+    private javax.swing.JComboBox<String> ivn_cb_nombre_usr;
+    private javax.swing.JComboBox<String> ivn_cb_red_salud_form;
+    private javax.swing.JComboBox<String> ivn_cb_rosiador_form;
+    private javax.swing.JTextField ivn_ci_usr;
+    private javax.swing.JTextField ivn_ciclo_rosiado_form;
+    private javax.swing.JTextField ivn_contra_usr;
+    private javax.swing.JTextField ivn_dia_form;
+    private javax.swing.JTextField ivn_direccion_centro;
+    private javax.swing.JTextField ivn_dosis_form;
+    private javax.swing.JTextField ivn_entrada_centroPanel;
+    private javax.swing.JTextField ivn_entrada_insecticida;
+    private javax.swing.JTextField ivn_entrada_panel_usuario;
+    private javax.swing.JLabel ivn_jl_10_form;
+    private javax.swing.JLabel ivn_jl_11_form;
+    private javax.swing.JLabel ivn_jl_12_form;
+    private javax.swing.JLabel ivn_jl_13_form;
+    private javax.swing.JLabel ivn_jl_14_form;
+    private javax.swing.JLabel ivn_jl_15_form;
+    private javax.swing.JLabel ivn_jl_16_form;
+    private javax.swing.JLabel ivn_jl_17_form;
+    private javax.swing.JLabel ivn_jl_18_form;
+    private javax.swing.JLabel ivn_jl_19_form;
+    private javax.swing.JLabel ivn_jl_1_centros;
+    private javax.swing.JLabel ivn_jl_1_form;
+    private javax.swing.JLabel ivn_jl_1_insecticidas;
+    private javax.swing.JLabel ivn_jl_1_usuarios;
+    private javax.swing.JLabel ivn_jl_20_form;
+    private javax.swing.JLabel ivn_jl_21_form;
+    private javax.swing.JLabel ivn_jl_22_form;
+    private javax.swing.JLabel ivn_jl_23_form;
+    private javax.swing.JLabel ivn_jl_24_form;
+    private javax.swing.JLabel ivn_jl_25_form;
+    private javax.swing.JLabel ivn_jl_26_form;
+    private javax.swing.JLabel ivn_jl_27_form;
+    private javax.swing.JLabel ivn_jl_28_form;
+    private javax.swing.JLabel ivn_jl_29_form;
+    private javax.swing.JLabel ivn_jl_2_centros;
+    private javax.swing.JLabel ivn_jl_2_form;
+    private javax.swing.JLabel ivn_jl_2_insecticidas;
+    private javax.swing.JLabel ivn_jl_2_usuarios;
+    private javax.swing.JLabel ivn_jl_30_form;
+    private javax.swing.JLabel ivn_jl_31_form;
+    private javax.swing.JLabel ivn_jl_32_form;
+    private javax.swing.JLabel ivn_jl_33_form;
+    private javax.swing.JLabel ivn_jl_34_form;
+    private javax.swing.JLabel ivn_jl_3_centros;
+    private javax.swing.JLabel ivn_jl_3_form;
+    private javax.swing.JLabel ivn_jl_3_insecticidas;
+    private javax.swing.JLabel ivn_jl_3_usuarios;
+    private javax.swing.JLabel ivn_jl_4_form;
+    private javax.swing.JLabel ivn_jl_4_usuarios;
+    private javax.swing.JLabel ivn_jl_5_form;
+    private javax.swing.JLabel ivn_jl_6_form;
+    private javax.swing.JLabel ivn_jl_7_form;
+    private javax.swing.JLabel ivn_jl_8_form;
+    private javax.swing.JLabel ivn_jl_9_form;
+    private javax.swing.JLabel ivn_jl_panelInsecticida_insecticidas;
+    private javax.swing.JLabel ivn_jl_panelcentros_form;
+    private javax.swing.JLabel ivn_jl_panelusr_form;
+    private javax.swing.JTable ivn_lista_insecticidas;
+    private javax.swing.JTextField ivn_lote_insecticida;
+    private javax.swing.JTextField ivn_lote_insecticida_form;
+    private javax.swing.JTextField ivn_margen;
+    private javax.swing.JTextField ivn_margen1;
+    private javax.swing.JTextField ivn_margen2;
+    private javax.swing.JTextField ivn_margen3;
+    private javax.swing.JTextField ivn_margen5;
+    private javax.swing.JTextField ivn_mes_form;
+    private javax.swing.JTextField ivn_ml_gr_form;
+    private javax.swing.JTextField ivn_nombre_centro;
+    private javax.swing.JTextField ivn_nombre_insecticida;
+    private javax.swing.JTextField ivn_nombre_jefeFamilia_form;
+    private javax.swing.JTextField ivn_num_cargas_form;
+    private javax.swing.JTextField ivn_num_casaViv_form;
+    private javax.swing.JTextField ivn_num_conejos_form;
+    private javax.swing.JTextField ivn_num_corrales_form;
+    private javax.swing.JTextField ivn_num_gallineros_form;
+    private javax.swing.JTextField ivn_num_habit_form;
+    private javax.swing.JTextField ivn_num_lote_insecticida;
+    private javax.swing.JTextField ivn_num_no_rociados_form;
+    private javax.swing.JTextField ivn_num_otros_form;
+    private javax.swing.JTextField ivn_num_rociados_form;
+    private javax.swing.JTextField ivn_num_zarjos_form;
+    private javax.swing.JTextArea ivn_obs_form;
+    private javax.swing.JTextField ivn_red_salud_centro;
+    private javax.swing.JTable ivn_tabla_lista_centros;
+    private javax.swing.JTable ivn_tabla_lista_usr;
+    private javax.swing.JTextField ivn_total_rosiados_form;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox12;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox15;
-    private javax.swing.JComboBox<String> jComboBox16;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jt_direccion;
-    private javax.swing.JTextField jt_nombreEst;
-    private javax.swing.JTextField jt_redSalud;
-    private javax.swing.JTextField margen;
-    private javax.swing.JTextField margen1;
-    private javax.swing.JTextField margen2;
-    private javax.swing.JTextField margen3;
-    private javax.swing.JTextField margen5;
+    private javax.swing.JScrollPane jScrollPane4;
     private interfaces.PanelRound menu;
     private interfaces.PanelRound panelRound2;
     private javax.swing.JPanel panel_añadir_;
@@ -1836,5 +1770,6 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTabbedPane panel_tabla_usuario;
     private javax.swing.JPanel panel_usuario;
     private javax.swing.JPanel panel_viviendas;
+    private javax.swing.JLabel titulo_planilla_form;
     // End of variables declaration//GEN-END:variables
 }
