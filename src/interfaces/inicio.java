@@ -4,6 +4,8 @@
  */
 package interfaces;
 
+import clases.Centro;
+import clases.CentroDAO;
 import clases.mover;
 import java.awt.Color;
 import java.awt.Image;
@@ -78,14 +80,14 @@ public final class inicio extends javax.swing.JFrame {
         panel_tabla_centro = new javax.swing.JTabbedPane();
         panel_añadir_1 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        jt_redSalud = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        jt_direccion = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
+        jt_nombreEst = new javax.swing.JTextField();
         panel_datos1 = new javax.swing.JPanel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jTextField4 = new javax.swing.JTextField();
@@ -445,7 +447,7 @@ public final class inicio extends javax.swing.JFrame {
         jLabel1.setText("DashBoard ");
         menu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        panelRound2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 670));
+        panelRound2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 720));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new java.awt.CardLayout());
@@ -617,22 +619,22 @@ public final class inicio extends javax.swing.JFrame {
         jLabel11.setText("NOMBRE ESTABLECIMIENTO");
         panel_añadir_1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jt_redSalud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jt_redSaludActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+        panel_añadir_1.add(jt_redSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
 
         jLabel17.setText("RED DE SALUD");
         panel_añadir_1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        jt_direccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                jt_direccionActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+        panel_añadir_1.add(jt_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
 
         jLabel18.setText("DIRECCION ESTABLECIMIENTO");
         panel_añadir_1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
@@ -661,12 +663,12 @@ public final class inicio extends javax.swing.JFrame {
         });
         panel_añadir_1.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jt_nombreEst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jt_nombreEstActionPerformed(evt);
             }
         });
-        panel_añadir_1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+        panel_añadir_1.add(jt_nombreEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
 
         panel_tabla_centro.addTab("AÑADIR", panel_añadir_1);
 
@@ -998,14 +1000,14 @@ public final class inicio extends javax.swing.JFrame {
 
         jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel36.setText("N° CASA CV:");
-        panel_formularios.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 90, 30));
+        panel_formularios.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 90, 30));
 
         jTextField20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField20ActionPerformed(evt);
             }
         });
-        panel_formularios.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 90, 30));
+        panel_formularios.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 90, 30));
 
         jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel37.setText("NOMBRE Y APELLIDO DE JEFE DE FAMILIA:");
@@ -1225,6 +1227,11 @@ public final class inicio extends javax.swing.JFrame {
         panel_formularios.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, -1, -1));
 
         jButton33.setText("GUARDAR");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
         panel_formularios.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
 
         jButton34.setText("LIMPIAR");
@@ -1243,7 +1250,7 @@ public final class inicio extends javax.swing.JFrame {
 
         jPanel1.add(panel_rdiario, "card2");
 
-        panelRound2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1050, 630));
+        panelRound2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1240, 690));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1251,14 +1258,11 @@ public final class inicio extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 1081, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, 1274, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -1439,16 +1443,30 @@ public final class inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton17ActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jt_redSaludActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_redSaludActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jt_redSaludActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jt_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_direccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_jt_direccionActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
+        // llamar y llenar un objeto de centro de salud
+        // llamar y llemar en bd usando DAO
+        Centro centro = new Centro();
+        
+        centro.setId(12);
+        centro.setNombre(jt_nombreEst.getText());
+        centro.setRed_salud(jt_redSalud.getText());
+        centro.setDireccion(jt_direccion.getText());
+        
+        CentroDAO centrodao = new CentroDAO();
+        
+        centrodao.insertarCentroSalud(centro);
+        
+        
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
@@ -1459,9 +1477,9 @@ public final class inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jt_nombreEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_nombreEstActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jt_nombreEstActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -1586,6 +1604,10 @@ public final class inicio extends javax.swing.JFrame {
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton33ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1775,7 +1797,6 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
@@ -1788,8 +1809,9 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jt_direccion;
+    private javax.swing.JTextField jt_nombreEst;
+    private javax.swing.JTextField jt_redSalud;
     private javax.swing.JTextField margen;
     private javax.swing.JTextField margen1;
     private javax.swing.JTextField margen2;
