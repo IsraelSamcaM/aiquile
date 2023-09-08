@@ -55,7 +55,7 @@ public final class inicio extends javax.swing.JFrame {
         ivn_jl_panelusr_form = new javax.swing.JLabel();
         panel_tabla_usuario = new javax.swing.JTabbedPane();
         panel_añadir_ = new javax.swing.JPanel();
-        ivn_jl_1_usuarios = new javax.swing.JLabel();
+        ivn_jl_1_usuario = new javax.swing.JLabel();
         ivn_ci_usr = new javax.swing.JTextField();
         ivn_jl_2_usuarios = new javax.swing.JLabel();
         ivn_cargo_usr = new javax.swing.JTextField();
@@ -572,8 +572,8 @@ public final class inicio extends javax.swing.JFrame {
 
         panel_añadir_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ivn_jl_1_usuarios.setText("NOMBRE DE USUARIO");
-        panel_añadir_.add(ivn_jl_1_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
+        ivn_jl_1_usuario.setText("NOMBRE DE USUARIO");
+        panel_añadir_.add(ivn_jl_1_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
 
         ivn_ci_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2361,7 +2361,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel ivn_jl_1_centros;
     private javax.swing.JLabel ivn_jl_1_form;
     private javax.swing.JLabel ivn_jl_1_insecticidas;
-    private javax.swing.JLabel ivn_jl_1_usuarios;
+    private javax.swing.JLabel ivn_jl_1_usuario;
     private javax.swing.JLabel ivn_jl_20_form;
     private javax.swing.JLabel ivn_jl_21_form;
     private javax.swing.JLabel ivn_jl_22_form;

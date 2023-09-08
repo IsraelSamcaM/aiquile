@@ -573,7 +573,7 @@
                         <Property name="useNullLayout" type="boolean" value="false"/>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="ivn_jl_1_usuarios">
+                        <Component class="javax.swing.JLabel" name="ivn_jl_1_usuario">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="NOMBRE DE USUARIO"/>
                           </Properties>
