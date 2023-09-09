@@ -4,6 +4,8 @@
  */
 package interfaces;
 
+import clases.Centro;
+import clases.CentroDAO;
 import clases.mover;
 import java.awt.Color;
 import java.awt.Image;
@@ -50,9 +52,51 @@ public final class inicio extends javax.swing.JFrame {
         panel_rmensual = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         panel_usuario = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        ivn_jl_panelusr_form = new javax.swing.JLabel();
+        panel_tabla_usuario = new javax.swing.JTabbedPane();
+        panel_añadir_ = new javax.swing.JPanel();
+        ivn_jl_1_usuarios = new javax.swing.JLabel();
+        ivn_ci_usr = new javax.swing.JTextField();
+        ivn_jl_2_usuarios = new javax.swing.JLabel();
+        ivn_cargo_usr = new javax.swing.JTextField();
+        ivn_jl_3_usuarios = new javax.swing.JLabel();
+        ivn_btn_guardar_usr = new javax.swing.JButton();
+        ivn_btn_nuevo_usr = new javax.swing.JButton();
+        btn_eliminarPanel_usr = new javax.swing.JButton();
+        inv_nombre_usr = new javax.swing.JTextField();
+        ivn_jl_4_usuarios = new javax.swing.JLabel();
+        ivn_contra_usr = new javax.swing.JTextField();
+        panel_datos = new javax.swing.JPanel();
+        ivn_cb_nombre_usr = new javax.swing.JComboBox<>();
+        ivn_entrada_panel_usuario = new javax.swing.JTextField();
+        ivn_btn_usr_buscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ivn_tabla_lista_usr = new javax.swing.JTable();
+        ivn_btn_editar_usrPanel = new javax.swing.JButton();
+        ivn_btn_eliminar_usrPanel = new javax.swing.JButton();
+        ivn_btn_imprimir_usrPanel = new javax.swing.JButton();
         panel_centros = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        ivn_jl_panelcentros_form = new javax.swing.JLabel();
+        panel_tabla_centro = new javax.swing.JTabbedPane();
+        panel_añadir_1 = new javax.swing.JPanel();
+        ivn_jl_1_centros = new javax.swing.JLabel();
+        ivn_red_salud_centro = new javax.swing.JTextField();
+        ivn_jl_2_centros = new javax.swing.JLabel();
+        ivn_direccion_centro = new javax.swing.JTextField();
+        ivn_jl_3_centros = new javax.swing.JLabel();
+        ivn_btn_guardar_centro = new javax.swing.JButton();
+        ivn_btn_nuevo_centro = new javax.swing.JButton();
+        ivn_btn_eliminar_centro = new javax.swing.JButton();
+        ivn_nombre_centro = new javax.swing.JTextField();
+        panel_datos1 = new javax.swing.JPanel();
+        ivn_cb_lista_centros = new javax.swing.JComboBox<>();
+        ivn_entrada_centroPanel = new javax.swing.JTextField();
+        ivn_buscar_centro = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        ivn_tabla_lista_centros = new javax.swing.JTable();
+        ivn_btn_editar_centroPanel = new javax.swing.JButton();
+        ivn_btn_eliminar_centroPanel = new javax.swing.JButton();
+        ivn_btn_imprimir_centrosPanel = new javax.swing.JButton();
         panel_viviendas = new javax.swing.JPanel();
         lis_viv = new javax.swing.JTabbedPane();
         panel_act_viv = new javax.swing.JPanel();
@@ -130,9 +174,103 @@ public final class inicio extends javax.swing.JFrame {
         guardar_jefe2 = new javax.swing.JButton();
         guardar_jefe3 = new javax.swing.JButton();
         panel_insecticidas = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        ivn_jl_panelInsecticida_insecticidas = new javax.swing.JLabel();
+        panel_tabla_insect = new javax.swing.JTabbedPane();
+        panel_añadir_2 = new javax.swing.JPanel();
+        ivn_jl_1_insecticidas = new javax.swing.JLabel();
+        ivn_num_lote_insecticida = new javax.swing.JTextField();
+        ivn_jl_2_insecticidas = new javax.swing.JLabel();
+        ivn_lote_insecticida = new javax.swing.JTextField();
+        ivn_jl_3_insecticidas = new javax.swing.JLabel();
+        ivn_bt_guardar_insecticida = new javax.swing.JButton();
+        ivn_bt_nuevo_insecticida = new javax.swing.JButton();
+        ivn_bt_eliminar_insecticida = new javax.swing.JButton();
+        ivn_nombre_insecticida = new javax.swing.JTextField();
+        panel_datos2 = new javax.swing.JPanel();
+        ivn_cb_lista_insecticida = new javax.swing.JComboBox<>();
+        ivn_entrada_insecticida = new javax.swing.JTextField();
+        ivn_bt_buscar_insecticida = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        ivn_lista_insecticidas = new javax.swing.JTable();
+        ivn_bt_editar_insecticidaPanel = new javax.swing.JButton();
+        ivn_bt_eliminar_insecticidaPanel = new javax.swing.JButton();
+        ivn_bt_imprimir_insecticidaPanel = new javax.swing.JButton();
         panel_formularios = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        titulo_planilla_form = new javax.swing.JLabel();
+        ivn_jl_5_form = new javax.swing.JLabel();
+        ivn_jl_1_form = new javax.swing.JLabel();
+        ivn_jl_2_form = new javax.swing.JLabel();
+        ivn_jl_3_form = new javax.swing.JLabel();
+        ivn_jl_4_form = new javax.swing.JLabel();
+        ivn_cb_comunidad_form = new javax.swing.JComboBox<>();
+        ivn_cb_cedes_form = new javax.swing.JComboBox<>();
+        ivn_cb_red_salud_form = new javax.swing.JComboBox<>();
+        ivn_cb_est_salud_form = new javax.swing.JComboBox<>();
+        ivn_cb_minicipio_form = new javax.swing.JComboBox<>();
+        ivn_jl_31_form = new javax.swing.JLabel();
+        ivn_jl_24_form = new javax.swing.JLabel();
+        ivn_jl_32_form = new javax.swing.JLabel();
+        ivn_jl_25_form = new javax.swing.JLabel();
+        ivn_jl_33_form = new javax.swing.JLabel();
+        ivn_cb_rosiador_form = new javax.swing.JComboBox<>();
+        ivn_cb_jefe_brigada_form = new javax.swing.JComboBox<>();
+        ivn_cb_insecticida_form = new javax.swing.JComboBox<>();
+        ivn_dosis_form = new javax.swing.JTextField();
+        ivn_jl_26_form = new javax.swing.JLabel();
+        ivn_jl_27_form = new javax.swing.JLabel();
+        ivn_dia_form = new javax.swing.JTextField();
+        ivn_jl_28_form = new javax.swing.JLabel();
+        ivn_mes_form = new javax.swing.JTextField();
+        ivn_jl_29_form = new javax.swing.JLabel();
+        ivn_año_form = new javax.swing.JTextField();
+        ivn_jl_34_form = new javax.swing.JLabel();
+        ivn_lote_insecticida_form = new javax.swing.JTextField();
+        ivn_jl_30_form = new javax.swing.JLabel();
+        ivn_jl_6_form = new javax.swing.JLabel();
+        ivn_num_casaViv_form = new javax.swing.JTextField();
+        ivn_jl_7_form = new javax.swing.JLabel();
+        ivn_nombre_jefeFamilia_form = new javax.swing.JTextField();
+        ivn_jl_8_form = new javax.swing.JLabel();
+        ivn_num_habit_form = new javax.swing.JTextField();
+        ivn_jl_9_form = new javax.swing.JLabel();
+        ivn_jl_10_form = new javax.swing.JLabel();
+        ivn_jl_11_form = new javax.swing.JLabel();
+        ivn_jl_12_form = new javax.swing.JLabel();
+        ivn_cb_conformidad_form = new javax.swing.JComboBox<>();
+        ivn_cb_cerrada_renuente_form = new javax.swing.JComboBox<>();
+        ivn_jl_13_form = new javax.swing.JLabel();
+        ivn_num_rociados_form = new javax.swing.JTextField();
+        ivn_jl_14_form = new javax.swing.JLabel();
+        ivn_num_no_rociados_form = new javax.swing.JTextField();
+        ivn_jl_15_form = new javax.swing.JLabel();
+        ivn_total_rosiados_form = new javax.swing.JTextField();
+        ivn_jl_16_form = new javax.swing.JLabel();
+        ivn_num_corrales_form = new javax.swing.JTextField();
+        ivn_jl_17_form = new javax.swing.JLabel();
+        ivn_num_gallineros_form = new javax.swing.JTextField();
+        ivn_jl_18_form = new javax.swing.JLabel();
+        ivn_num_conejos_form = new javax.swing.JTextField();
+        ivn_num_zarjos_form = new javax.swing.JTextField();
+        ivn_jl_19_form = new javax.swing.JLabel();
+        ivn_num_otros_form = new javax.swing.JTextField();
+        ivn_jl_20_form = new javax.swing.JLabel();
+        ivn_jl_21_form = new javax.swing.JLabel();
+        ivn_num_cargas_form = new javax.swing.JTextField();
+        ivn_jl_22_form = new javax.swing.JLabel();
+        ivn_ml_gr_form = new javax.swing.JTextField();
+        ivn_jl_23_form = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        ivn_obs_form = new javax.swing.JTextArea();
+        ivn_margen1 = new javax.swing.JTextField();
+        ivn_margen2 = new javax.swing.JTextField();
+        ivn_margen5 = new javax.swing.JTextField();
+        ivn_ciclo_rosiado_form = new javax.swing.JTextField();
+        ivn_bn_buscar_casa_form = new javax.swing.JButton();
+        ivn_margen = new javax.swing.JTextField();
+        ivn_margen3 = new javax.swing.JTextField();
+        ivn_bn_nueva_form = new javax.swing.JButton();
+        ivn_bn_guardar_form = new javax.swing.JButton();
+        ivn_bn_limpiar_form = new javax.swing.JButton();
         panel_rdiario = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -175,15 +313,16 @@ public final class inicio extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user-.png"))); // NOI18N
         jButton9.setText("USUARIOS     ");
+
         jButton9.setAlignmentY(0.0F);
         jButton9.setAutoscrolls(true);
         jButton9.setBorder(null);
         jButton9.setContentAreaFilled(false);
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton9.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton9.setName(""); // NOI18N
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -196,20 +335,21 @@ public final class inicio extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        menu.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 220, 30));
+        menu.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 200, 30));
 
         jButton8.setBackground(new java.awt.Color(0, 204, 204));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/vivienda.png"))); // NOI18N
         jButton8.setText("VIVIENDAS     ");
+
         jButton8.setActionCommand(" VIVIENDAS         ");
         jButton8.setAlignmentY(0.0F);
         jButton8.setAutoscrolls(true);
         jButton8.setBorder(null);
         jButton8.setContentAreaFilled(false);
-        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -226,8 +366,10 @@ public final class inicio extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(0, 204, 204));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user.png"))); // NOI18N
         jButton10.setText("BRIGADAS     ");
+
         jButton10.setAlignmentY(0.0F);
         jButton10.setAutoscrolls(true);
         jButton10.setBorder(null);
@@ -250,14 +392,15 @@ public final class inicio extends javax.swing.JFrame {
         jButton11.setBackground(new java.awt.Color(0, 204, 204));
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/centro_salud.png"))); // NOI18N
         jButton11.setText("CENTROS DE SALUD     ");
+
         jButton11.setAlignmentY(0.0F);
         jButton11.setAutoscrolls(true);
         jButton11.setBorder(null);
         jButton11.setContentAreaFilled(false);
-        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton11.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -269,13 +412,15 @@ public final class inicio extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        menu.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 220, 30));
+        menu.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 200, 30));
 
         jButton12.setBackground(new java.awt.Color(0, 204, 204));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/insec.png"))); // NOI18N
         jButton12.setText("INSECTICIDAS     ");
+
         jButton12.setAlignmentY(0.0F);
         jButton12.setAutoscrolls(true);
         jButton12.setBorder(null);
@@ -298,8 +443,10 @@ public final class inicio extends javax.swing.JFrame {
         jButton13.setBackground(new java.awt.Color(0, 204, 204));
         jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/form.png"))); // NOI18N
         jButton13.setText("FORMULARIOS     ");
+
         jButton13.setAlignmentY(0.0F);
         jButton13.setAutoscrolls(true);
         jButton13.setBorder(null);
@@ -322,8 +469,10 @@ public final class inicio extends javax.swing.JFrame {
         jButton15.setBackground(new java.awt.Color(0, 204, 204));
         jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/diario.png"))); // NOI18N
         jButton15.setText("REPORTE DIARIO     ");
+
         jButton15.setAlignmentY(0.0F);
         jButton15.setAutoscrolls(true);
         jButton15.setBorder(null);
@@ -346,8 +495,10 @@ public final class inicio extends javax.swing.JFrame {
         jButton16.setBackground(new java.awt.Color(0, 204, 204));
         jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mensual.png"))); // NOI18N
         jButton16.setText("REPORTE MENSUAL     ");
+
         jButton16.setAlignmentY(0.0F);
         jButton16.setAutoscrolls(true);
         jButton16.setBorder(null);
@@ -370,7 +521,6 @@ public final class inicio extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/menu.png"))); // NOI18N
         jButton4.setAlignmentY(0.0F);
         jButton4.setAutoscrolls(true);
         jButton4.setBorder(null);
@@ -415,21 +565,275 @@ public final class inicio extends javax.swing.JFrame {
         panel_usuario.setBackground(new java.awt.Color(255, 255, 255));
         panel_usuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("PANEL_USUARIO");
-        panel_usuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        ivn_jl_panelusr_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ivn_jl_panelusr_form.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_panelusr_form.setText("PANEL_USUARIO");
+        panel_usuario.add(ivn_jl_panelusr_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 220, 30));
+
+        panel_añadir_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ivn_jl_1_usuarios.setText("NOMBRE DE USUARIO");
+        panel_añadir_.add(ivn_jl_1_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, 40));
+
+        ivn_ci_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_ci_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(ivn_ci_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 420, 40));
+
+        ivn_jl_2_usuarios.setText("CI");
+        panel_añadir_.add(ivn_jl_2_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 200, 40));
+
+        ivn_cargo_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_cargo_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(ivn_cargo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 420, 40));
+
+        ivn_jl_3_usuarios.setText("CARGO");
+        panel_añadir_.add(ivn_jl_3_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 200, 40));
+
+        ivn_btn_guardar_usr.setText("GUARDAR");
+        ivn_btn_guardar_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_guardar_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(ivn_btn_guardar_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 180, 70));
+
+        ivn_btn_nuevo_usr.setText("NUEVO");
+        ivn_btn_nuevo_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_nuevo_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(ivn_btn_nuevo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 180, 70));
+
+        btn_eliminarPanel_usr.setText("ELIMINAR");
+        btn_eliminarPanel_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eliminarPanel_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(btn_eliminarPanel_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 180, 70));
+
+        inv_nombre_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inv_nombre_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(inv_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 420, 40));
+
+        ivn_jl_4_usuarios.setText("CONTRASEÑA");
+        panel_añadir_.add(ivn_jl_4_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 200, 40));
+
+        ivn_contra_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_contra_usrActionPerformed(evt);
+            }
+        });
+        panel_añadir_.add(ivn_contra_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+
+        panel_tabla_usuario.addTab("AÑADIR", panel_añadir_);
+
+        panel_datos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ivn_cb_nombre_usr.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "TIPO" }));
+        panel_datos.add(ivn_cb_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 150, 40));
+
+        ivn_entrada_panel_usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_entrada_panel_usuarioActionPerformed(evt);
+            }
+        });
+        panel_datos.add(ivn_entrada_panel_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 480, 40));
+
+        ivn_btn_usr_buscar.setText("BUSCAR");
+        ivn_btn_usr_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_usr_buscarActionPerformed(evt);
+            }
+        });
+        panel_datos.add(ivn_btn_usr_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 160, 40));
+
+        ivn_tabla_lista_usr.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE USUARIOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        ivn_tabla_lista_usr.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(ivn_tabla_lista_usr);
+
+        panel_datos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 810, 410));
+
+        ivn_btn_editar_usrPanel.setText("EDITAR");
+        ivn_btn_editar_usrPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_editar_usrPanelActionPerformed(evt);
+            }
+        });
+        panel_datos.add(ivn_btn_editar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 190, 60));
+
+        ivn_btn_eliminar_usrPanel.setText("ELIMINAR");
+        ivn_btn_eliminar_usrPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_eliminar_usrPanelActionPerformed(evt);
+            }
+        });
+        panel_datos.add(ivn_btn_eliminar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 145, 60));
+
+        ivn_btn_imprimir_usrPanel.setText("IMPRIMIR USUARIOS");
+        ivn_btn_imprimir_usrPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_imprimir_usrPanelActionPerformed(evt);
+            }
+        });
+        panel_datos.add(ivn_btn_imprimir_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 510, -1, 60));
+
+        panel_tabla_usuario.addTab("LISTA DE USUARIOS", panel_datos);
+
+        panel_usuario.add(panel_tabla_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 850, 630));
 
         jPanel1.add(panel_usuario, "card2");
 
         panel_centros.setBackground(new java.awt.Color(255, 255, 255));
         panel_centros.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setBackground(new java.awt.Color(102, 153, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("PANEL_CENTROS");
-        panel_centros.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, -1, -1));
+        ivn_jl_panelcentros_form.setBackground(new java.awt.Color(102, 153, 255));
+        ivn_jl_panelcentros_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ivn_jl_panelcentros_form.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_panelcentros_form.setText("PANEL_CENTROS");
+        panel_centros.add(ivn_jl_panelcentros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 200, -1));
+
+        panel_añadir_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ivn_jl_1_centros.setText("NOMBRE ESTABLECIMIENTO");
+        panel_añadir_1.add(ivn_jl_1_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
+
+        ivn_red_salud_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_red_salud_centroActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(ivn_red_salud_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+
+        ivn_jl_2_centros.setText("RED DE SALUD");
+        panel_añadir_1.add(ivn_jl_2_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
+
+        ivn_direccion_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_direccion_centroActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(ivn_direccion_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+
+        ivn_jl_3_centros.setText("DIRECCION ESTABLECIMIENTO");
+        panel_añadir_1.add(ivn_jl_3_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
+
+        ivn_btn_guardar_centro.setText("GUARDAR");
+        ivn_btn_guardar_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_guardar_centroActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(ivn_btn_guardar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
+
+        ivn_btn_nuevo_centro.setText("NUEVO");
+        ivn_btn_nuevo_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_nuevo_centroActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(ivn_btn_nuevo_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
+
+        ivn_btn_eliminar_centro.setText("ELIMINAR");
+        ivn_btn_eliminar_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_eliminar_centroActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(ivn_btn_eliminar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
+
+        ivn_nombre_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_nombre_centroActionPerformed(evt);
+            }
+        });
+        panel_añadir_1.add(ivn_nombre_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+
+        panel_tabla_centro.addTab("AÑADIR", panel_añadir_1);
+
+        panel_datos1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ivn_cb_lista_centros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "RED DE SALUD", "DIRECCION" }));
+        panel_datos1.add(ivn_cb_lista_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
+
+        ivn_entrada_centroPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_entrada_centroPanelActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(ivn_entrada_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
+
+        ivn_buscar_centro.setText("BUSCAR");
+        ivn_buscar_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_buscar_centroActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(ivn_buscar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
+
+        ivn_tabla_lista_centros.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE ESTABLECIMIENTOS DE SALUD", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        ivn_tabla_lista_centros.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(ivn_tabla_lista_centros);
+
+        panel_datos1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 830, 410));
+
+        ivn_btn_editar_centroPanel.setText("EDITAR");
+        ivn_btn_editar_centroPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_editar_centroPanelActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(ivn_btn_editar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
+
+        ivn_btn_eliminar_centroPanel.setText("ELIMINAR");
+        ivn_btn_eliminar_centroPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_eliminar_centroPanelActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(ivn_btn_eliminar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
+
+        ivn_btn_imprimir_centrosPanel.setText("IMPRIMIR ESTABLECIMIENTOS");
+        ivn_btn_imprimir_centrosPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_imprimir_centrosPanelActionPerformed(evt);
+            }
+        });
+        panel_datos1.add(ivn_btn_imprimir_centrosPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
+
+        panel_tabla_centro.addTab("LISTA DE ESTABLECIMIENTOS", panel_datos1);
+
+        panel_centros.add(panel_tabla_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 850, 630));
 
         jPanel1.add(panel_centros, "card2");
 
@@ -1034,36 +1438,456 @@ public final class inicio extends javax.swing.JFrame {
         panel_insecticidas.setBackground(new java.awt.Color(255, 255, 255));
         panel_insecticidas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel6.setText("PANEL_INSEC");
-        panel_insecticidas.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        ivn_jl_panelInsecticida_insecticidas.setBackground(new java.awt.Color(0, 153, 153));
+        ivn_jl_panelInsecticida_insecticidas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ivn_jl_panelInsecticida_insecticidas.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_panelInsecticida_insecticidas.setText("PANEL_INSECTICIDAS");
+        panel_insecticidas.add(ivn_jl_panelInsecticida_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 260, 30));
+
+        panel_añadir_2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ivn_jl_1_insecticidas.setText("NOMBRE INSECTICIDA");
+        panel_añadir_2.add(ivn_jl_1_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 240, 40));
+
+        ivn_num_lote_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_num_lote_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(ivn_num_lote_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 420, 40));
+
+        ivn_jl_2_insecticidas.setText("NUM DE LOTE");
+        panel_añadir_2.add(ivn_jl_2_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 240, 40));
+
+        ivn_lote_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_lote_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(ivn_lote_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 420, 40));
+
+        ivn_jl_3_insecticidas.setText("DOSIS");
+        panel_añadir_2.add(ivn_jl_3_insecticidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 240, 40));
+
+        ivn_bt_guardar_insecticida.setText("GUARDAR");
+        ivn_bt_guardar_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_guardar_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(ivn_bt_guardar_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 190, 70));
+
+        ivn_bt_nuevo_insecticida.setText("NUEVO");
+        ivn_bt_nuevo_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_nuevo_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(ivn_bt_nuevo_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 190, 70));
+
+        ivn_bt_eliminar_insecticida.setText("ELIMINAR");
+        ivn_bt_eliminar_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_eliminar_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(ivn_bt_eliminar_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 190, 70));
+
+        ivn_nombre_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_nombre_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_añadir_2.add(ivn_nombre_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 420, 40));
+
+        panel_tabla_insect.addTab("AÑADIR", panel_añadir_2);
+
+        panel_datos2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ivn_cb_lista_insecticida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "NUM LOTE" }));
+        panel_datos2.add(ivn_cb_lista_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 220, 40));
+
+        ivn_entrada_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_entrada_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(ivn_entrada_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 470, 40));
+
+        ivn_bt_buscar_insecticida.setText("BUSCAR");
+        ivn_bt_buscar_insecticida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_buscar_insecticidaActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(ivn_bt_buscar_insecticida, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 120, 40));
+
+        ivn_lista_insecticidas.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "LISTA DE INSECTICIDAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
+        ivn_lista_insecticidas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(ivn_lista_insecticidas);
+
+        panel_datos2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 830, 410));
+
+        ivn_bt_editar_insecticidaPanel.setText("EDITAR");
+        ivn_bt_editar_insecticidaPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_editar_insecticidaPanelActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(ivn_bt_editar_insecticidaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 196, 60));
+
+        ivn_bt_eliminar_insecticidaPanel.setText("ELIMINAR");
+        ivn_bt_eliminar_insecticidaPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_eliminar_insecticidaPanelActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(ivn_bt_eliminar_insecticidaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 168, 60));
+
+        ivn_bt_imprimir_insecticidaPanel.setText("IMPRIMIR ESTABLECIMIENTOS");
+        ivn_bt_imprimir_insecticidaPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bt_imprimir_insecticidaPanelActionPerformed(evt);
+            }
+        });
+        panel_datos2.add(ivn_bt_imprimir_insecticidaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, -1, 60));
+
+        panel_tabla_insect.addTab("LISTA DE INSECTICIDAS", panel_datos2);
+
+        panel_insecticidas.add(panel_tabla_insect, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 850, 630));
 
         jPanel1.add(panel_insecticidas, "card2");
 
         panel_formularios.setBackground(new java.awt.Color(255, 255, 255));
         panel_formularios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("PANEL_FORMUALIO");
-        panel_formularios.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, -1, -1));
+        titulo_planilla_form.setBackground(new java.awt.Color(0, 153, 153));
+        titulo_planilla_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        titulo_planilla_form.setForeground(new java.awt.Color(102, 102, 102));
+        titulo_planilla_form.setText("PLANILLA DIARIA DE ROSIADO RR1-CH-MA");
+        panel_formularios.add(titulo_planilla_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
+
+        ivn_jl_5_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_5_form.setText("COMUNIDAD:");
+        panel_formularios.add(ivn_jl_5_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 100, 30));
+
+        ivn_jl_1_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_1_form.setText("SEDES:");
+        panel_formularios.add(ivn_jl_1_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 50, 30));
+
+        ivn_jl_2_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_2_form.setText("RED DE SALUD:");
+        panel_formularios.add(ivn_jl_2_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 110, 30));
+
+        ivn_jl_3_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_3_form.setText("E. SALUD:");
+        panel_formularios.add(ivn_jl_3_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 70, 30));
+
+        ivn_jl_4_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_4_form.setText("MUNICIPIO:");
+        panel_formularios.add(ivn_jl_4_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, 90, 30));
+
+        ivn_cb_comunidad_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_comunidad_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 90, -1));
+
+        ivn_cb_cedes_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_cedes_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 130, -1));
+
+        ivn_cb_red_salud_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_red_salud_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 100, -1));
+
+        ivn_cb_est_salud_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_est_salud_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 100, -1));
+
+        ivn_cb_minicipio_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_minicipio_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 60, 120, -1));
+
+        ivn_jl_31_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_31_form.setText("DOSIS:");
+        panel_formularios.add(ivn_jl_31_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 50, 30));
+
+        ivn_jl_24_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_24_form.setText("NOMBRE ROCIADOR:");
+        panel_formularios.add(ivn_jl_24_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 150, 30));
+
+        ivn_jl_32_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_32_form.setText("NOMBRE JEFE DE BRIGADA:");
+        panel_formularios.add(ivn_jl_32_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 190, 30));
+
+        ivn_jl_25_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_25_form.setText("INSECTICIDA UTILIZADO:");
+        panel_formularios.add(ivn_jl_25_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 170, 30));
+
+        ivn_jl_33_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_33_form.setText("CICLO DEL ROCIADO:");
+        panel_formularios.add(ivn_jl_33_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, 150, 30));
+
+        ivn_cb_rosiador_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_rosiador_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 380, -1));
+
+        ivn_cb_jefe_brigada_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_jefe_brigada_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
+
+        ivn_cb_insecticida_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_insecticida_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 210, -1));
+        panel_formularios.add(ivn_dosis_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 90, -1));
+
+        ivn_jl_26_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_26_form.setText("FECHA DEL ROSIADO:");
+        panel_formularios.add(ivn_jl_26_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, 150, 30));
+
+        ivn_jl_27_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_27_form.setText("DIA:");
+        panel_formularios.add(ivn_jl_27_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 40, 30));
+        panel_formularios.add(ivn_dia_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 60, -1));
+
+        ivn_jl_28_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_28_form.setText("MES:");
+        panel_formularios.add(ivn_jl_28_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 40, 30));
+        panel_formularios.add(ivn_mes_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 80, -1));
+
+        ivn_jl_29_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_29_form.setText("AÑO:");
+        panel_formularios.add(ivn_jl_29_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 40, 30));
+        panel_formularios.add(ivn_año_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 90, -1));
+
+        ivn_jl_34_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_34_form.setText("LOTE DE INSECTICIDA:");
+        panel_formularios.add(ivn_jl_34_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, 150, 30));
+        panel_formularios.add(ivn_lote_insecticida_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 140, -1));
+
+        ivn_jl_30_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_30_form.setText("OBSERVACIONES:");
+        panel_formularios.add(ivn_jl_30_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 140, 30));
+
+        ivn_jl_6_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_6_form.setText("N° CASA CV:");
+        panel_formularios.add(ivn_jl_6_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 90, 30));
+
+        ivn_num_casaViv_form.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_num_casaViv_formActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_num_casaViv_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 90, 30));
+
+        ivn_jl_7_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_7_form.setText("NOMBRE Y APELLIDO DE JEFE DE FAMILIA:");
+        panel_formularios.add(ivn_jl_7_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 280, 30));
+
+        ivn_nombre_jefeFamilia_form.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_nombre_jefeFamilia_formActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_nombre_jefeFamilia_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 280, 30));
+
+        ivn_jl_8_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_8_form.setText("N° HABITACIONES PROTEGIDAS:");
+        panel_formularios.add(ivn_jl_8_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 220, 30));
+
+        ivn_num_habit_form.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_num_habit_formActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_num_habit_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 220, 30));
+
+        ivn_jl_9_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_9_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_9_form.setText("ROSIADO");
+        ivn_jl_9_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_9_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 1000, 30));
+
+        ivn_jl_10_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_10_form.setText("CERRADA/RENUENTE");
+        ivn_jl_10_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_10_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 160, 30));
+
+        ivn_jl_11_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_11_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_11_form.setText("INTRADOMICILIO N° DE HABITACIONES ");
+        ivn_jl_11_form.setToolTipText("");
+        ivn_jl_11_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_11_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 370, 30));
+
+        ivn_jl_12_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_12_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_12_form.setText("PERIDOMICILIO");
+        ivn_jl_12_form.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panel_formularios.add(ivn_jl_12_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 30));
+
+        ivn_cb_conformidad_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_conformidad_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 350, 140, -1));
+
+        ivn_cb_cerrada_renuente_form.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        panel_formularios.add(ivn_cb_cerrada_renuente_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 160, 30));
+
+        ivn_jl_13_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_13_form.setText("ROCIADAS");
+        panel_formularios.add(ivn_jl_13_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 50, 30));
+        panel_formularios.add(ivn_num_rociados_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 70, 30));
+
+        ivn_jl_14_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_14_form.setText("NO ROCIADAS");
+        panel_formularios.add(ivn_jl_14_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 50, 30));
+        panel_formularios.add(ivn_num_no_rociados_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 60, 30));
+
+        ivn_jl_15_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_15_form.setText("TOTAL");
+        panel_formularios.add(ivn_jl_15_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 50, 30));
+        panel_formularios.add(ivn_total_rosiados_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 70, 30));
+
+        ivn_jl_16_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_16_form.setText("CORRALES");
+        panel_formularios.add(ivn_jl_16_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, -1, 30));
+        panel_formularios.add(ivn_num_corrales_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 70, 30));
+
+        ivn_jl_17_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_17_form.setText("GALLINEROS");
+        panel_formularios.add(ivn_jl_17_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, 50, 30));
+        panel_formularios.add(ivn_num_gallineros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 60, 30));
+
+        ivn_jl_18_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_18_form.setText("CONEJERAS");
+        panel_formularios.add(ivn_jl_18_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 250, 50, 30));
+        panel_formularios.add(ivn_num_conejos_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 250, 70, 30));
+        panel_formularios.add(ivn_num_zarjos_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 70, 30));
+
+        ivn_jl_19_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_19_form.setText("ZARJO O TROJE");
+        panel_formularios.add(ivn_jl_19_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 50, 30));
+        panel_formularios.add(ivn_num_otros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 290, 70, 30));
+
+        ivn_jl_20_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_20_form.setText("OTROS");
+        panel_formularios.add(ivn_jl_20_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 290, 50, 30));
+
+        ivn_jl_21_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_21_form.setText("N° DE CARGAS:");
+        panel_formularios.add(ivn_jl_21_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 110, 30));
+        panel_formularios.add(ivn_num_cargas_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 90, -1));
+
+        ivn_jl_22_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_22_form.setText("EN ML. O GR.:");
+        panel_formularios.add(ivn_jl_22_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 110, 30));
+        panel_formularios.add(ivn_ml_gr_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 90, -1));
+
+        ivn_jl_23_form.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_23_form.setText("CONFORMIDAD:");
+        panel_formularios.add(ivn_jl_23_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 110, 30));
+
+        ivn_obs_form.setColumns(20);
+        ivn_obs_form.setRows(5);
+        jScrollPane4.setViewportView(ivn_obs_form);
+
+        panel_formularios.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 740, 40));
+
+        ivn_margen1.setEditable(false);
+        ivn_margen1.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_margen1ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_margen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1000, 70));
+
+        ivn_margen2.setEditable(false);
+        ivn_margen2.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_margen2ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_margen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 530, 50));
+
+        ivn_margen5.setEditable(false);
+        ivn_margen5.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_margen5ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_margen5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 470, 110));
+
+        ivn_ciclo_rosiado_form.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_ciclo_rosiado_formActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_ciclo_rosiado_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 450, 140, -1));
+
+        ivn_bn_buscar_casa_form.setText("BUSCAR");
+        panel_formularios.add(ivn_bn_buscar_casa_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 110, 30));
+
+        ivn_margen.setEditable(false);
+        ivn_margen.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_margenActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_margen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 1000, 180));
+
+        ivn_margen3.setEditable(false);
+        ivn_margen3.setBackground(new java.awt.Color(255, 255, 255));
+        ivn_margen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ivn_margen3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_margen3ActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_margen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 1000, 280));
+
+        ivn_bn_nueva_form.setText("NUEVA PLANILLA");
+        ivn_bn_nueva_form.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bn_nueva_formActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_bn_nueva_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 590, -1, -1));
+
+        ivn_bn_guardar_form.setText("GUARDAR");
+        ivn_bn_guardar_form.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_bn_guardar_formActionPerformed(evt);
+            }
+        });
+        panel_formularios.add(ivn_bn_guardar_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 590, -1, -1));
+
+        ivn_bn_limpiar_form.setText("LIMPIAR");
+        panel_formularios.add(ivn_bn_limpiar_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 590, -1, -1));
 
         jPanel1.add(panel_formularios, "card2");
 
         panel_rdiario.setBackground(new java.awt.Color(255, 255, 255));
         panel_rdiario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jPanel1.add(panel_rdiario, "card2");
 
         panelRound2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1240, 680));
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1137,7 +1961,7 @@ public final class inicio extends javax.swing.JFrame {
         gestionarBtn(jButton12,btns );
         gestionarBtnOpaque( btns);
         JPanel[] pnl = {panel_brigadas,panel_usuario,panel_formularios,panel_centros,panel_rdiario,panel_rmensual,panel_viviendas};
-        moverMenu.gestionarPnl(panel_rdiario, pnl);
+        moverMenu.gestionarPnl(panel_insecticidas, pnl);
         moverMenu.realizarMov(menu);
     }//GEN-LAST:event_jButton12ActionPerformed
 
@@ -1204,6 +2028,201 @@ public final class inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+
+    private void ivn_entrada_panel_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_panel_usuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_entrada_panel_usuarioActionPerformed
+
+    private void ivn_ci_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_ci_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_ci_usrActionPerformed
+
+    private void ivn_cargo_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cargo_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_cargo_usrActionPerformed
+
+    private void ivn_btn_usr_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_usr_buscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_usr_buscarActionPerformed
+
+    private void ivn_btn_guardar_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_guardar_usrActionPerformed
+
+    private void ivn_btn_nuevo_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_nuevo_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_nuevo_usrActionPerformed
+
+    private void btn_eliminarPanel_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarPanel_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_eliminarPanel_usrActionPerformed
+
+    private void inv_nombre_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inv_nombre_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inv_nombre_usrActionPerformed
+
+    private void ivn_btn_editar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_usrPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_editar_usrPanelActionPerformed
+
+    private void ivn_btn_eliminar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_usrPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_eliminar_usrPanelActionPerformed
+
+    private void ivn_btn_imprimir_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_imprimir_usrPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_imprimir_usrPanelActionPerformed
+
+    private void ivn_red_salud_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_red_salud_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_red_salud_centroActionPerformed
+
+    private void ivn_direccion_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_direccion_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_direccion_centroActionPerformed
+
+    private void ivn_btn_guardar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_centroActionPerformed
+        // TODO add your handling code here:
+        // llamar y llenar un objeto de centro de salud
+        // llamar y llemar en bd usando DAO
+        Centro centro = new Centro();
+        
+        centro.setId(12);
+        centro.setNombre(ivn_nombre_centro.getText());
+        centro.setRed_salud(ivn_red_salud_centro.getText());
+        centro.setDireccion(ivn_direccion_centro.getText());
+        
+        CentroDAO centrodao = new CentroDAO();
+        
+        centrodao.insertarCentroSalud(centro);
+        
+        
+    }//GEN-LAST:event_ivn_btn_guardar_centroActionPerformed
+
+    private void ivn_btn_nuevo_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_nuevo_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_nuevo_centroActionPerformed
+
+    private void ivn_btn_eliminar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_eliminar_centroActionPerformed
+
+    private void ivn_nombre_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_nombre_centroActionPerformed
+
+    private void ivn_entrada_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_centroPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_entrada_centroPanelActionPerformed
+
+    private void ivn_buscar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_buscar_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_buscar_centroActionPerformed
+
+    private void ivn_btn_editar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_centroPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_editar_centroPanelActionPerformed
+
+    private void ivn_btn_eliminar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_eliminar_centroPanelActionPerformed
+
+    private void ivn_btn_imprimir_centrosPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_imprimir_centrosPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_btn_imprimir_centrosPanelActionPerformed
+
+    private void ivn_contra_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_contra_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_contra_usrActionPerformed
+
+    private void ivn_num_lote_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_lote_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_num_lote_insecticidaActionPerformed
+
+    private void ivn_lote_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_lote_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_lote_insecticidaActionPerformed
+
+    private void ivn_bt_guardar_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_guardar_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_guardar_insecticidaActionPerformed
+
+    private void ivn_bt_nuevo_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_nuevo_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_nuevo_insecticidaActionPerformed
+
+    private void ivn_bt_eliminar_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_eliminar_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_eliminar_insecticidaActionPerformed
+
+    private void ivn_nombre_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_nombre_insecticidaActionPerformed
+
+    private void ivn_entrada_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_entrada_insecticidaActionPerformed
+
+    private void ivn_bt_buscar_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_buscar_insecticidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_buscar_insecticidaActionPerformed
+
+    private void ivn_bt_editar_insecticidaPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_editar_insecticidaPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_editar_insecticidaPanelActionPerformed
+
+    private void ivn_bt_eliminar_insecticidaPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_eliminar_insecticidaPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_eliminar_insecticidaPanelActionPerformed
+
+    private void ivn_bt_imprimir_insecticidaPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bt_imprimir_insecticidaPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bt_imprimir_insecticidaPanelActionPerformed
+
+    private void ivn_num_casaViv_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_casaViv_formActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_num_casaViv_formActionPerformed
+
+    private void ivn_nombre_jefeFamilia_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_jefeFamilia_formActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_nombre_jefeFamilia_formActionPerformed
+
+    private void ivn_num_habit_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_habit_formActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_num_habit_formActionPerformed
+
+    private void ivn_margen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_margen1ActionPerformed
+
+    private void ivn_margen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_margen2ActionPerformed
+
+    private void ivn_margenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_margenActionPerformed
+
+    private void ivn_margen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_margen3ActionPerforme
+
+    private void ivn_bn_nueva_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bn_nueva_formActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bn_nueva_formActionPerformed
+
+    private void ivn_bn_guardar_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bn_guardar_formActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_bn_guardar_formActionPerformed
+
+    private void ivn_ciclo_rosiado_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_ciclo_rosiado_formActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_ciclo_rosiado_formActionPerformed
+
+    private void ivn_margen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_margen5ActionPerformed
+
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -1219,6 +2238,7 @@ public final class inicio extends javax.swing.JFrame {
     private void guardar_nuevo_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_nuevo_rocActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_guardar_nuevo_rocActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1277,6 +2297,133 @@ public final class inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
+    private javax.swing.JButton btn_eliminarPanel_usr;
+    private javax.swing.JTextField inv_nombre_usr;
+    private javax.swing.JTextField ivn_año_form;
+    private javax.swing.JButton ivn_bn_buscar_casa_form;
+    private javax.swing.JButton ivn_bn_guardar_form;
+    private javax.swing.JButton ivn_bn_limpiar_form;
+    private javax.swing.JButton ivn_bn_nueva_form;
+    private javax.swing.JButton ivn_bt_buscar_insecticida;
+    private javax.swing.JButton ivn_bt_editar_insecticidaPanel;
+    private javax.swing.JButton ivn_bt_eliminar_insecticida;
+    private javax.swing.JButton ivn_bt_eliminar_insecticidaPanel;
+    private javax.swing.JButton ivn_bt_guardar_insecticida;
+    private javax.swing.JButton ivn_bt_imprimir_insecticidaPanel;
+    private javax.swing.JButton ivn_bt_nuevo_insecticida;
+    private javax.swing.JButton ivn_btn_editar_centroPanel;
+    private javax.swing.JButton ivn_btn_editar_usrPanel;
+    private javax.swing.JButton ivn_btn_eliminar_centro;
+    private javax.swing.JButton ivn_btn_eliminar_centroPanel;
+    private javax.swing.JButton ivn_btn_eliminar_usrPanel;
+    private javax.swing.JButton ivn_btn_guardar_centro;
+    private javax.swing.JButton ivn_btn_guardar_usr;
+    private javax.swing.JButton ivn_btn_imprimir_centrosPanel;
+    private javax.swing.JButton ivn_btn_imprimir_usrPanel;
+    private javax.swing.JButton ivn_btn_nuevo_centro;
+    private javax.swing.JButton ivn_btn_nuevo_usr;
+    private javax.swing.JButton ivn_btn_usr_buscar;
+    private javax.swing.JButton ivn_buscar_centro;
+    private javax.swing.JTextField ivn_cargo_usr;
+    private javax.swing.JComboBox<String> ivn_cb_cedes_form;
+    private javax.swing.JComboBox<String> ivn_cb_cerrada_renuente_form;
+    private javax.swing.JComboBox<String> ivn_cb_comunidad_form;
+    private javax.swing.JComboBox<String> ivn_cb_conformidad_form;
+    private javax.swing.JComboBox<String> ivn_cb_est_salud_form;
+    private javax.swing.JComboBox<String> ivn_cb_insecticida_form;
+    private javax.swing.JComboBox<String> ivn_cb_jefe_brigada_form;
+    private javax.swing.JComboBox<String> ivn_cb_lista_centros;
+    private javax.swing.JComboBox<String> ivn_cb_lista_insecticida;
+    private javax.swing.JComboBox<String> ivn_cb_minicipio_form;
+    private javax.swing.JComboBox<String> ivn_cb_nombre_usr;
+    private javax.swing.JComboBox<String> ivn_cb_red_salud_form;
+    private javax.swing.JComboBox<String> ivn_cb_rosiador_form;
+    private javax.swing.JTextField ivn_ci_usr;
+    private javax.swing.JTextField ivn_ciclo_rosiado_form;
+    private javax.swing.JTextField ivn_contra_usr;
+    private javax.swing.JTextField ivn_dia_form;
+    private javax.swing.JTextField ivn_direccion_centro;
+    private javax.swing.JTextField ivn_dosis_form;
+    private javax.swing.JTextField ivn_entrada_centroPanel;
+    private javax.swing.JTextField ivn_entrada_insecticida;
+    private javax.swing.JTextField ivn_entrada_panel_usuario;
+    private javax.swing.JLabel ivn_jl_10_form;
+    private javax.swing.JLabel ivn_jl_11_form;
+    private javax.swing.JLabel ivn_jl_12_form;
+    private javax.swing.JLabel ivn_jl_13_form;
+    private javax.swing.JLabel ivn_jl_14_form;
+    private javax.swing.JLabel ivn_jl_15_form;
+    private javax.swing.JLabel ivn_jl_16_form;
+    private javax.swing.JLabel ivn_jl_17_form;
+    private javax.swing.JLabel ivn_jl_18_form;
+    private javax.swing.JLabel ivn_jl_19_form;
+    private javax.swing.JLabel ivn_jl_1_centros;
+    private javax.swing.JLabel ivn_jl_1_form;
+    private javax.swing.JLabel ivn_jl_1_insecticidas;
+    private javax.swing.JLabel ivn_jl_1_usuarios;
+    private javax.swing.JLabel ivn_jl_20_form;
+    private javax.swing.JLabel ivn_jl_21_form;
+    private javax.swing.JLabel ivn_jl_22_form;
+    private javax.swing.JLabel ivn_jl_23_form;
+    private javax.swing.JLabel ivn_jl_24_form;
+    private javax.swing.JLabel ivn_jl_25_form;
+    private javax.swing.JLabel ivn_jl_26_form;
+    private javax.swing.JLabel ivn_jl_27_form;
+    private javax.swing.JLabel ivn_jl_28_form;
+    private javax.swing.JLabel ivn_jl_29_form;
+    private javax.swing.JLabel ivn_jl_2_centros;
+    private javax.swing.JLabel ivn_jl_2_form;
+    private javax.swing.JLabel ivn_jl_2_insecticidas;
+    private javax.swing.JLabel ivn_jl_2_usuarios;
+    private javax.swing.JLabel ivn_jl_30_form;
+    private javax.swing.JLabel ivn_jl_31_form;
+    private javax.swing.JLabel ivn_jl_32_form;
+    private javax.swing.JLabel ivn_jl_33_form;
+    private javax.swing.JLabel ivn_jl_34_form;
+    private javax.swing.JLabel ivn_jl_3_centros;
+    private javax.swing.JLabel ivn_jl_3_form;
+    private javax.swing.JLabel ivn_jl_3_insecticidas;
+    private javax.swing.JLabel ivn_jl_3_usuarios;
+    private javax.swing.JLabel ivn_jl_4_form;
+    private javax.swing.JLabel ivn_jl_4_usuarios;
+    private javax.swing.JLabel ivn_jl_5_form;
+    private javax.swing.JLabel ivn_jl_6_form;
+    private javax.swing.JLabel ivn_jl_7_form;
+    private javax.swing.JLabel ivn_jl_8_form;
+    private javax.swing.JLabel ivn_jl_9_form;
+    private javax.swing.JLabel ivn_jl_panelInsecticida_insecticidas;
+    private javax.swing.JLabel ivn_jl_panelcentros_form;
+    private javax.swing.JLabel ivn_jl_panelusr_form;
+    private javax.swing.JTable ivn_lista_insecticidas;
+    private javax.swing.JTextField ivn_lote_insecticida;
+    private javax.swing.JTextField ivn_lote_insecticida_form;
+    private javax.swing.JTextField ivn_margen;
+    private javax.swing.JTextField ivn_margen1;
+    private javax.swing.JTextField ivn_margen2;
+    private javax.swing.JTextField ivn_margen3;
+    private javax.swing.JTextField ivn_margen5;
+    private javax.swing.JTextField ivn_mes_form;
+    private javax.swing.JTextField ivn_ml_gr_form;
+    private javax.swing.JTextField ivn_nombre_centro;
+    private javax.swing.JTextField ivn_nombre_insecticida;
+    private javax.swing.JTextField ivn_nombre_jefeFamilia_form;
+    private javax.swing.JTextField ivn_num_cargas_form;
+    private javax.swing.JTextField ivn_num_casaViv_form;
+    private javax.swing.JTextField ivn_num_conejos_form;
+    private javax.swing.JTextField ivn_num_corrales_form;
+    private javax.swing.JTextField ivn_num_gallineros_form;
+    private javax.swing.JTextField ivn_num_habit_form;
+    private javax.swing.JTextField ivn_num_lote_insecticida;
+    private javax.swing.JTextField ivn_num_no_rociados_form;
+    private javax.swing.JTextField ivn_num_otros_form;
+    private javax.swing.JTextField ivn_num_rociados_form;
+    private javax.swing.JTextField ivn_num_zarjos_form;
+    private javax.swing.JTextArea ivn_obs_form;
+    private javax.swing.JTextField ivn_red_salud_centro;
+    private javax.swing.JTable ivn_tabla_lista_centros;
+    private javax.swing.JTable ivn_tabla_lista_usr;
+    private javax.swing.JTextField ivn_total_rosiados_form;
     private javax.swing.JLabel brig_roc;
     private javax.swing.JButton buscar_viv;
     private javax.swing.JLabel ci_brig;
@@ -1309,6 +2456,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton guardar_roc;
     private javax.swing.JButton guardar_viv;
     private javax.swing.JButton jButton1;
+
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1323,6 +2471,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
@@ -1347,6 +2496,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel label_rociadores;
     private javax.swing.JLabel label_viviendas;
     private javax.swing.JTabbedPane lis_viv;
+
     private interfaces.PanelRound menu;
     private javax.swing.JLabel n_habitaciones;
     private javax.swing.JLabel n_vivienda;
@@ -1359,16 +2509,31 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton nuevo_brig;
     private javax.swing.JButton nuevo_viv;
     private interfaces.PanelRound panelRound2;
-    private javax.swing.JPanel panel_act_viv;
+
+    private javax.swing.JPanel panel_añadir_;
+    private javax.swing.JPanel panel_añadir_1;
+    private javax.swing.JPanel panel_añadir_2;
+
+    private javax.swing.JPanel panel_act_viv; 
+
     private javax.swing.JPanel panel_brigadas;
     private javax.swing.JPanel panel_centros;
+    private javax.swing.JPanel panel_datos;
+    private javax.swing.JPanel panel_datos1;
+    private javax.swing.JPanel panel_datos2;
     private javax.swing.JPanel panel_formularios;
     private javax.swing.JPanel panel_insecticidas;
     private javax.swing.JPanel panel_lis_viv;
     private javax.swing.JPanel panel_rdiario;
     private javax.swing.JPanel panel_rmensual;
+    private javax.swing.JTabbedPane panel_tabla_centro;
+    private javax.swing.JTabbedPane panel_tabla_insect;
+    private javax.swing.JTabbedPane panel_tabla_usuario;
     private javax.swing.JPanel panel_usuario;
     private javax.swing.JPanel panel_viviendas;
+
+    private javax.swing.JLabel titulo_planilla_form;
+
     private javax.swing.JTable table_brigadas;
     private javax.swing.JTable table_jefes;
     private javax.swing.JTable table_rociadores;
@@ -1378,5 +2543,6 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel tel_roc;
     private javax.swing.JTextField tel_rociadores;
     private javax.swing.JTextField zona_brigada;
+
     // End of variables declaration//GEN-END:variables
 }

@@ -13,7 +13,7 @@ public class ConexionBD {
     private static final String URL = "jdbc:postgresql://localhost:5432/Chagas_Aiquile";
     private static final String USUARIO = "postgres";
     private static final String CONTRASEÑA = "1234";
-
+    
     public static Connection obtenerConexion() {
         Connection conexion = null;
         try {
