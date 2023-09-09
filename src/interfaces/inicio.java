@@ -98,9 +98,81 @@ public final class inicio extends javax.swing.JFrame {
         ivn_btn_eliminar_centroPanel = new javax.swing.JButton();
         ivn_btn_imprimir_centrosPanel = new javax.swing.JButton();
         panel_viviendas = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        lis_viv = new javax.swing.JTabbedPane();
+        panel_act_viv = new javax.swing.JPanel();
+        dirVivienda = new javax.swing.JLabel();
+        label_viviendas = new javax.swing.JLabel();
+        n_vivienda = new javax.swing.JLabel();
+        jefe_familia = new javax.swing.JLabel();
+        n_habitaciones = new javax.swing.JLabel();
+        telVivienda = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        guardar_viv = new javax.swing.JButton();
+        nuevo_viv = new javax.swing.JButton();
+        eliminar_viv = new javax.swing.JButton();
+        panel_lis_viv = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        combo_viv = new javax.swing.JComboBox<>();
+        jTextField6 = new javax.swing.JTextField();
+        buscar_viv = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         panel_brigadas = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        gestion_brigadas = new javax.swing.JTabbedPane();
+        ges_brig = new javax.swing.JPanel();
+        label_brig = new javax.swing.JLabel();
+        nom_brig = new javax.swing.JLabel();
+        nombre_jefe1 = new javax.swing.JTextField();
+        ci_brig = new javax.swing.JLabel();
+        zona_brigada = new javax.swing.JTextField();
+        jefe_brig = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        table_brigadas = new javax.swing.JTable();
+        nuevo_brig = new javax.swing.JButton();
+        guardar_nuevo_brig = new javax.swing.JButton();
+        guardar_brig = new javax.swing.JButton();
+        eliminar_brig = new javax.swing.JButton();
+        est_jefe_brigada = new javax.swing.JComboBox<>();
+        ges_roc = new javax.swing.JPanel();
+        label_rociadores = new javax.swing.JLabel();
+        nom_roc = new javax.swing.JLabel();
+        nombre_rociadores = new javax.swing.JTextField();
+        ci_roc = new javax.swing.JLabel();
+        ci_rociadores = new javax.swing.JTextField();
+        dir_roc = new javax.swing.JLabel();
+        dir_rociadores = new javax.swing.JTextField();
+        tel_roc = new javax.swing.JLabel();
+        tel_rociadores = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        table_rociadores = new javax.swing.JTable();
+        guardar_roc = new javax.swing.JButton();
+        guardar_nuevo_roc = new javax.swing.JButton();
+        guardar_cambios_roc = new javax.swing.JButton();
+        eliminar_roc = new javax.swing.JButton();
+        brig_roc = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        ges_jefes = new javax.swing.JPanel();
+        dir_jefe = new javax.swing.JLabel();
+        guardar_jefe = new javax.swing.JButton();
+        label_jefes = new javax.swing.JLabel();
+        nom_jefe = new javax.swing.JLabel();
+        ci_jefe = new javax.swing.JLabel();
+        tel_jefe = new javax.swing.JLabel();
+        nombre_jefe = new javax.swing.JTextField();
+        ci_jefe_brig = new javax.swing.JTextField();
+        dir_jefe_brig = new javax.swing.JTextField();
+        tel_jefe_brig = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        table_jefes = new javax.swing.JTable();
+        guardar_jefe1 = new javax.swing.JButton();
+        guardar_jefe2 = new javax.swing.JButton();
+        guardar_jefe3 = new javax.swing.JButton();
         panel_insecticidas = new javax.swing.JPanel();
         ivn_jl_panelInsecticida_insecticidas = new javax.swing.JLabel();
         panel_tabla_insect = new javax.swing.JTabbedPane();
@@ -200,7 +272,6 @@ public final class inicio extends javax.swing.JFrame {
         ivn_bn_guardar_form = new javax.swing.JButton();
         ivn_bn_limpiar_form = new javax.swing.JButton();
         panel_rdiario = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -242,9 +313,10 @@ public final class inicio extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
-        jButton9.setText("USUARIOS");
-        jButton9.setToolTipText("");
-        jButton9.setActionCommand("USUARIOS     ");
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user-.png"))); // NOI18N
+        jButton9.setText("USUARIOS     ");
+
         jButton9.setAlignmentY(0.0F);
         jButton9.setAutoscrolls(true);
         jButton9.setBorder(null);
@@ -268,7 +340,10 @@ public final class inicio extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 204, 204));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
-        jButton8.setText("VIVIENDAS");
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/vivienda.png"))); // NOI18N
+        jButton8.setText("VIVIENDAS     ");
+
         jButton8.setActionCommand(" VIVIENDAS         ");
         jButton8.setAlignmentY(0.0F);
         jButton8.setAutoscrolls(true);
@@ -286,16 +361,21 @@ public final class inicio extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        menu.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 200, 30));
+        menu.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 220, 30));
 
         jButton10.setBackground(new java.awt.Color(0, 204, 204));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
-        jButton10.setText("BRIGADAS");
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user.png"))); // NOI18N
+        jButton10.setText("BRIGADAS     ");
+
         jButton10.setAlignmentY(0.0F);
         jButton10.setAutoscrolls(true);
         jButton10.setBorder(null);
         jButton10.setContentAreaFilled(false);
+        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton10.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -307,12 +387,15 @@ public final class inicio extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        menu.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 200, 30));
+        menu.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 220, 30));
 
         jButton11.setBackground(new java.awt.Color(0, 204, 204));
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
-        jButton11.setText("CENTROS DE SALUD");
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/centro_salud.png"))); // NOI18N
+        jButton11.setText("CENTROS DE SALUD     ");
+
         jButton11.setAlignmentY(0.0F);
         jButton11.setAutoscrolls(true);
         jButton11.setBorder(null);
@@ -334,11 +417,16 @@ public final class inicio extends javax.swing.JFrame {
         jButton12.setBackground(new java.awt.Color(0, 204, 204));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
-        jButton12.setText("INSECTICIDAS");
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/insec.png"))); // NOI18N
+        jButton12.setText("INSECTICIDAS     ");
+
         jButton12.setAlignmentY(0.0F);
         jButton12.setAutoscrolls(true);
         jButton12.setBorder(null);
         jButton12.setContentAreaFilled(false);
+        jButton12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -350,16 +438,21 @@ public final class inicio extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        menu.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 200, 30));
+        menu.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 220, 30));
 
         jButton13.setBackground(new java.awt.Color(0, 204, 204));
         jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(51, 51, 51));
-        jButton13.setText("FORMULARIOS");
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/form.png"))); // NOI18N
+        jButton13.setText("FORMULARIOS     ");
+
         jButton13.setAlignmentY(0.0F);
         jButton13.setAutoscrolls(true);
         jButton13.setBorder(null);
         jButton13.setContentAreaFilled(false);
+        jButton13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton13.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -371,16 +464,21 @@ public final class inicio extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        menu.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 200, 30));
+        menu.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 220, 30));
 
         jButton15.setBackground(new java.awt.Color(0, 204, 204));
         jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
-        jButton15.setText("REPORTE DIARIO");
+
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/diario.png"))); // NOI18N
+        jButton15.setText("REPORTE DIARIO     ");
+
         jButton15.setAlignmentY(0.0F);
         jButton15.setAutoscrolls(true);
         jButton15.setBorder(null);
         jButton15.setContentAreaFilled(false);
+        jButton15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton15.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton15.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -392,16 +490,21 @@ public final class inicio extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        menu.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 200, 30));
+        menu.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 210, 30));
 
         jButton16.setBackground(new java.awt.Color(0, 204, 204));
         jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
-        jButton16.setText("REPORTE MENSUAL");
+
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mensual.png"))); // NOI18N
+        jButton16.setText("REPORTE MENSUAL     ");
+
         jButton16.setAlignmentY(0.0F);
         jButton16.setAutoscrolls(true);
         jButton16.setBorder(null);
         jButton16.setContentAreaFilled(false);
+        jButton16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton16.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -413,7 +516,7 @@ public final class inicio extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        menu.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 200, 30));
+        menu.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 220, 30));
 
         jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -737,21 +840,598 @@ public final class inicio extends javax.swing.JFrame {
         panel_viviendas.setBackground(new java.awt.Color(255, 255, 255));
         panel_viviendas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("PANEL_VIVIENDAS");
-        panel_viviendas.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        panel_act_viv.setBackground(new java.awt.Color(255, 255, 255));
+
+        dirVivienda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dirVivienda.setForeground(new java.awt.Color(102, 102, 102));
+        dirVivienda.setText("Dirección: ");
+
+        label_viviendas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        label_viviendas.setForeground(new java.awt.Color(102, 102, 102));
+        label_viviendas.setText("REGISTRO Y EDICION DE VIVIENDAS");
+
+        n_vivienda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        n_vivienda.setForeground(new java.awt.Color(102, 102, 102));
+        n_vivienda.setText("Número de Vivienda:");
+
+        jefe_familia.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jefe_familia.setForeground(new java.awt.Color(102, 102, 102));
+        jefe_familia.setText("Jefe de Familia:");
+
+        n_habitaciones.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        n_habitaciones.setForeground(new java.awt.Color(102, 102, 102));
+        n_habitaciones.setText("Número de Habitaciones:");
+
+        telVivienda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        telVivienda.setForeground(new java.awt.Color(102, 102, 102));
+        telVivienda.setText("Tel/Cel de Referencia:");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        guardar_viv.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_viv.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_viv.setText("GUARDAR");
+
+        nuevo_viv.setBackground(new java.awt.Color(51, 153, 255));
+        nuevo_viv.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        nuevo_viv.setText("NUEVO");
+
+        eliminar_viv.setBackground(new java.awt.Color(51, 153, 255));
+        eliminar_viv.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        eliminar_viv.setText("ELIMINAR");
+
+        javax.swing.GroupLayout panel_act_vivLayout = new javax.swing.GroupLayout(panel_act_viv);
+        panel_act_viv.setLayout(panel_act_vivLayout);
+        panel_act_vivLayout.setHorizontalGroup(
+            panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_act_vivLayout.createSequentialGroup()
+                .addContainerGap(277, Short.MAX_VALUE)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_act_vivLayout.createSequentialGroup()
+                        .addComponent(nuevo_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(eliminar_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69)
+                        .addComponent(guardar_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(302, 302, 302))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_act_vivLayout.createSequentialGroup()
+                        .addComponent(label_viviendas)
+                        .addGap(272, 272, 272))))
+            .addGroup(panel_act_vivLayout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panel_act_vivLayout.createSequentialGroup()
+                        .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(telVivienda)
+                            .addComponent(dirVivienda))
+                        .addGap(37, 37, 37)
+                        .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+                            .addComponent(jTextField3)))
+                    .addGroup(panel_act_vivLayout.createSequentialGroup()
+                        .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(n_habitaciones)
+                            .addComponent(n_vivienda)
+                            .addComponent(jefe_familia))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField4)
+                            .addComponent(jTextField1))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel_act_vivLayout.setVerticalGroup(
+            panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_act_vivLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(label_viviendas)
+                .addGap(57, 57, 57)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n_vivienda))
+                .addGap(18, 18, 18)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(n_habitaciones)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jefe_familia)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dirVivienda, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(telVivienda)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(panel_act_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(guardar_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nuevo_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eliminar_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(169, Short.MAX_VALUE))
+        );
+
+        lis_viv.addTab("Actualizar Vivienda", panel_act_viv);
+
+        panel_lis_viv.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        combo_viv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NUMERO", "JEFE DE FAMILIA" }));
+
+        jTextField6.setText("jTextField6");
+
+        buscar_viv.setText("BUSCAR");
+
+        jButton1.setText("ELIMINAR");
+
+        jButton2.setText("EDITAR");
+
+        jButton3.setText("NUEVO");
+
+        javax.swing.GroupLayout panel_lis_vivLayout = new javax.swing.GroupLayout(panel_lis_viv);
+        panel_lis_viv.setLayout(panel_lis_vivLayout);
+        panel_lis_vivLayout.setHorizontalGroup(
+            panel_lis_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_lis_vivLayout.createSequentialGroup()
+                .addGroup(panel_lis_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_lis_vivLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(panel_lis_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 912, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_lis_vivLayout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(combo_viv, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(buscar_viv))))
+                    .addGroup(panel_lis_vivLayout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel_lis_vivLayout.setVerticalGroup(
+            panel_lis_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_lis_vivLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(panel_lis_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(combo_viv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buscar_viv))
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addGroup(panel_lis_vivLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
+                .addContainerGap(78, Short.MAX_VALUE))
+        );
+
+        lis_viv.addTab("Lista de Viviendas", panel_lis_viv);
+
+        panel_viviendas.add(lis_viv, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 1000, 640));
 
         jPanel1.add(panel_viviendas, "card2");
 
         panel_brigadas.setBackground(new java.awt.Color(255, 255, 255));
         panel_brigadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("PANEL_BRIGADAS");
-        panel_brigadas.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, -1));
+        ges_brig.setBackground(new java.awt.Color(255, 255, 255));
+
+        label_brig.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        label_brig.setForeground(new java.awt.Color(102, 102, 102));
+        label_brig.setText("REGISTRO Y EDICION DE BRIGADAS");
+
+        nom_brig.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        nom_brig.setForeground(new java.awt.Color(102, 102, 102));
+        nom_brig.setText("Nombre Brigada: ");
+
+        ci_brig.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ci_brig.setForeground(new java.awt.Color(102, 102, 102));
+        ci_brig.setText("Zona de Cobertura:");
+
+        jefe_brig.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jefe_brig.setForeground(new java.awt.Color(102, 102, 102));
+        jefe_brig.setText("Jefe de Brigada:");
+
+        table_brigadas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(table_brigadas);
+
+        nuevo_brig.setBackground(new java.awt.Color(51, 153, 255));
+        nuevo_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        nuevo_brig.setText("NUEVO");
+
+        guardar_nuevo_brig.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_nuevo_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_nuevo_brig.setText("GUARDAR NUEVO");
+        guardar_nuevo_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardar_nuevo_brigActionPerformed(evt);
+            }
+        });
+
+        guardar_brig.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_brig.setText("GUARDAR CAMBIOS");
+
+        eliminar_brig.setBackground(new java.awt.Color(51, 153, 255));
+        eliminar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        eliminar_brig.setText("ELIMINAR");
+
+        est_jefe_brigada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout ges_brigLayout = new javax.swing.GroupLayout(ges_brig);
+        ges_brig.setLayout(ges_brigLayout);
+        ges_brigLayout.setHorizontalGroup(
+            ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_brigLayout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nom_brig)
+                    .addComponent(ci_brig)
+                    .addComponent(jefe_brig))
+                .addGap(18, 18, 18)
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(zona_brigada)
+                    .addComponent(est_jefe_brigada, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nombre_jefe1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(218, 218, 218))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_brigLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(label_brig)
+                .addGap(286, 286, 286))
+            .addGroup(ges_brigLayout.createSequentialGroup()
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ges_brigLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 823, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ges_brigLayout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addComponent(nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(guardar_nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(guardar_brig)
+                        .addGap(35, 35, 35)
+                        .addComponent(eliminar_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(113, Short.MAX_VALUE))
+        );
+        ges_brigLayout.setVerticalGroup(
+            ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ges_brigLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(label_brig)
+                .addGap(12, 12, 12)
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nom_brig)
+                    .addComponent(nombre_jefe1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ci_brig)
+                    .addComponent(zona_brigada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jefe_brig)
+                    .addComponent(est_jefe_brigada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eliminar_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
+        );
+
+        gestion_brigadas.addTab("GESTION DE BRIGADAS", ges_brig);
+
+        ges_roc.setBackground(new java.awt.Color(255, 255, 255));
+
+        label_rociadores.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        label_rociadores.setForeground(new java.awt.Color(102, 102, 102));
+        label_rociadores.setText("REGISTRO Y EDICION DE ROCIADORES");
+
+        nom_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        nom_roc.setForeground(new java.awt.Color(102, 102, 102));
+        nom_roc.setText("Nombre Completo: ");
+
+        ci_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ci_roc.setForeground(new java.awt.Color(102, 102, 102));
+        ci_roc.setText("Cédula de Identidad:");
+
+        dir_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dir_roc.setForeground(new java.awt.Color(102, 102, 102));
+        dir_roc.setText("Dirección: ");
+
+        tel_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tel_roc.setForeground(new java.awt.Color(102, 102, 102));
+        tel_roc.setText("Tel/Cel:");
+
+        table_rociadores.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(table_rociadores);
+
+        guardar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_roc.setText("NUEVO");
+
+        guardar_nuevo_roc.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_nuevo_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_nuevo_roc.setText("GUARDAR NUEVO");
+        guardar_nuevo_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardar_nuevo_rocActionPerformed(evt);
+            }
+        });
+
+        guardar_cambios_roc.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_cambios_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_cambios_roc.setText("GUARDAR CAMBIOS");
+
+        eliminar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        eliminar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        eliminar_roc.setText("ELIMINAR");
+
+        brig_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        brig_roc.setForeground(new java.awt.Color(102, 102, 102));
+        brig_roc.setText("Brigada: ");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout ges_rocLayout = new javax.swing.GroupLayout(ges_roc);
+        ges_roc.setLayout(ges_rocLayout);
+        ges_rocLayout.setHorizontalGroup(
+            ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_rocLayout.createSequentialGroup()
+                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ges_rocLayout.createSequentialGroup()
+                        .addGap(224, 224, 224)
+                        .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nom_roc)
+                            .addComponent(ci_roc)
+                            .addComponent(dir_roc)
+                            .addComponent(brig_roc))
+                        .addGap(18, 18, 18)
+                        .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ges_rocLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(nombre_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(dir_rociadores)
+                            .addGroup(ges_rocLayout.createSequentialGroup()
+                                .addComponent(ci_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(tel_roc)
+                                .addGap(18, 18, 18)
+                                .addComponent(tel_rociadores))
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(ges_rocLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(label_rociadores)
+                        .addGap(68, 68, 68)))
+                .addGap(218, 218, 218))
+            .addGroup(ges_rocLayout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_rocLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(guardar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(guardar_nuevo_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(guardar_cambios_roc)
+                .addGap(35, 35, 35)
+                .addComponent(eliminar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(185, 185, 185))
+        );
+        ges_rocLayout.setVerticalGroup(
+            ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ges_rocLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(label_rociadores)
+                .addGap(12, 12, 12)
+                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nom_roc)
+                    .addComponent(nombre_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ci_roc)
+                    .addComponent(ci_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tel_roc)
+                    .addComponent(tel_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dir_roc)
+                    .addComponent(dir_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(brig_roc))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(guardar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_nuevo_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_cambios_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eliminar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
+        );
+
+        gestion_brigadas.addTab("GESTION DE ROCIADORES", ges_roc);
+
+        ges_jefes.setBackground(new java.awt.Color(255, 255, 255));
+
+        dir_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dir_jefe.setForeground(new java.awt.Color(102, 102, 102));
+        dir_jefe.setText("Dirección: ");
+
+        guardar_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_jefe.setText("NUEVO");
+
+        label_jefes.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        label_jefes.setForeground(new java.awt.Color(102, 102, 102));
+        label_jefes.setText("REGISTRO Y EDICION DE JEFES");
+
+        nom_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        nom_jefe.setForeground(new java.awt.Color(102, 102, 102));
+        nom_jefe.setText("Nombre Completo: ");
+
+        ci_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ci_jefe.setForeground(new java.awt.Color(102, 102, 102));
+        ci_jefe.setText("Cédula de Identidad:");
+
+        tel_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tel_jefe.setForeground(new java.awt.Color(102, 102, 102));
+        tel_jefe.setText("Tel/Cel:");
+
+        table_jefes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(table_jefes);
+
+        guardar_jefe1.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_jefe1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_jefe1.setText("GUARDAR NUEVO");
+        guardar_jefe1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardar_jefe1ActionPerformed(evt);
+            }
+        });
+
+        guardar_jefe2.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_jefe2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_jefe2.setText("GUARDAR CAMBIOS");
+
+        guardar_jefe3.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_jefe3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_jefe3.setText("ELIMINAR");
+
+        javax.swing.GroupLayout ges_jefesLayout = new javax.swing.GroupLayout(ges_jefes);
+        ges_jefes.setLayout(ges_jefesLayout);
+        ges_jefesLayout.setHorizontalGroup(
+            ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nom_jefe)
+                    .addComponent(ci_jefe)
+                    .addComponent(dir_jefe)
+                    .addComponent(tel_jefe))
+                .addGap(18, 18, 18)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ci_jefe_brig)
+                    .addComponent(dir_jefe_brig)
+                    .addComponent(tel_jefe_brig)
+                    .addComponent(nombre_jefe))
+                .addGap(218, 218, 218))
+            .addGroup(ges_jefesLayout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 843, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
+                        .addComponent(guardar_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(guardar_jefe1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(guardar_jefe2)
+                        .addGap(35, 35, 35)
+                        .addComponent(guardar_jefe3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(208, 208, 208))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
+                        .addComponent(label_jefes)
+                        .addGap(339, 339, 339))))
+        );
+        ges_jefesLayout.setVerticalGroup(
+            ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ges_jefesLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(label_jefes)
+                .addGap(12, 12, 12)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nom_jefe)
+                    .addComponent(nombre_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ci_jefe)
+                    .addComponent(ci_jefe_brig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dir_jefe)
+                    .addComponent(dir_jefe_brig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tel_jefe)
+                    .addComponent(tel_jefe_brig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(guardar_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_jefe1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_jefe2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(guardar_jefe3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
+        );
+
+        gestion_brigadas.addTab("GETION DE JEFES", ges_jefes);
+
+        panel_brigadas.add(gestion_brigadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 970, 600));
 
         jPanel1.add(panel_brigadas, "card2");
 
@@ -1197,23 +1877,17 @@ public final class inicio extends javax.swing.JFrame {
         panel_rdiario.setBackground(new java.awt.Color(255, 255, 255));
         panel_rdiario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("PANEL_DIARIO");
-        panel_rdiario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, -1, -1));
-
         jPanel1.add(panel_rdiario, "card2");
 
-        panelRound2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1240, 690));
+        panelRound2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1240, 680));
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, 1274, Short.MAX_VALUE))
+            .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1353,6 +2027,7 @@ public final class inicio extends javax.swing.JFrame {
             desplace.desplazarDerecha(menu, menu.getX(), 0, 10, 10);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
 
     private void ivn_entrada_panel_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_panel_usuarioActionPerformed
         // TODO add your handling code here:
@@ -1530,7 +2205,7 @@ public final class inicio extends javax.swing.JFrame {
 
     private void ivn_margen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_margen3ActionPerformed
+    }//GEN-LAST:event_ivn_margen3ActionPerforme
 
     private void ivn_bn_nueva_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_bn_nueva_formActionPerformed
         // TODO add your handling code here:
@@ -1547,6 +2222,23 @@ public final class inicio extends javax.swing.JFrame {
     private void ivn_margen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_margen5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ivn_margen5ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void guardar_jefe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_jefe1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardar_jefe1ActionPerformed
+
+    private void guardar_nuevo_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_nuevo_brigActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardar_nuevo_brigActionPerformed
+
+    private void guardar_nuevo_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_nuevo_rocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardar_nuevo_rocActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1605,6 +2297,7 @@ public final class inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton btn_eliminarPanel_usr;
     private javax.swing.JTextField inv_nombre_usr;
     private javax.swing.JTextField ivn_año_form;
@@ -1731,31 +2424,98 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTable ivn_tabla_lista_centros;
     private javax.swing.JTable ivn_tabla_lista_usr;
     private javax.swing.JTextField ivn_total_rosiados_form;
+    private javax.swing.JLabel brig_roc;
+    private javax.swing.JButton buscar_viv;
+    private javax.swing.JLabel ci_brig;
+    private javax.swing.JLabel ci_jefe;
+    private javax.swing.JTextField ci_jefe_brig;
+    private javax.swing.JLabel ci_roc;
+    private javax.swing.JTextField ci_rociadores;
+    private javax.swing.JComboBox<String> combo_viv;
+    private javax.swing.JLabel dirVivienda;
+    private javax.swing.JLabel dir_jefe;
+    private javax.swing.JTextField dir_jefe_brig;
+    private javax.swing.JLabel dir_roc;
+    private javax.swing.JTextField dir_rociadores;
+    private javax.swing.JButton eliminar_brig;
+    private javax.swing.JButton eliminar_roc;
+    private javax.swing.JButton eliminar_viv;
+    private javax.swing.JComboBox<String> est_jefe_brigada;
+    private javax.swing.JPanel ges_brig;
+    private javax.swing.JPanel ges_jefes;
+    private javax.swing.JPanel ges_roc;
+    private javax.swing.JTabbedPane gestion_brigadas;
+    private javax.swing.JButton guardar_brig;
+    private javax.swing.JButton guardar_cambios_roc;
+    private javax.swing.JButton guardar_jefe;
+    private javax.swing.JButton guardar_jefe1;
+    private javax.swing.JButton guardar_jefe2;
+    private javax.swing.JButton guardar_jefe3;
+    private javax.swing.JButton guardar_nuevo_brig;
+    private javax.swing.JButton guardar_nuevo_roc;
+    private javax.swing.JButton guardar_roc;
+    private javax.swing.JButton guardar_viv;
+    private javax.swing.JButton jButton1;
+
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel8;
+
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel jefe_brig;
+    private javax.swing.JLabel jefe_familia;
+    private javax.swing.JLabel label_brig;
+    private javax.swing.JLabel label_jefes;
+    private javax.swing.JLabel label_rociadores;
+    private javax.swing.JLabel label_viviendas;
+    private javax.swing.JTabbedPane lis_viv;
+
     private interfaces.PanelRound menu;
+    private javax.swing.JLabel n_habitaciones;
+    private javax.swing.JLabel n_vivienda;
+    private javax.swing.JLabel nom_brig;
+    private javax.swing.JLabel nom_jefe;
+    private javax.swing.JLabel nom_roc;
+    private javax.swing.JTextField nombre_jefe;
+    private javax.swing.JTextField nombre_jefe1;
+    private javax.swing.JTextField nombre_rociadores;
+    private javax.swing.JButton nuevo_brig;
+    private javax.swing.JButton nuevo_viv;
     private interfaces.PanelRound panelRound2;
+
     private javax.swing.JPanel panel_añadir_;
     private javax.swing.JPanel panel_añadir_1;
     private javax.swing.JPanel panel_añadir_2;
+
+    private javax.swing.JPanel panel_act_viv; 
+
     private javax.swing.JPanel panel_brigadas;
     private javax.swing.JPanel panel_centros;
     private javax.swing.JPanel panel_datos;
@@ -1763,6 +2523,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JPanel panel_datos2;
     private javax.swing.JPanel panel_formularios;
     private javax.swing.JPanel panel_insecticidas;
+    private javax.swing.JPanel panel_lis_viv;
     private javax.swing.JPanel panel_rdiario;
     private javax.swing.JPanel panel_rmensual;
     private javax.swing.JTabbedPane panel_tabla_centro;
@@ -1770,6 +2531,18 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTabbedPane panel_tabla_usuario;
     private javax.swing.JPanel panel_usuario;
     private javax.swing.JPanel panel_viviendas;
+
     private javax.swing.JLabel titulo_planilla_form;
+
+    private javax.swing.JTable table_brigadas;
+    private javax.swing.JTable table_jefes;
+    private javax.swing.JTable table_rociadores;
+    private javax.swing.JLabel telVivienda;
+    private javax.swing.JLabel tel_jefe;
+    private javax.swing.JTextField tel_jefe_brig;
+    private javax.swing.JLabel tel_roc;
+    private javax.swing.JTextField tel_rociadores;
+    private javax.swing.JTextField zona_brigada;
+
     // End of variables declaration//GEN-END:variables
 }
