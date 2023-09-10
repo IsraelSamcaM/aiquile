@@ -5,7 +5,10 @@
 package clases;
 import desplazable.Desface;
 import interfaces.PanelRound;
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 
 public class mover {
@@ -30,6 +33,16 @@ public class mover {
         
         for (int i = 0; i < arr.length; i++) {
             arr[i].setVisible(false);
+        }
+    }
+    
+    public void gestionarTables(JTable[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+            arr[i].getTableHeader().setOpaque(false);
+            arr[i].getTableHeader().setBackground(new Color(255,255,255));
+            arr[i].getTableHeader().setForeground(new Color(255,255,255));
+            arr[i].setRowHeight(20);
         }
     }
     
