@@ -2445,6 +2445,8 @@ public final class inicio extends javax.swing.JFrame {
 
     private void ivn_btn_eliminar_centroPanel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroPanel1ActionPerformed
         // TODO add your handling code here:
+        centrodao.eliminarCentroSalud(centro.getId());
+        mostrarCentrosSaludEnTabla();
     }//GEN-LAST:event_ivn_btn_eliminar_centroPanel1ActionPerformed
 
 
