@@ -4,28 +4,44 @@
  */
 package interfaces;
 
-import clases.Centro;
-import clases.CentroDAO;
+import clases.*;
 import clases.mover;
 import java.awt.Color;
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import desplazable.Desface;
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 
 public final class inicio extends javax.swing.JFrame {
     Desface desplace;
     mover moverMenu = new mover(); 
+    Centro centro = new Centro(); 
+    CentroDAO centrodao = new CentroDAO();
+    
+    Usuario usuario = new Usuario(); 
+    UsuarioDAO usuariodao = new UsuarioDAO();
+    
+    Insecticida insecticida = new Insecticida(); 
+    InsecticidaDAO insecticidadao = new InsecticidaDAO();
+    
+    Brigada brigada = new Brigada(); 
+    BrigadaDAO brigadadao = new BrigadaDAO();
+    
+    Vivienda vivienda = new Vivienda(); 
+    ViviendaDAO viviendadao = new ViviendaDAO();
     
     public inicio() {
         initComponents();
         desplace = new Desface();
+//        setBackground(new Color(1.0f,1.0f,0.0f,0.0f));
+        
+        mostrarCentrosSaludEnTabla(); 
+        mostrarUsuariosEnTabla();
+        ivn_tabla_lista_centros.setAutoCreateRowSorter(true);
     }
-
   
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,51 +67,47 @@ public final class inicio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         panel_usuario = new javax.swing.JPanel();
-        panel_tabla_usuario = new javax.swing.JTabbedPane();
-        panel_añadir_ = new javax.swing.JPanel();
         ivn_jl_1_usuarios = new javax.swing.JLabel();
         ivn_ci_usr = new javax.swing.JTextField();
         ivn_jl_2_usuarios = new javax.swing.JLabel();
-        ivn_cargo_usr = new javax.swing.JTextField();
-        ivn_jl_3_usuarios = new javax.swing.JLabel();
-        ivn_btn_guardar_usr = new javax.swing.JButton();
-        ivn_btn_nuevo_usr = new javax.swing.JButton();
-        btn_eliminarPanel_usr = new javax.swing.JButton();
-        inv_nombre_usr = new javax.swing.JTextField();
+        ivn_btn_guardarCambios_usr = new javax.swing.JButton();
+        ivn_btn_actualizar_usr = new javax.swing.JButton();
+        ivn_nombre_usr = new javax.swing.JTextField();
         ivn_jl_4_usuarios = new javax.swing.JLabel();
         ivn_contra_usr = new javax.swing.JTextField();
         ivn_jl_panelusr_form = new javax.swing.JLabel();
-        panel_datos = new javax.swing.JPanel();
-        ivn_cb_nombre_usr = new javax.swing.JComboBox<>();
+        ivn_cb_lista_usr = new javax.swing.JComboBox<>();
         ivn_entrada_panel_usuario = new javax.swing.JTextField();
         ivn_btn_usr_buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         ivn_tabla_lista_usr = new javax.swing.JTable();
         ivn_btn_editar_usrPanel = new javax.swing.JButton();
         ivn_btn_eliminar_usrPanel = new javax.swing.JButton();
-        ivn_btn_imprimir_usrPanel = new javax.swing.JButton();
+        ivn_btn_guardar_usr = new javax.swing.JButton();
+        ivn_btn_limpiar_usr1 = new javax.swing.JButton();
+        ivn_jl_5_usuarios = new javax.swing.JLabel();
+        ivn_telefono_usr = new javax.swing.JTextField();
+        ivn_jl_6_usuarios = new javax.swing.JLabel();
+        ivn_tipo_usr = new javax.swing.JTextField();
         panel_centros = new javax.swing.JPanel();
-        panel_tabla_centro = new javax.swing.JTabbedPane();
-        panel_añadir_1 = new javax.swing.JPanel();
-        ivn_jl_1_centros = new javax.swing.JLabel();
-        ivn_red_salud_centro = new javax.swing.JTextField();
-        ivn_jl_2_centros = new javax.swing.JLabel();
-        ivn_direccion_centro = new javax.swing.JTextField();
-        ivn_jl_3_centros = new javax.swing.JLabel();
-        ivn_btn_guardar_centro = new javax.swing.JButton();
-        ivn_btn_nuevo_centro = new javax.swing.JButton();
-        ivn_btn_eliminar_centro = new javax.swing.JButton();
-        ivn_nombre_centro = new javax.swing.JTextField();
         ivn_jl_panelcentros_form = new javax.swing.JLabel();
-        panel_datos1 = new javax.swing.JPanel();
         ivn_cb_lista_centros = new javax.swing.JComboBox<>();
         ivn_entrada_centroPanel = new javax.swing.JTextField();
         ivn_buscar_centro = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         ivn_tabla_lista_centros = new javax.swing.JTable();
+        ivn_btn_actualizar_centroPanel = new javax.swing.JButton();
         ivn_btn_editar_centroPanel = new javax.swing.JButton();
-        ivn_btn_eliminar_centroPanel = new javax.swing.JButton();
-        ivn_btn_imprimir_centrosPanel = new javax.swing.JButton();
+        ivn_jl_1_centros = new javax.swing.JLabel();
+        ivn_red_salud_centro = new javax.swing.JTextField();
+        ivn_jl_2_centros = new javax.swing.JLabel();
+        ivn_direccion_centro = new javax.swing.JTextField();
+        ivn_jl_3_centros = new javax.swing.JLabel();
+        ivn_btn_guardarCambios_centro = new javax.swing.JButton();
+        ivn_btn_limpiar_centro = new javax.swing.JButton();
+        ivn_nombre_centro = new javax.swing.JTextField();
+        ivn_btn_guardar_centro = new javax.swing.JButton();
+        ivn_btn_eliminar_centroPanel1 = new javax.swing.JButton();
         panel_viviendas = new javax.swing.JPanel();
         lis_viv = new javax.swing.JTabbedPane();
         panel_act_viv = new javax.swing.JPanel();
@@ -308,7 +320,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user-.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\user-.png")); // NOI18N
         jButton9.setText("USUARIOS     ");
         jButton9.setAlignmentY(0.0F);
         jButton9.setAutoscrolls(true);
@@ -334,7 +346,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 204, 204));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/vivienda.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\vivienda.png")); // NOI18N
         jButton8.setText("VIVIENDAS     ");
         jButton8.setActionCommand(" VIVIENDAS         ");
         jButton8.setAlignmentY(0.0F);
@@ -359,7 +371,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(0, 204, 204));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\user.png")); // NOI18N
         jButton10.setText("BRIGADAS     ");
         jButton10.setAlignmentY(0.0F);
         jButton10.setAutoscrolls(true);
@@ -383,7 +395,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton11.setBackground(new java.awt.Color(0, 204, 204));
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/centro_salud.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\centro_salud.png")); // NOI18N
         jButton11.setText("CENTROS DE SALUD     ");
         jButton11.setAlignmentY(0.0F);
         jButton11.setAutoscrolls(true);
@@ -407,7 +419,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton12.setBackground(new java.awt.Color(0, 204, 204));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/insec.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\insec.png")); // NOI18N
         jButton12.setText("INSECTICIDAS     ");
         jButton12.setAlignmentY(0.0F);
         jButton12.setAutoscrolls(true);
@@ -431,7 +443,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton13.setBackground(new java.awt.Color(0, 204, 204));
         jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(51, 51, 51));
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/form.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\form.png")); // NOI18N
         jButton13.setText("FORMULARIOS     ");
         jButton13.setAlignmentY(0.0F);
         jButton13.setAutoscrolls(true);
@@ -455,7 +467,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton15.setBackground(new java.awt.Color(0, 204, 204));
         jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/diario.png"))); // NOI18N
+        jButton15.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\diario.png")); // NOI18N
         jButton15.setText("REPORTE DIARIO     ");
         jButton15.setAlignmentY(0.0F);
         jButton15.setAutoscrolls(true);
@@ -479,7 +491,7 @@ public final class inicio extends javax.swing.JFrame {
         jButton16.setBackground(new java.awt.Color(0, 204, 204));
         jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mensual.png"))); // NOI18N
+        jButton16.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\icons\\mensual.png")); // NOI18N
         jButton16.setText("REPORTE MENSUAL     ");
         jButton16.setAlignmentY(0.0F);
         jButton16.setAutoscrolls(true);
@@ -505,7 +517,7 @@ public final class inicio extends javax.swing.JFrame {
         jLabel1.setText("DashBoard ");
         menu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_aiquile.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Proyecto Chagas\\aiquile\\src\\imagenes\\logo_aiquile.png")); // NOI18N
         menu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 140, 130));
 
         panelRound2.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 720));
@@ -516,119 +528,65 @@ public final class inicio extends javax.swing.JFrame {
         panel_usuario.setBackground(new java.awt.Color(255, 255, 255));
         panel_usuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panel_tabla_usuario.setBackground(new java.awt.Color(0, 153, 255));
-        panel_tabla_usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        panel_tabla_usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        panel_añadir_.setBackground(new java.awt.Color(255, 255, 255));
-        panel_añadir_.setForeground(new java.awt.Color(255, 255, 255));
-        panel_añadir_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         ivn_jl_1_usuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ivn_jl_1_usuarios.setForeground(new java.awt.Color(102, 102, 102));
         ivn_jl_1_usuarios.setText("Nombre de Usuario");
-        panel_añadir_.add(ivn_jl_1_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 200, 40));
-
-        ivn_ci_usr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_ci_usrActionPerformed(evt);
-            }
-        });
-        panel_añadir_.add(ivn_ci_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 420, 30));
+        panel_usuario.add(ivn_jl_1_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 180, 30));
+        panel_usuario.add(ivn_ci_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 420, 30));
 
         ivn_jl_2_usuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ivn_jl_2_usuarios.setForeground(new java.awt.Color(102, 102, 102));
         ivn_jl_2_usuarios.setText("CI");
-        panel_añadir_.add(ivn_jl_2_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 200, 40));
+        panel_usuario.add(ivn_jl_2_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 180, 30));
 
-        ivn_cargo_usr.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_guardarCambios_usr.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_guardarCambios_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_guardarCambios_usr.setText("GUARDAR CAMBIOS");
+        ivn_btn_guardarCambios_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_cargo_usrActionPerformed(evt);
+                ivn_btn_guardarCambios_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(ivn_cargo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 420, 30));
+        panel_usuario.add(ivn_btn_guardarCambios_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 640, 160, 30));
 
-        ivn_jl_3_usuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ivn_jl_3_usuarios.setForeground(new java.awt.Color(102, 102, 102));
-        ivn_jl_3_usuarios.setText("Cargo");
-        panel_añadir_.add(ivn_jl_3_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 200, 40));
-
-        ivn_btn_guardar_usr.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_guardar_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_guardar_usr.setText("GUARDAR");
-        ivn_btn_guardar_usr.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_actualizar_usr.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_actualizar_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_actualizar_usr.setText("ACTUALIZAR");
+        ivn_btn_actualizar_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_guardar_usrActionPerformed(evt);
+                ivn_btn_actualizar_usrActionPerformed(evt);
             }
         });
-        panel_añadir_.add(ivn_btn_guardar_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 160, 40));
-
-        ivn_btn_nuevo_usr.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_nuevo_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_nuevo_usr.setText("NUEVO");
-        ivn_btn_nuevo_usr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_nuevo_usrActionPerformed(evt);
-            }
-        });
-        panel_añadir_.add(ivn_btn_nuevo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 160, 40));
-
-        btn_eliminarPanel_usr.setBackground(new java.awt.Color(51, 153, 255));
-        btn_eliminarPanel_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btn_eliminarPanel_usr.setText("ELIMINAR");
-        btn_eliminarPanel_usr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_eliminarPanel_usrActionPerformed(evt);
-            }
-        });
-        panel_añadir_.add(btn_eliminarPanel_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 460, 160, 40));
-
-        inv_nombre_usr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inv_nombre_usrActionPerformed(evt);
-            }
-        });
-        panel_añadir_.add(inv_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 420, 30));
+        panel_usuario.add(ivn_btn_actualizar_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 640, 130, 30));
+        panel_usuario.add(ivn_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 420, 30));
 
         ivn_jl_4_usuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ivn_jl_4_usuarios.setForeground(new java.awt.Color(102, 102, 102));
         ivn_jl_4_usuarios.setText("Contraseña:");
-        panel_añadir_.add(ivn_jl_4_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 200, 40));
-
-        ivn_contra_usr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_contra_usrActionPerformed(evt);
-            }
-        });
-        panel_añadir_.add(ivn_contra_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 420, 30));
+        panel_usuario.add(ivn_jl_4_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 180, 30));
+        panel_usuario.add(ivn_contra_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 420, 30));
 
         ivn_jl_panelusr_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ivn_jl_panelusr_form.setForeground(new java.awt.Color(102, 102, 102));
-        ivn_jl_panelusr_form.setText("REGISTRO Y EDICION DE USUARIO");
-        panel_añadir_.add(ivn_jl_panelusr_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 400, 30));
+        ivn_jl_panelusr_form.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ivn_jl_panelusr_form.setText("USUARIOS");
+        panel_usuario.add(ivn_jl_panelusr_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 400, 30));
 
-        panel_tabla_usuario.addTab("Actualizar Usuario", panel_añadir_);
+        ivn_cb_lista_usr.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_cb_lista_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_cb_lista_usr.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "CARGO" }));
+        panel_usuario.add(ivn_cb_lista_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 150, 30));
+        panel_usuario.add(ivn_entrada_panel_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 650, 30));
 
-        panel_datos.setBackground(new java.awt.Color(255, 255, 255));
-        panel_datos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ivn_cb_nombre_usr.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "TIPO" }));
-        panel_datos.add(ivn_cb_nombre_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 140, 30));
-
-        ivn_entrada_panel_usuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_entrada_panel_usuarioActionPerformed(evt);
-            }
-        });
-        panel_datos.add(ivn_entrada_panel_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 460, 30));
-
+        ivn_btn_usr_buscar.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_usr_buscar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ivn_btn_usr_buscar.setText("BUSCAR");
         ivn_btn_usr_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ivn_btn_usr_buscarActionPerformed(evt);
             }
         });
-        panel_datos.add(ivn_btn_usr_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 140, 30));
+        panel_usuario.add(ivn_btn_usr_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 280, 140, 30));
 
         ivn_tabla_lista_usr.setForeground(new java.awt.Color(0, 0, 255));
         ivn_tabla_lista_usr.setModel(new javax.swing.table.DefaultTableModel(
@@ -642,14 +600,16 @@ public final class inicio extends javax.swing.JFrame {
                 "Nombre", "CI", "Cargo", "Contraseña"
             }
         ));
-        ivn_tabla_lista_usr.setIntercellSpacing(new java.awt.Dimension(0, 0));
-        ivn_tabla_lista_usr.setRowHeight(25);
         ivn_tabla_lista_usr.setSelectionBackground(new java.awt.Color(255, 0, 0));
-        ivn_tabla_lista_usr.setShowVerticalLines(false);
         ivn_tabla_lista_usr.getTableHeader().setReorderingAllowed(false);
+        ivn_tabla_lista_usr.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ivn_tabla_lista_usrMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(ivn_tabla_lista_usr);
 
-        panel_datos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 860, -1));
+        panel_usuario.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 960, 300));
 
         ivn_btn_editar_usrPanel.setBackground(new java.awt.Color(51, 153, 255));
         ivn_btn_editar_usrPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -660,7 +620,7 @@ public final class inicio extends javax.swing.JFrame {
                 ivn_btn_editar_usrPanelActionPerformed(evt);
             }
         });
-        panel_datos.add(ivn_btn_editar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 150, 30));
+        panel_usuario.add(ivn_btn_editar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, 110, 30));
 
         ivn_btn_eliminar_usrPanel.setBackground(new java.awt.Color(51, 153, 255));
         ivn_btn_eliminar_usrPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -670,122 +630,70 @@ public final class inicio extends javax.swing.JFrame {
                 ivn_btn_eliminar_usrPanelActionPerformed(evt);
             }
         });
-        panel_datos.add(ivn_btn_eliminar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 140, 30));
+        panel_usuario.add(ivn_btn_eliminar_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 640, 120, 30));
 
-        ivn_btn_imprimir_usrPanel.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_imprimir_usrPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_imprimir_usrPanel.setText("IMPRIMIR USUARIOS");
-        ivn_btn_imprimir_usrPanel.addActionListener(new java.awt.event.ActionListener() {
+        ivn_btn_guardar_usr.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_guardar_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_guardar_usr.setText("GUARDAR");
+        ivn_btn_guardar_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_imprimir_usrPanelActionPerformed(evt);
+                ivn_btn_guardar_usrActionPerformed(evt);
             }
         });
-        panel_datos.add(ivn_btn_imprimir_usrPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, 130, 30));
+        panel_usuario.add(ivn_btn_guardar_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 640, 130, 30));
 
-        panel_tabla_usuario.addTab("Lista de Usuarios", panel_datos);
+        ivn_btn_limpiar_usr1.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_limpiar_usr1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_limpiar_usr1.setText("LIMPIAR");
+        ivn_btn_limpiar_usr1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_limpiar_usr1ActionPerformed(evt);
+            }
+        });
+        panel_usuario.add(ivn_btn_limpiar_usr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 120, 30));
 
-        panel_usuario.add(panel_tabla_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 980, 670));
+        ivn_jl_5_usuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_5_usuarios.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_5_usuarios.setText("telefono:");
+        panel_usuario.add(ivn_jl_5_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 180, 30));
+        panel_usuario.add(ivn_telefono_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 420, 30));
+
+        ivn_jl_6_usuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ivn_jl_6_usuarios.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_6_usuarios.setText("Cargo:");
+        panel_usuario.add(ivn_jl_6_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 180, 30));
+        panel_usuario.add(ivn_tipo_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 420, 30));
 
         jPanel1.add(panel_usuario, "card2");
 
         panel_centros.setBackground(new java.awt.Color(255, 255, 255));
-        panel_centros.setPreferredSize(new java.awt.Dimension(1230, 650));
+        panel_centros.setPreferredSize(new java.awt.Dimension(1230, 7200));
         panel_centros.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        panel_tabla_centro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        panel_tabla_centro.setPreferredSize(new java.awt.Dimension(934, 618));
-
-        panel_añadir_1.setBackground(new java.awt.Color(255, 255, 255));
-        panel_añadir_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ivn_jl_1_centros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ivn_jl_1_centros.setForeground(new java.awt.Color(102, 102, 102));
-        ivn_jl_1_centros.setText("Nombre de Estableciemiento");
-        panel_añadir_1.add(ivn_jl_1_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 230, 30));
-
-        ivn_red_salud_centro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_red_salud_centroActionPerformed(evt);
-            }
-        });
-        panel_añadir_1.add(ivn_red_salud_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 390, 30));
-
-        ivn_jl_2_centros.setBackground(new java.awt.Color(51, 51, 51));
-        ivn_jl_2_centros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ivn_jl_2_centros.setForeground(new java.awt.Color(102, 102, 102));
-        ivn_jl_2_centros.setText("Red de Salud");
-        panel_añadir_1.add(ivn_jl_2_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 150, 30));
-
-        ivn_direccion_centro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_direccion_centroActionPerformed(evt);
-            }
-        });
-        panel_añadir_1.add(ivn_direccion_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 390, 30));
-
-        ivn_jl_3_centros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ivn_jl_3_centros.setForeground(new java.awt.Color(102, 102, 102));
-        ivn_jl_3_centros.setText("Direccion del establecimiento");
-        panel_añadir_1.add(ivn_jl_3_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 220, 30));
-
-        ivn_btn_guardar_centro.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_guardar_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_guardar_centro.setText("GUARDAR");
-        ivn_btn_guardar_centro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_guardar_centroActionPerformed(evt);
-            }
-        });
-        panel_añadir_1.add(ivn_btn_guardar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 150, 30));
-
-        ivn_btn_nuevo_centro.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_nuevo_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_nuevo_centro.setText("NUEVO");
-        ivn_btn_nuevo_centro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_nuevo_centroActionPerformed(evt);
-            }
-        });
-        panel_añadir_1.add(ivn_btn_nuevo_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 150, 30));
-
-        ivn_btn_eliminar_centro.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_eliminar_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_eliminar_centro.setText("ELIMINAR");
-        ivn_btn_eliminar_centro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_eliminar_centroActionPerformed(evt);
-            }
-        });
-        panel_añadir_1.add(ivn_btn_eliminar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 430, 150, 30));
-
-        ivn_nombre_centro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_nombre_centroActionPerformed(evt);
-            }
-        });
-        panel_añadir_1.add(ivn_nombre_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 390, 30));
 
         ivn_jl_panelcentros_form.setBackground(new java.awt.Color(102, 153, 255));
         ivn_jl_panelcentros_form.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ivn_jl_panelcentros_form.setForeground(new java.awt.Color(102, 102, 102));
-        ivn_jl_panelcentros_form.setText("REGISTRO Y EDICION DE CENTROS DE SALUD");
-        panel_añadir_1.add(ivn_jl_panelcentros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 580, -1));
+        ivn_jl_panelcentros_form.setText("ESTABLECIMIENTOS DE SALUD");
+        panel_centros.add(ivn_jl_panelcentros_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 350, -1));
 
-        panel_tabla_centro.addTab("Actualizar Centros de Salud", panel_añadir_1);
-
-        panel_datos1.setBackground(new java.awt.Color(255, 255, 255));
-        panel_datos1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
+        ivn_cb_lista_centros.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_cb_lista_centros.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ivn_cb_lista_centros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "ID", "RED DE SALUD", "DIRECCION" }));
-        panel_datos1.add(ivn_cb_lista_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 200, 30));
+        ivn_cb_lista_centros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_cb_lista_centrosActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_cb_lista_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 210, 30));
 
         ivn_entrada_centroPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ivn_entrada_centroPanelActionPerformed(evt);
             }
         });
-        panel_datos1.add(ivn_entrada_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 470, 30));
+        panel_centros.add(ivn_entrada_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 610, 30));
 
+        ivn_buscar_centro.setBackground(new java.awt.Color(51, 153, 255));
         ivn_buscar_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ivn_buscar_centro.setText("BUSCAR");
         ivn_buscar_centro.addActionListener(new java.awt.event.ActionListener() {
@@ -793,22 +701,38 @@ public final class inicio extends javax.swing.JFrame {
                 ivn_buscar_centroActionPerformed(evt);
             }
         });
-        panel_datos1.add(ivn_buscar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, 110, 30));
+        panel_centros.add(ivn_buscar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 130, 30));
 
+        ivn_tabla_lista_centros.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP));
         ivn_tabla_lista_centros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {"", "", null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Nombre", "Red de Salud", "Dirección"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        ivn_tabla_lista_centros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ivn_tabla_lista_centrosMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(ivn_tabla_lista_centros);
 
-        panel_datos1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 900, 410));
+        panel_centros.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 980, 390));
+
+        ivn_btn_actualizar_centroPanel.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_actualizar_centroPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_actualizar_centroPanel.setText("ACTUALIZAR");
+        ivn_btn_actualizar_centroPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_actualizar_centroPanelActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_btn_actualizar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 630, 130, 30));
 
         ivn_btn_editar_centroPanel.setBackground(new java.awt.Color(51, 153, 255));
         ivn_btn_editar_centroPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -818,31 +742,83 @@ public final class inicio extends javax.swing.JFrame {
                 ivn_btn_editar_centroPanelActionPerformed(evt);
             }
         });
-        panel_datos1.add(ivn_btn_editar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 540, 160, 30));
+        panel_centros.add(ivn_btn_editar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 630, 90, 30));
 
-        ivn_btn_eliminar_centroPanel.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_eliminar_centroPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_eliminar_centroPanel.setText("ELIMINAR");
-        ivn_btn_eliminar_centroPanel.addActionListener(new java.awt.event.ActionListener() {
+        ivn_jl_1_centros.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        ivn_jl_1_centros.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_1_centros.setText("Nombre Establecimiento");
+        panel_centros.add(ivn_jl_1_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 240, 30));
+
+        ivn_red_salud_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_eliminar_centroPanelActionPerformed(evt);
+                ivn_red_salud_centroActionPerformed(evt);
             }
         });
-        panel_datos1.add(ivn_btn_eliminar_centroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 160, 30));
+        panel_centros.add(ivn_red_salud_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 420, 30));
 
-        ivn_btn_imprimir_centrosPanel.setBackground(new java.awt.Color(51, 153, 255));
-        ivn_btn_imprimir_centrosPanel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        ivn_btn_imprimir_centrosPanel.setText("IMPRIMIR ESTABLECIMIENTOS");
-        ivn_btn_imprimir_centrosPanel.addActionListener(new java.awt.event.ActionListener() {
+        ivn_jl_2_centros.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        ivn_jl_2_centros.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_2_centros.setText("Red de Salud");
+        panel_centros.add(ivn_jl_2_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 240, 30));
+
+        ivn_direccion_centro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ivn_btn_imprimir_centrosPanelActionPerformed(evt);
+                ivn_direccion_centroActionPerformed(evt);
             }
         });
-        panel_datos1.add(ivn_btn_imprimir_centrosPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 540, -1, 30));
+        panel_centros.add(ivn_direccion_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 420, 30));
 
-        panel_tabla_centro.addTab("Lista de Centros de Salud", panel_datos1);
+        ivn_jl_3_centros.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        ivn_jl_3_centros.setForeground(new java.awt.Color(102, 102, 102));
+        ivn_jl_3_centros.setText("Dirección Establecimiento");
+        panel_centros.add(ivn_jl_3_centros, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 240, 30));
 
-        panel_centros.add(panel_tabla_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 970, 640));
+        ivn_btn_guardarCambios_centro.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_guardarCambios_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_guardarCambios_centro.setText("GUARDAR CAMBIOS");
+        ivn_btn_guardarCambios_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_guardarCambios_centroActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_btn_guardarCambios_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 630, 190, 30));
+
+        ivn_btn_limpiar_centro.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_limpiar_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_limpiar_centro.setText("LIMPIAR");
+        ivn_btn_limpiar_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_limpiar_centroActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_btn_limpiar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 120, 30));
+
+        ivn_nombre_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_nombre_centroActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_nombre_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 420, 30));
+
+        ivn_btn_guardar_centro.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_guardar_centro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_guardar_centro.setText("GUARDAR");
+        ivn_btn_guardar_centro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_guardar_centroActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_btn_guardar_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 630, 120, 30));
+
+        ivn_btn_eliminar_centroPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        ivn_btn_eliminar_centroPanel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ivn_btn_eliminar_centroPanel1.setText("ELIMINAR");
+        ivn_btn_eliminar_centroPanel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_btn_eliminar_centroPanel1ActionPerformed(evt);
+            }
+        });
+        panel_centros.add(ivn_btn_eliminar_centroPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 630, 120, 30));
 
         jPanel1.add(panel_centros, "card2");
 
@@ -1969,7 +1945,65 @@ public final class inicio extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    public void mostrarCentrosSaludEnTabla() {
+        // Crear una instancia del CentroSaludDAO
+        CentroDAO centroSaludDAO = new CentroDAO();
 
+        // Obtener la lista de todos los centros de salud desde la base de datos
+        List<Centro> centrosSalud = centroSaludDAO.obtenerTodosLosCentrosSalud();
+
+        // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
+        DefaultTableModel modeloTabla = new DefaultTableModel();
+        modeloTabla.addColumn("ID");
+        modeloTabla.addColumn("Nombre");
+        modeloTabla.addColumn("Red de Salud");
+        modeloTabla.addColumn("Dirección");
+        // Agrega más columnas según tus necesidades
+        // Llenar el modelo de tabla con los datos de los centros de salud
+        for (Centro centroAux : centrosSalud) {
+            modeloTabla.addRow(new Object[]{
+                centroAux.getId(),
+                centroAux.getNombre(),
+                centroAux.getRed_salud(),
+                centroAux.getDireccion()
+                    // Agrega más columnas según tus necesidades
+            });
+        }
+        // Asignar el modelo de tabla al JTable
+        ivn_tabla_lista_centros.setModel(modeloTabla);
+    }
+        
+    public void mostrarUsuariosEnTabla() {
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+        // Obtener la lista de todos los usuarios desde la base de datos
+        List<Usuario> usuarios = usuarioDAO.obtenerTodosLosUsuarios();
+
+        // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
+        DefaultTableModel modeloTabla = new DefaultTableModel();
+        modeloTabla.addColumn("ID");
+        modeloTabla.addColumn("Nombre");
+        modeloTabla.addColumn("CI");
+        modeloTabla.addColumn("Telefono");
+        modeloTabla.addColumn("Contraseña");
+        modeloTabla.addColumn("Cargo");
+        // Agrega más columnas según tus necesidades
+        // Llenar el modelo de tabla con los datos de los usuarios
+        for (Usuario usuarioAux : usuarios) {
+            modeloTabla.addRow(new Object[]{
+                usuarioAux.getId(),
+                usuarioAux.getNombre(),
+                usuarioAux.getCi(),
+                usuarioAux.getTelefono(),
+                usuarioAux.getContraseña(),
+                usuarioAux.getTipo()
+            });
+        }
+        // Asignar el modelo de tabla al JTable
+        ivn_tabla_lista_usr.setModel(modeloTabla);
+    }
+    
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         // TODO add your handling code here:
         
@@ -2085,112 +2119,6 @@ public final class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7MouseClicked
 
 
-    private void ivn_entrada_panel_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_panel_usuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_entrada_panel_usuarioActionPerformed
-
-    private void ivn_ci_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_ci_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_ci_usrActionPerformed
-
-    private void ivn_cargo_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cargo_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_cargo_usrActionPerformed
-
-    private void ivn_btn_usr_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_usr_buscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_usr_buscarActionPerformed
-
-    private void ivn_btn_guardar_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_guardar_usrActionPerformed
-
-    private void ivn_btn_nuevo_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_nuevo_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_nuevo_usrActionPerformed
-
-    private void btn_eliminarPanel_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarPanel_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_eliminarPanel_usrActionPerformed
-
-    private void inv_nombre_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inv_nombre_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inv_nombre_usrActionPerformed
-
-    private void ivn_btn_editar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_usrPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_editar_usrPanelActionPerformed
-
-    private void ivn_btn_eliminar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_usrPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_eliminar_usrPanelActionPerformed
-
-    private void ivn_btn_imprimir_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_imprimir_usrPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_imprimir_usrPanelActionPerformed
-
-    private void ivn_red_salud_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_red_salud_centroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_red_salud_centroActionPerformed
-
-    private void ivn_direccion_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_direccion_centroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_direccion_centroActionPerformed
-
-    private void ivn_btn_guardar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_centroActionPerformed
-        // TODO add your handling code here:
-        // llamar y llenar un objeto de centro de salud
-        // llamar y llemar en bd usando DAO
-        Centro centro = new Centro();
-        
-        centro.setId(12);
-        centro.setNombre(ivn_nombre_centro.getText());
-        centro.setRed_salud(ivn_red_salud_centro.getText());
-        centro.setDireccion(ivn_direccion_centro.getText());
-        
-        CentroDAO centrodao = new CentroDAO();
-        
-        centrodao.insertarCentroSalud(centro);
-        
-        
-    }//GEN-LAST:event_ivn_btn_guardar_centroActionPerformed
-
-    private void ivn_btn_nuevo_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_nuevo_centroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_nuevo_centroActionPerformed
-
-    private void ivn_btn_eliminar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_eliminar_centroActionPerformed
-
-    private void ivn_nombre_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_centroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_nombre_centroActionPerformed
-
-    private void ivn_entrada_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_centroPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_entrada_centroPanelActionPerformed
-
-    private void ivn_buscar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_buscar_centroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_buscar_centroActionPerformed
-
-    private void ivn_btn_editar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_centroPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_editar_centroPanelActionPerformed
-
-    private void ivn_btn_eliminar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_eliminar_centroPanelActionPerformed
-
-    private void ivn_btn_imprimir_centrosPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_imprimir_centrosPanelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_btn_imprimir_centrosPanelActionPerformed
-
-    private void ivn_contra_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_contra_usrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ivn_contra_usrActionPerformed
-
     private void ivn_num_lote_insecticidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_num_lote_insecticidaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ivn_num_lote_insecticidaActionPerformed
@@ -2299,6 +2227,522 @@ public final class inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
+    private void ivn_cb_lista_centrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cb_lista_centrosActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_ivn_cb_lista_centrosActionPerformed
+
+    private void ivn_entrada_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_entrada_centroPanelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_entrada_centroPanelActionPerformed
+
+    private void ivn_buscar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_buscar_centroActionPerformed
+        // TODO add your handling code here:
+
+        String seleccion = ivn_cb_lista_centros.getSelectedItem().toString();
+        Centro centroBuscado;
+        List<Centro> resultados;
+        DefaultTableModel modelo;
+
+        switch (seleccion) {
+            case "NOMBRE":
+            String nombreBuscado = ivn_entrada_centroPanel.getText();
+
+            // Llama al método de búsqueda por nombre del CentroDAO
+            resultados = centrodao.buscarCentrosPorNombre(nombreBuscado);
+
+            // Limpia la tabla
+            modelo = (DefaultTableModel) ivn_tabla_lista_centros.getModel();
+            modelo.setRowCount(0);
+
+            // Llena la tabla con los resultados de la búsqueda
+            for (Centro centro : resultados) {
+                Object[] fila = {centro.getId(), centro.getNombre(), centro.getRed_salud(), centro.getDireccion()};
+                modelo.addRow(fila);
+            }
+            break;
+            case "ID":
+            int idBuscado = Integer.parseInt(ivn_entrada_centroPanel.getText());
+            centroBuscado = centrodao.obtenerCentroSaludPorId(idBuscado);
+
+            if (centroBuscado != null) {
+                // Establecer los valores en los JTextField
+                ivn_nombre_centro.setText(centroBuscado.getNombre());
+                ivn_red_salud_centro.setText(centroBuscado.getRed_salud());
+                ivn_direccion_centro.setText(centroBuscado.getDireccion());
+
+                // Buscar la fila correspondiente en el JTable
+                int rowCount = ivn_tabla_lista_centros.getRowCount();
+                for (int i = 0; i < rowCount; i++) {
+                    int idEnTabla = (int) ivn_tabla_lista_centros.getValueAt(i, 0); // Supongo que la columna 0 es el ID
+                    if (idEnTabla == idBuscado) {
+                        // Seleccionar la fila encontrada
+                        ivn_tabla_lista_centros.setRowSelectionInterval(i, i);
+                        break;
+                    }
+                }
+            } else {
+                // No se encontró el ID, puedes mostrar un mensaje al usuario
+                JOptionPane.showMessageDialog(this, "No se encontró ningún centro de salud con ese ID.");
+            }
+            break;
+            case "RED DE SALUD":
+            String redBuscado = ivn_entrada_centroPanel.getText();
+
+            // Llama al método de búsqueda por nombre del CentroDAO
+            resultados = centrodao.buscarCentrosPorRedSadud(redBuscado);
+
+            // Limpia la tabla
+            modelo = (DefaultTableModel) ivn_tabla_lista_centros.getModel();
+            modelo.setRowCount(0);
+
+            // Llena la tabla con los resultados de la búsqueda
+            for (Centro centro : resultados) {
+                Object[] fila = {centro.getId(), centro.getNombre(), centro.getRed_salud(), centro.getDireccion()};
+                modelo.addRow(fila);
+            }
+            break;
+            case "DIRECCION":
+            String dirBuscado = ivn_entrada_centroPanel.getText();
+
+            // Llama al método de búsqueda por nombre del CentroDAO
+            resultados = centrodao.buscarCentrosPorDireccion(dirBuscado);
+
+            // Limpia la tabla
+            modelo = (DefaultTableModel) ivn_tabla_lista_centros.getModel();
+            modelo.setRowCount(0);
+
+            // Llena la tabla con los resultados de la búsqueda
+            for (Centro centro : resultados) {
+                Object[] fila = {centro.getId(), centro.getNombre(), centro.getRed_salud(), centro.getDireccion()};
+                modelo.addRow(fila);
+            }
+            break;
+            default:
+            break;
+        }
+    }//GEN-LAST:event_ivn_buscar_centroActionPerformed
+
+    private void ivn_tabla_lista_centrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ivn_tabla_lista_centrosMouseClicked
+        // Obtiene el modelo de la JTable
+        DefaultTableModel model = (DefaultTableModel) ivn_tabla_lista_centros.getModel();
+
+        // Obtiene el índice de la fila seleccionada
+        int RowSelect = ivn_tabla_lista_centros.getSelectedRow();
+
+        if (RowSelect != -1) {
+            // Recupera los valores de la fila seleccionada
+            String columna1 = model.getValueAt(RowSelect, 0).toString();
+            String columna2 = model.getValueAt(RowSelect, 1).toString();
+            String columna3 = model.getValueAt(RowSelect, 2).toString();
+            String columna4 = model.getValueAt(RowSelect, 3).toString();
+            // Inserta los valores en los JTextFields
+            ivn_nombre_centro.setText(columna2);
+            ivn_red_salud_centro.setText(columna3);
+            ivn_direccion_centro.setText(columna4);
+
+            // guardamos datos en un objeto centro
+            centro.setId(Integer.parseInt(columna1));
+            centro.setNombre(columna2);
+            centro.setRed_salud(columna3);
+            centro.setDireccion(columna4);
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione una fila que contenga datos :)");
+        }
+    }//GEN-LAST:event_ivn_tabla_lista_centrosMouseClicked
+
+    private void ivn_btn_actualizar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_actualizar_centroPanelActionPerformed
+        // TODO add your handling code here:
+        limpiarEntradasCentro();
+
+        mostrarCentrosSaludEnTabla();
+
+    }//GEN-LAST:event_ivn_btn_actualizar_centroPanelActionPerformed
+
+    private void ivn_btn_editar_centroPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_centroPanelActionPerformed
+        // TODO add your handling code here:
+        int filaSeleccionada = ivn_tabla_lista_centros.getSelectedRow();
+        int columnaSeleccionada = ivn_tabla_lista_centros.getSelectedColumn();
+        Object valorCelda;
+        // Verifica si se hizo clic en la columna que deseas editar (por ejemplo, la columna del nombre)
+        switch (columnaSeleccionada) {
+            case 1:
+            // Obtén el valor de la celda seleccionada
+            valorCelda = ivn_tabla_lista_centros.getValueAt(filaSeleccionada, columnaSeleccionada);
+            // Asigna el valor al JTextField y coloca el cursor en el JTextField
+            ivn_nombre_centro.setText(valorCelda.toString());
+            ivn_nombre_centro.requestFocus();
+            ivn_nombre_centro.selectAll(); // Seleciona todo el texto en el JTextField
+            break;
+            case 2:
+
+            valorCelda = ivn_tabla_lista_centros.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ivn_red_salud_centro.setText(valorCelda.toString());
+            ivn_red_salud_centro.requestFocus();
+            ivn_red_salud_centro.selectAll();
+            break;
+            case 3:
+
+            valorCelda = ivn_tabla_lista_centros.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ivn_direccion_centro.setText(valorCelda.toString());
+            ivn_direccion_centro.requestFocus();
+            ivn_direccion_centro.selectAll();
+            break;
+            default:
+            JOptionPane.showMessageDialog(this, "Seleccione una celda para editar :)");
+            break;
+        }
+    }//GEN-LAST:event_ivn_btn_editar_centroPanelActionPerformed
+
+    private void ivn_red_salud_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_red_salud_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_red_salud_centroActionPerformed
+
+    private void ivn_direccion_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_direccion_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_direccion_centroActionPerformed
+
+    private void ivn_btn_guardarCambios_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardarCambios_centroActionPerformed
+
+        centro.setNombre(ivn_nombre_centro.getText().trim());
+        centro.setRed_salud(ivn_red_salud_centro.getText().trim());
+        centro.setDireccion(ivn_direccion_centro.getText().trim());
+
+        centrodao.actualizarCentroSalud(centro);
+        // actulizar tabla
+        mostrarCentrosSaludEnTabla();
+    }//GEN-LAST:event_ivn_btn_guardarCambios_centroActionPerformed
+
+    private void ivn_btn_limpiar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_limpiar_centroActionPerformed
+        // TODO add your handling code here:
+        limpiarEntradasCentro();
+    }//GEN-LAST:event_ivn_btn_limpiar_centroActionPerformed
+
+    private void limpiarEntradasCentro(){
+        ivn_nombre_centro.setText("");
+        ivn_red_salud_centro.setText("");
+        ivn_direccion_centro.setText("");
+    }
+    
+    private void ivn_nombre_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_nombre_centroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ivn_nombre_centroActionPerformed
+
+    private void ivn_btn_guardar_centroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_centroActionPerformed
+        // TODO add your handling code here:
+        String nombreCentro = ivn_nombre_centro.getText().trim();
+        String redSalud = ivn_red_salud_centro.getText().trim();
+        String direccion = ivn_direccion_centro.getText().trim();
+
+        // Verificar que ninguno de los campos esté en blanco
+        if (nombreCentro.isEmpty() || redSalud.isEmpty() || direccion.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.");
+            return;  // No continuar si hay campos en blanco
+        }
+
+        // Crear una instancia del CentroDAO
+        centrodao = new CentroDAO();
+
+        // Crear un nuevo Centro si todos los campos están completos
+        Centro centro = new Centro();
+        centro.setNombre(nombreCentro);
+        centro.setRed_salud(redSalud);
+        centro.setDireccion(direccion);
+
+        // Insertar el Centro en la base de datos
+        boolean exito = centrodao.insertarCentroSalud(centro);
+        if (exito) {
+            // Mostrar un mensaje de confirmación al usuario
+            JOptionPane.showMessageDialog(this, "El centro de salud se ha guardado exitosamente.");
+
+            // Limpiar los campos después de la inserción exitosa
+            limpiarEntradasCentro();
+
+            // Actualizar la tabla de centros de salud
+            mostrarCentrosSaludEnTabla();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al guardar el centro de salud.");
+        }
+    }//GEN-LAST:event_ivn_btn_guardar_centroActionPerformed
+
+    private void ivn_btn_eliminar_centroPanel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_centroPanel1ActionPerformed
+        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de eliminar este centro de salud?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+
+        if (opcion == JOptionPane.YES_OPTION) {
+            // Si el usuario confirma la eliminación
+            centrodao.eliminarCentroSalud(centro.getId());
+            mostrarCentrosSaludEnTabla();
+        }
+    }//GEN-LAST:event_ivn_btn_eliminar_centroPanel1ActionPerformed
+
+    private void ivn_btn_guardar_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardar_usrActionPerformed
+        // TODO add your handling code here:
+        String nombre = ivn_nombre_usr.getText().trim();
+        String ci = ivn_ci_usr.getText().trim();
+        String telefono = ivn_telefono_usr.getText().trim();
+        String contraseña = ivn_contra_usr.getText().trim();
+        String tipo = ivn_tipo_usr.getText().trim();
+
+        // Verificar que ninguno de los campos esté en blanco
+        if (nombre.isEmpty() || ci.isEmpty() || telefono.isEmpty() || contraseña.isEmpty() || tipo.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.");
+            return;  // No continuar si hay campos en blanco
+        }
+
+        // Crear una instancia del UsuarioDAO
+        usuariodao = new UsuarioDAO();
+
+        // Crear un nuevo Usuario si todos los campos están completos
+        Usuario usuario = new Usuario();
+        usuario.setNombre(nombre);
+        usuario.setCi(ci);
+        usuario.setTelefono(telefono);
+        usuario.setContraseña(contraseña);
+        usuario.setTipo(tipo);
+
+        // Insertar el Usuario en la base de datos
+        boolean exito = usuariodao.insertarUsuario(usuario);
+        if (exito) {
+            // Mostrar un mensaje de confirmación al usuario
+            JOptionPane.showMessageDialog(this, "El usuario se ha guardado exitosamente.");
+
+            // Limpiar los campos después de la inserción exitosa
+            ivn_nombre_usr.setText("");
+            ivn_ci_usr.setText("");
+            ivn_telefono_usr.setText("");
+            ivn_contra_usr.setText("");
+            ivn_tipo_usr.setText("");
+
+            // Actualizar la tabla de usuarios
+            mostrarUsuariosEnTabla();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al guardar usuario.");
+        }
+    }//GEN-LAST:event_ivn_btn_guardar_usrActionPerformed
+
+    private void ivn_btn_limpiar_usr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_limpiar_usr1ActionPerformed
+        // TODO add your handling code here:
+        limpiarEntradasUsuario();
+    }//GEN-LAST:event_ivn_btn_limpiar_usr1ActionPerformed
+
+    private void ivn_btn_editar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_editar_usrPanelActionPerformed
+        // TODO add your handling code here:
+        int filaSeleccionada = ivn_tabla_lista_usr.getSelectedRow();
+        int columnaSeleccionada = ivn_tabla_lista_usr.getSelectedColumn();
+        Object valorCelda;
+        // Verifica si se hizo clic en la columna que deseas editar (por ejemplo, la columna del nombre)
+        switch (columnaSeleccionada) {
+            case 1:
+            // Obtén el valor de la celda seleccionada
+            valorCelda = ivn_tabla_lista_usr.getValueAt(filaSeleccionada, columnaSeleccionada);
+            // Asigna el valor al JTextField y coloca el cursor en el JTextField
+            ivn_nombre_usr.setText(valorCelda.toString());
+            ivn_nombre_usr.requestFocus();
+            ivn_nombre_usr.selectAll(); // Seleciona todo el texto en el JTextField
+            break;
+            case 2:
+
+            valorCelda = ivn_tabla_lista_usr.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ivn_ci_usr.setText(valorCelda.toString());
+            ivn_ci_usr.requestFocus();
+            ivn_ci_usr.selectAll();
+            break;
+            case 3:
+
+            valorCelda = ivn_tabla_lista_usr.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ivn_telefono_usr.setText(valorCelda.toString());
+            ivn_telefono_usr.requestFocus();
+            ivn_telefono_usr.selectAll();
+            break;
+            case 4:
+                
+            valorCelda = ivn_tabla_lista_usr.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ivn_contra_usr.setText(valorCelda.toString());
+            ivn_contra_usr.requestFocus();
+            ivn_contra_usr.selectAll();
+            break;
+            case 5:
+            valorCelda = ivn_tabla_lista_usr.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ivn_tipo_usr.setText(valorCelda.toString());
+            ivn_tipo_usr.requestFocus();
+            ivn_tipo_usr.selectAll();
+            break;
+            default:
+            JOptionPane.showMessageDialog(this, "Seleccione una celda para editar :)");
+            break;
+        }
+    }//GEN-LAST:event_ivn_btn_editar_usrPanelActionPerformed
+
+    private void ivn_tabla_lista_usrMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ivn_tabla_lista_usrMouseClicked
+        // TODO add your handling code here:
+        // Obtiene el modelo de la JTable
+        DefaultTableModel model = (DefaultTableModel) ivn_tabla_lista_usr.getModel();
+
+        // Obtiene el índice de la fila seleccionada
+        int RowSelect = ivn_tabla_lista_usr.getSelectedRow();
+
+        if (RowSelect != -1) {
+            // Recupera los valores de la fila seleccionada
+            String columna1 = model.getValueAt(RowSelect, 0).toString();
+            String columna2 = model.getValueAt(RowSelect, 1).toString();            
+            String columna3 = model.getValueAt(RowSelect, 2).toString();
+            String columna4 = model.getValueAt(RowSelect, 3).toString();
+            String columna5 = model.getValueAt(RowSelect, 4).toString();
+            String columna6 = model.getValueAt(RowSelect, 5).toString();
+            // Inserta los valores en los JTextFields
+            ivn_nombre_usr.setText(columna2);
+            ivn_ci_usr.setText(columna3);
+            ivn_telefono_usr.setText(columna4);
+            ivn_contra_usr.setText(columna5);
+            ivn_tipo_usr.setText(columna6);
+
+            // guardamos datos en un objeto clase
+            usuario.setId(Integer.parseInt(columna1));
+            usuario.setNombre(columna2);
+            usuario.setCi(columna3);
+            usuario.setTelefono(columna4);
+            usuario.setContraseña(columna5);
+            usuario.setTipo(columna6);
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione una fila que contenga datos :)");
+        }
+    }//GEN-LAST:event_ivn_tabla_lista_usrMouseClicked
+
+    private void ivn_btn_guardarCambios_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_guardarCambios_usrActionPerformed
+        // TODO add your handling code here:
+        usuario.setNombre(ivn_nombre_usr.getText().trim());
+        usuario.setCi(ivn_ci_usr.getText().trim());
+        usuario.setTelefono(ivn_telefono_usr.getText().trim());
+        usuario.setContraseña(ivn_contra_usr.getText().trim());
+        usuario.setTipo(ivn_tipo_usr.getText().trim());
+
+        usuariodao.actualizarUsuario(usuario);
+        // actulizar tabla
+        mostrarUsuariosEnTabla();
+    }//GEN-LAST:event_ivn_btn_guardarCambios_usrActionPerformed
+
+    private void ivn_btn_actualizar_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_actualizar_usrActionPerformed
+        // TODO add your handling code here:
+        mostrarUsuariosEnTabla();
+    }//GEN-LAST:event_ivn_btn_actualizar_usrActionPerformed
+
+    private void ivn_btn_eliminar_usrPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_eliminar_usrPanelActionPerformed
+        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de eliminar este Usuario?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+        
+        if (opcion == JOptionPane.YES_OPTION) {
+        // Si el usuario confirma la eliminación
+        usuariodao.eliminarUsuario(usuario.getId());
+        mostrarUsuariosEnTabla();
+        }
+        
+    }//GEN-LAST:event_ivn_btn_eliminar_usrPanelActionPerformed
+
+    private void ivn_btn_usr_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_btn_usr_buscarActionPerformed
+        // TODO add your handling code here:
+        String seleccion = ivn_cb_lista_usr.getSelectedItem().toString();
+        Usuario usuarioBuscado;
+        List<Usuario> resultados;
+        DefaultTableModel modelo;
+
+        switch (seleccion) {
+            case "NOMBRE":
+            String nombreBuscado = ivn_entrada_panel_usuario.getText();
+
+            // Llama al método de búsqueda por nombre del UsuarioDAO
+            resultados = usuariodao.buscarUsuariosPorNombre(nombreBuscado);
+
+            // Limpia la tabla
+            modelo = (DefaultTableModel) ivn_tabla_lista_usr.getModel();
+            modelo.setRowCount(0);
+
+            // Llena la tabla con los resultados de la búsqueda
+            for (Usuario usuarioNombre : resultados) {
+                Object[] fila = {usuarioNombre.getId(), usuarioNombre.getNombre(), usuarioNombre.getCi(),
+                    usuarioNombre.getTelefono(), usuarioNombre.getContraseña(), usuarioNombre.getTipo()};
+                modelo.addRow(fila);
+                
+                System.out.println(usuarioNombre.getId()+ " "+  usuarioNombre.getNombre());
+            }
+            break;
+            case "CI":
+            String CIBuscados = ivn_entrada_panel_usuario.getText();
+            resultados = usuariodao.buscarUsuariosCI(CIBuscados);
+
+            // Limpia la tabla
+            modelo = (DefaultTableModel) ivn_tabla_lista_usr.getModel();
+            modelo.setRowCount(0);
+
+            // Llena la tabla con los resultados de la búsqueda
+            for (Usuario usuarioCI : resultados) {
+                Object[] fila = {usuarioCI.getId(), usuarioCI.getNombre(), usuarioCI.getCi(),
+                    usuarioCI.getTelefono(), usuarioCI.getContraseña(), usuarioCI.getTipo()};
+                modelo.addRow(fila);
+            }
+            break;
+            case "ID":
+            int idBuscado = Integer.parseInt(ivn_entrada_panel_usuario.getText());
+            usuarioBuscado = usuariodao.obtenerUsuarioSaludPorId(idBuscado);
+
+            if (usuarioBuscado != null) {
+                // Establecer los valores en los JTextField
+                ivn_nombre_usr.setText(usuarioBuscado.getNombre());
+                ivn_ci_usr.setText(usuarioBuscado.getCi());
+                ivn_telefono_usr.setText(usuarioBuscado.getTelefono());
+                ivn_contra_usr.setText(usuarioBuscado.getContraseña());
+                ivn_tipo_usr.setText(usuarioBuscado.getTipo());
+
+                // Buscar la fila correspondiente en el JTable
+                int rowCount = ivn_tabla_lista_usr.getRowCount();
+                for (int i = 0; i < rowCount; i++) {
+                    int idEnTabla = (int) ivn_tabla_lista_usr.getValueAt(i, 0); 
+                    if (idEnTabla == idBuscado) {
+                        // Seleccionar la fila encontrada
+                        ivn_tabla_lista_usr.setRowSelectionInterval(i, i);
+                        break;
+                    }
+                }
+            } else {
+                // No se encontró el ID, puedes mostrar un mensaje al usuario
+                JOptionPane.showMessageDialog(this, "No se encontró ningún clase usuario con ese ID.");
+            }
+            break;
+            case "CARGO":
+            String cargBuscado = ivn_entrada_panel_usuario.getText();
+
+            // Llama al método de búsqueda por nombre del UsuarioDAO
+            resultados = usuariodao.buscarUsuariosTipo(cargBuscado);
+
+            // Limpia la tabla
+            modelo = (DefaultTableModel) ivn_tabla_lista_usr.getModel();
+            modelo.setRowCount(0);
+
+            // Llena la tabla con los resultados de la búsqueda
+            for (Usuario usuario : resultados) {
+                Object[] fila = {usuario.getId(), usuario.getNombre(), usuario.getCi(),
+                    usuario.getTelefono(), usuario.getContraseña(), usuario.getTipo()};
+                modelo.addRow(fila);
+            }
+            break;
+            default:
+            break;
+        }
+    }//GEN-LAST:event_ivn_btn_usr_buscarActionPerformed
+    
+    private void limpiarEntradasUsuario(){
+        ivn_nombre_usr.setText("");
+        ivn_ci_usr.setText("");
+        ivn_telefono_usr.setText("");
+        ivn_contra_usr.setText("");
+        ivn_tipo_usr.setText("");
+    }
 
     /**
      * @param args the command line arguments
@@ -2359,7 +2803,6 @@ public final class inicio extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel brig_roc;
-    private javax.swing.JButton btn_eliminarPanel_usr;
     private javax.swing.JButton buscar_viv;
     private javax.swing.JLabel ci_brig;
     private javax.swing.JLabel ci_jefe;
@@ -2390,7 +2833,6 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton guardar_nuevo_roc;
     private javax.swing.JButton guardar_roc;
     private javax.swing.JButton guardar_viv;
-    private javax.swing.JTextField inv_nombre_usr;
     private javax.swing.JTextField ivn_año_form;
     private javax.swing.JButton ivn_bn_buscar_casa_form;
     private javax.swing.JButton ivn_bn_guardar_form;
@@ -2403,27 +2845,27 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton ivn_bt_guardar_insecticida;
     private javax.swing.JButton ivn_bt_imprimir_insecticidaPanel;
     private javax.swing.JButton ivn_bt_nuevo_insecticida;
+    private javax.swing.JButton ivn_btn_actualizar_centroPanel;
+    private javax.swing.JButton ivn_btn_actualizar_usr;
     private javax.swing.JButton ivn_btn_editar_centroPanel;
     private javax.swing.JButton ivn_btn_editar_usrPanel;
-    private javax.swing.JButton ivn_btn_eliminar_centro;
-    private javax.swing.JButton ivn_btn_eliminar_centroPanel;
+    private javax.swing.JButton ivn_btn_eliminar_centroPanel1;
     private javax.swing.JButton ivn_btn_eliminar_usrPanel;
+    private javax.swing.JButton ivn_btn_guardarCambios_centro;
+    private javax.swing.JButton ivn_btn_guardarCambios_usr;
     private javax.swing.JButton ivn_btn_guardar_centro;
     private javax.swing.JButton ivn_btn_guardar_usr;
-    private javax.swing.JButton ivn_btn_imprimir_centrosPanel;
-    private javax.swing.JButton ivn_btn_imprimir_usrPanel;
-    private javax.swing.JButton ivn_btn_nuevo_centro;
-    private javax.swing.JButton ivn_btn_nuevo_usr;
+    private javax.swing.JButton ivn_btn_limpiar_centro;
+    private javax.swing.JButton ivn_btn_limpiar_usr1;
     private javax.swing.JButton ivn_btn_usr_buscar;
     private javax.swing.JButton ivn_buscar_centro;
-    private javax.swing.JTextField ivn_cargo_usr;
     private javax.swing.JComboBox<String> ivn_cb_cerrada_renuente_form;
     private javax.swing.JComboBox<String> ivn_cb_conformidad_form;
     private javax.swing.JComboBox<String> ivn_cb_est_salud_form;
     private javax.swing.JComboBox<String> ivn_cb_insecticida_form;
     private javax.swing.JComboBox<String> ivn_cb_lista_centros;
     private javax.swing.JComboBox<String> ivn_cb_lista_insecticida;
-    private javax.swing.JComboBox<String> ivn_cb_nombre_usr;
+    private javax.swing.JComboBox<String> ivn_cb_lista_usr;
     private javax.swing.JComboBox<String> ivn_cb_rosiador_form;
     private javax.swing.JTextField ivn_ci_usr;
     private javax.swing.JTextField ivn_ciclo_rosiado_form;
@@ -2470,9 +2912,10 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel ivn_jl_3_centros;
     private javax.swing.JLabel ivn_jl_3_form;
     private javax.swing.JLabel ivn_jl_3_insecticidas;
-    private javax.swing.JLabel ivn_jl_3_usuarios;
     private javax.swing.JLabel ivn_jl_4_usuarios;
+    private javax.swing.JLabel ivn_jl_5_usuarios;
     private javax.swing.JLabel ivn_jl_6_form;
+    private javax.swing.JLabel ivn_jl_6_usuarios;
     private javax.swing.JLabel ivn_jl_7_form;
     private javax.swing.JLabel ivn_jl_8_form;
     private javax.swing.JLabel ivn_jl_9_form;
@@ -2490,6 +2933,7 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField ivn_nombre_centro;
     private javax.swing.JTextField ivn_nombre_insecticida;
     private javax.swing.JTextField ivn_nombre_jefeFamilia_form;
+    private javax.swing.JTextField ivn_nombre_usr;
     private javax.swing.JTextField ivn_num_cargas_form;
     private javax.swing.JTextField ivn_num_casaViv_form;
     private javax.swing.JTextField ivn_num_conejos_form;
@@ -2505,6 +2949,8 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField ivn_red_salud_centro;
     private javax.swing.JTable ivn_tabla_lista_centros;
     private javax.swing.JTable ivn_tabla_lista_usr;
+    private javax.swing.JTextField ivn_telefono_usr;
+    private javax.swing.JTextField ivn_tipo_usr;
     private javax.swing.JTextField ivn_total_rosiados_form;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -2560,22 +3006,16 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JButton nuevo_viv;
     private interfaces.PanelRound panelRound2;
     private javax.swing.JPanel panel_act_viv;
-    private javax.swing.JPanel panel_añadir_;
-    private javax.swing.JPanel panel_añadir_1;
     private javax.swing.JPanel panel_añadir_2;
     private javax.swing.JPanel panel_brigadas;
     private javax.swing.JPanel panel_centros;
-    private javax.swing.JPanel panel_datos;
-    private javax.swing.JPanel panel_datos1;
     private javax.swing.JPanel panel_datos2;
     private javax.swing.JPanel panel_formularios;
     private javax.swing.JPanel panel_insecticidas;
     private javax.swing.JPanel panel_lis_viv;
     private javax.swing.JPanel panel_rdiario;
     private javax.swing.JPanel panel_rmensual;
-    private javax.swing.JTabbedPane panel_tabla_centro;
     private javax.swing.JTabbedPane panel_tabla_insect;
-    private javax.swing.JTabbedPane panel_tabla_usuario;
     private javax.swing.JPanel panel_usuario;
     private javax.swing.JPanel panel_viviendas;
     private javax.swing.JTable table_brigadas;
