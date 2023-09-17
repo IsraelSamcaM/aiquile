@@ -9,7 +9,10 @@ import clases.mover;
 import java.awt.Color;
 import javax.swing.JButton;
 import desplazable.Desface;
+import java.util.ArrayList;
 import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -27,20 +30,59 @@ public final class inicio extends javax.swing.JFrame {
     Insecticida insecticida = new Insecticida(); 
     InsecticidaDAO insecticidadao = new InsecticidaDAO();
     
-    Brigada brigada = new Brigada(); 
-    BrigadaDAO brigadadao = new BrigadaDAO();
-    
     Vivienda vivienda = new Vivienda(); 
     ViviendaDAO viviendadao = new ViviendaDAO();
+    
+    JefeBrigada jefeBrigada = new JefeBrigada();
+    JefeBrigadaDAO jefeBrigadadao = new JefeBrigadaDAO();
+    
+    Rociador rociador = new Rociador();
+    RociadorDAO rociadordao = new RociadorDAO();
+    
+    Brigada brigada = new Brigada();
+    BrigadaDAO brigadadao = new BrigadaDAO();
+    
+    List<JefeBrigada> listaJefesBrigada;
     
     public inicio() {
         initComponents();
         desplace = new Desface();
-//        setBackground(new Color(1.0f,1.0f,0.0f,0.0f));
         
         mostrarCentrosSaludEnTabla(); 
         mostrarUsuariosEnTabla();
         ivn_tabla_lista_centros.setAutoCreateRowSorter(true);
+        mostrarJefesBrigada();
+        llenarJefesComboBox();
+        
+        mostrarBrigadas();
+        
+        
+    }
+    
+    public void llenarJefesComboBox() {
+        // Limpiar el JComboBox antes de agregar nuevos elementos
+        cb_jefe_brigada.removeAllItems();
+
+        // Obtener los datos desde la base de datos
+        List<JefeBrigada> jefesCB = jefeBrigadadao.obtenerTodosLosJefeBrigadas();
+        
+        // Crear lista para almacenar los nombres
+        List<String> nombresJefes = new ArrayList<>();
+        
+        
+        // Llenar el JComboBox con los nombres de los jefes
+        for (JefeBrigada jefe : jefesCB) {
+            nombresJefes.add(jefe.getNombre());
+        }
+        
+        // Llenar el JComboBox con los nombres
+        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(nombresJefes.toArray(new String[0]));
+        cb_jefe_brigada.setModel(comboBoxModel);
+        
+        listaJefesBrigada = jefesCB;
+        
+        //int posicionSeleccionada = cb_jefe_brigada.getSelectedIndex();
+        //JefeBrigada jefeSeleccionado = listaJefesBrigada.get(posicionSeleccionada);
     }
   
     /**
@@ -138,7 +180,7 @@ public final class inicio extends javax.swing.JFrame {
         gestion_brigadas = new javax.swing.JTabbedPane();
         ges_jefes = new javax.swing.JPanel();
         dir_jefe = new javax.swing.JLabel();
-        guardar_jefe = new javax.swing.JButton();
+        editar_jefe = new javax.swing.JButton();
         label_jefes = new javax.swing.JLabel();
         nom_jefe = new javax.swing.JLabel();
         ci_jefe = new javax.swing.JLabel();
@@ -149,23 +191,27 @@ public final class inicio extends javax.swing.JFrame {
         tel_jefe_brig = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         table_jefes = new javax.swing.JTable();
-        guardar_jefe1 = new javax.swing.JButton();
-        guardar_jefe2 = new javax.swing.JButton();
-        guardar_jefe3 = new javax.swing.JButton();
+        guardarCambios_jefe = new javax.swing.JButton();
+        eliminar_jefe = new javax.swing.JButton();
+        limpiar_jefe = new javax.swing.JButton();
+        actualizar_jefe = new javax.swing.JButton();
+        guardar_jefe = new javax.swing.JButton();
         ges_brig = new javax.swing.JPanel();
         label_brig = new javax.swing.JLabel();
         nom_brig = new javax.swing.JLabel();
-        nombre_jefe1 = new javax.swing.JTextField();
+        nombre_Brigada = new javax.swing.JTextField();
         ci_brig = new javax.swing.JLabel();
         zona_brigada = new javax.swing.JTextField();
         jefe_brig = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         table_brigadas = new javax.swing.JTable();
-        nuevo_brig = new javax.swing.JButton();
-        guardar_nuevo_brig = new javax.swing.JButton();
         guardar_brig = new javax.swing.JButton();
+        editar_brig = new javax.swing.JButton();
+        guardarCambios_brig = new javax.swing.JButton();
+        actualizar_brig = new javax.swing.JButton();
+        cb_jefe_brigada = new javax.swing.JComboBox<>();
         eliminar_brig = new javax.swing.JButton();
-        est_jefe_brigada = new javax.swing.JComboBox<>();
+        limpiar_brig = new javax.swing.JButton();
         ges_roc = new javax.swing.JPanel();
         label_rociadores = new javax.swing.JLabel();
         nom_roc = new javax.swing.JLabel();
@@ -178,12 +224,14 @@ public final class inicio extends javax.swing.JFrame {
         tel_rociadores = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
         table_rociadores = new javax.swing.JTable();
-        guardar_roc = new javax.swing.JButton();
-        guardar_nuevo_roc = new javax.swing.JButton();
-        guardar_cambios_roc = new javax.swing.JButton();
-        eliminar_roc = new javax.swing.JButton();
         brig_roc = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        guardar_roc = new javax.swing.JButton();
+        editar_roc = new javax.swing.JButton();
+        guardarCambios_roc = new javax.swing.JButton();
+        actualizar_roc = new javax.swing.JButton();
+        eliminar_roc = new javax.swing.JButton();
+        limpiar_roc = new javax.swing.JButton();
         panel_insecticidas = new javax.swing.JPanel();
         panel_tabla_insect = new javax.swing.JTabbedPane();
         panel_añadir_2 = new javax.swing.JPanel();
@@ -575,6 +623,11 @@ public final class inicio extends javax.swing.JFrame {
         ivn_cb_lista_usr.setBackground(new java.awt.Color(51, 153, 255));
         ivn_cb_lista_usr.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ivn_cb_lista_usr.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NOMBRE", "CI", "ID", "CARGO" }));
+        ivn_cb_lista_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ivn_cb_lista_usrActionPerformed(evt);
+            }
+        });
         panel_usuario.add(ivn_cb_lista_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 150, 30));
         panel_usuario.add(ivn_entrada_panel_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 650, 30));
 
@@ -1030,30 +1083,52 @@ public final class inicio extends javax.swing.JFrame {
         panel_brigadas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ges_jefes.setBackground(new java.awt.Color(255, 255, 255));
+        ges_jefes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dir_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dir_jefe.setForeground(new java.awt.Color(102, 102, 102));
         dir_jefe.setText("Dirección: ");
+        ges_jefes.add(dir_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 154, -1, -1));
 
-        guardar_jefe.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_jefe.setText("NUEVO");
+        editar_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        editar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editar_jefe.setText("EDITAR");
+        editar_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editar_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(editar_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, 125, 30));
 
         label_jefes.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         label_jefes.setForeground(new java.awt.Color(102, 102, 102));
         label_jefes.setText("REGISTRO Y EDICION DE JEFES");
+        ges_jefes.add(label_jefes, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 20, -1, -1));
 
         nom_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nom_jefe.setForeground(new java.awt.Color(102, 102, 102));
         nom_jefe.setText("Nombre Completo: ");
+        ges_jefes.add(nom_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 70, -1, -1));
 
         ci_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ci_jefe.setForeground(new java.awt.Color(102, 102, 102));
         ci_jefe.setText("CI:");
+        ges_jefes.add(ci_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 112, -1, -1));
 
         tel_jefe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tel_jefe.setForeground(new java.awt.Color(102, 102, 102));
         tel_jefe.setText("Tel/Cel:");
+        ges_jefes.add(tel_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 196, -1, -1));
+
+        nombre_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombre_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(nombre_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 64, 419, -1));
+        ges_jefes.add(ci_jefe_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 106, 419, -1));
+        ges_jefes.add(dir_jefe_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 148, 419, -1));
+        ges_jefes.add(tel_jefe_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 419, -1));
 
         table_jefes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1066,114 +1141,91 @@ public final class inicio extends javax.swing.JFrame {
                 "Nombre Completo", "CI", "Dirección", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(table_jefes);
-
-        guardar_jefe1.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_jefe1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_jefe1.setText("GUARDAR NUEVO");
-        guardar_jefe1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                guardar_jefe1ActionPerformed(evt);
+        table_jefes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_jefesMouseClicked(evt);
             }
         });
+        jScrollPane3.setViewportView(table_jefes);
 
-        guardar_jefe2.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_jefe2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_jefe2.setText("GUARDAR CAMBIOS");
+        ges_jefes.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 930, 280));
 
-        guardar_jefe3.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_jefe3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_jefe3.setText("ELIMINAR");
+        guardarCambios_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        guardarCambios_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardarCambios_jefe.setText("GUARDAR CAMBIOS");
+        guardarCambios_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarCambios_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(guardarCambios_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, -1, 30));
 
-        javax.swing.GroupLayout ges_jefesLayout = new javax.swing.GroupLayout(ges_jefes);
-        ges_jefes.setLayout(ges_jefesLayout);
-        ges_jefesLayout.setHorizontalGroup(
-            ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
-                .addGap(208, 208, 208)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nom_jefe)
-                    .addComponent(ci_jefe)
-                    .addComponent(dir_jefe)
-                    .addComponent(tel_jefe))
-                .addGap(18, 18, 18)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ci_jefe_brig)
-                    .addComponent(dir_jefe_brig)
-                    .addComponent(tel_jefe_brig)
-                    .addComponent(nombre_jefe))
-                .addGap(221, 221, 221))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
-                .addContainerGap(185, Short.MAX_VALUE)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
-                        .addComponent(guardar_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(guardar_jefe1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(guardar_jefe2)
-                        .addGap(35, 35, 35)
-                        .addComponent(guardar_jefe3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(208, 208, 208))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_jefesLayout.createSequentialGroup()
-                        .addComponent(label_jefes)
-                        .addGap(339, 339, 339))))
-            .addGroup(ges_jefesLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 843, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        ges_jefesLayout.setVerticalGroup(
-            ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ges_jefesLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(label_jefes)
-                .addGap(12, 12, 12)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nom_jefe)
-                    .addComponent(nombre_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ci_jefe)
-                    .addComponent(ci_jefe_brig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dir_jefe)
-                    .addComponent(dir_jefe_brig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tel_jefe)
-                    .addComponent(tel_jefe_brig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(ges_jefesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(guardar_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_jefe1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_jefe2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_jefe3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
-        );
+        eliminar_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        eliminar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        eliminar_jefe.setText("ELIMINAR");
+        eliminar_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminar_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(eliminar_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 530, 125, 30));
+
+        limpiar_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        limpiar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        limpiar_jefe.setText("LIMPIAR");
+        limpiar_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiar_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(limpiar_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 120, 30));
+
+        actualizar_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        actualizar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        actualizar_jefe.setText("ACTUALIZAR");
+        actualizar_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualizar_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(actualizar_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 530, 130, 30));
+
+        guardar_jefe.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_jefe.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_jefe.setText("GUARDAR");
+        guardar_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardar_jefeActionPerformed(evt);
+            }
+        });
+        ges_jefes.add(guardar_jefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 130, 30));
 
         gestion_brigadas.addTab("Gestion de Jefes", ges_jefes);
 
         ges_brig.setBackground(new java.awt.Color(255, 255, 255));
+        ges_brig.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         label_brig.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         label_brig.setForeground(new java.awt.Color(102, 102, 102));
         label_brig.setText("REGISTRO Y EDICION DE BRIGADAS");
+        ges_brig.add(label_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 20, -1, -1));
 
         nom_brig.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nom_brig.setForeground(new java.awt.Color(102, 102, 102));
         nom_brig.setText("Nombre Brigada: ");
+        ges_brig.add(nom_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 70, -1, -1));
+        ges_brig.add(nombre_Brigada, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 64, 415, -1));
 
         ci_brig.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ci_brig.setForeground(new java.awt.Color(102, 102, 102));
         ci_brig.setText("Zona de Cobertura:");
+        ges_brig.add(ci_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 112, -1, -1));
+        ges_brig.add(zona_brigada, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 106, 415, -1));
 
         jefe_brig.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jefe_brig.setForeground(new java.awt.Color(102, 102, 102));
         jefe_brig.setText("Jefe de Brigada:");
+        ges_brig.add(jefe_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 154, -1, -1));
 
         table_brigadas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1186,118 +1238,104 @@ public final class inicio extends javax.swing.JFrame {
                 "Nombre de la Brigada", "Zona de Cobertura", "Jefe de Brigada"
             }
         ));
-        jScrollPane4.setViewportView(table_brigadas);
-
-        nuevo_brig.setBackground(new java.awt.Color(51, 153, 255));
-        nuevo_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        nuevo_brig.setText("NUEVO");
-
-        guardar_nuevo_brig.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_nuevo_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_nuevo_brig.setText("GUARDAR NUEVO");
-        guardar_nuevo_brig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                guardar_nuevo_brigActionPerformed(evt);
+        table_brigadas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_brigadasMouseClicked(evt);
             }
         });
+        jScrollPane4.setViewportView(table_brigadas);
+
+        ges_brig.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 196, 823, 319));
 
         guardar_brig.setBackground(new java.awt.Color(51, 153, 255));
         guardar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_brig.setText("GUARDAR CAMBIOS");
+        guardar_brig.setText("GUARDAR");
+        guardar_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardar_brigActionPerformed(evt);
+            }
+        });
+        ges_brig.add(guardar_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 530, 125, 30));
+
+        editar_brig.setBackground(new java.awt.Color(51, 153, 255));
+        editar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editar_brig.setText("EDITAR");
+        editar_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editar_brigActionPerformed(evt);
+            }
+        });
+        ges_brig.add(editar_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 125, 30));
+
+        guardarCambios_brig.setBackground(new java.awt.Color(51, 153, 255));
+        guardarCambios_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardarCambios_brig.setText("GUARDAR CAMBIOS");
+        guardarCambios_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarCambios_brigActionPerformed(evt);
+            }
+        });
+        ges_brig.add(guardarCambios_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, -1, 30));
+
+        actualizar_brig.setBackground(new java.awt.Color(51, 153, 255));
+        actualizar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        actualizar_brig.setText("ACTUALIZAR");
+        actualizar_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualizar_brigActionPerformed(evt);
+            }
+        });
+        ges_brig.add(actualizar_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 530, 125, 30));
+        ges_brig.add(cb_jefe_brigada, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 148, 415, -1));
 
         eliminar_brig.setBackground(new java.awt.Color(51, 153, 255));
         eliminar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         eliminar_brig.setText("ELIMINAR");
+        ges_brig.add(eliminar_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 125, 30));
 
-        est_jefe_brigada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        javax.swing.GroupLayout ges_brigLayout = new javax.swing.GroupLayout(ges_brig);
-        ges_brig.setLayout(ges_brigLayout);
-        ges_brigLayout.setHorizontalGroup(
-            ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_brigLayout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nom_brig)
-                    .addComponent(ci_brig)
-                    .addComponent(jefe_brig))
-                .addGap(18, 18, 18)
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(zona_brigada)
-                    .addComponent(est_jefe_brigada, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(nombre_jefe1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(218, 218, 218))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_brigLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(label_brig)
-                .addGap(286, 286, 286))
-            .addGroup(ges_brigLayout.createSequentialGroup()
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ges_brigLayout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 823, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ges_brigLayout.createSequentialGroup()
-                        .addGap(207, 207, 207)
-                        .addComponent(nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(guardar_nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(guardar_brig)
-                        .addGap(35, 35, 35)
-                        .addComponent(eliminar_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
-        );
-        ges_brigLayout.setVerticalGroup(
-            ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ges_brigLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(label_brig)
-                .addGap(12, 12, 12)
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nom_brig)
-                    .addComponent(nombre_jefe1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ci_brig)
-                    .addComponent(zona_brigada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jefe_brig)
-                    .addComponent(est_jefe_brigada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(ges_brigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_nuevo_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eliminar_brig, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
-        );
+        limpiar_brig.setBackground(new java.awt.Color(51, 153, 255));
+        limpiar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        limpiar_brig.setText("LIMPIAR");
+        limpiar_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiar_brigActionPerformed(evt);
+            }
+        });
+        ges_brig.add(limpiar_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 125, 30));
 
         gestion_brigadas.addTab("Gestion de Brigadas", ges_brig);
 
         ges_roc.setBackground(new java.awt.Color(255, 255, 255));
+        ges_roc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         label_rociadores.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         label_rociadores.setForeground(new java.awt.Color(102, 102, 102));
         label_rociadores.setText("REGISTRO Y EDICION DE ROCIADORES");
+        ges_roc.add(label_rociadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 20, -1, -1));
 
         nom_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nom_roc.setForeground(new java.awt.Color(102, 102, 102));
         nom_roc.setText("Nombre Completo: ");
+        ges_roc.add(nom_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 70, -1, -1));
+        ges_roc.add(nombre_rociadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 64, 460, -1));
 
         ci_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ci_roc.setForeground(new java.awt.Color(102, 102, 102));
         ci_roc.setText("Cédula de Identidad:");
+        ges_roc.add(ci_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 112, -1, -1));
+        ges_roc.add(ci_rociadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 106, 132, -1));
 
         dir_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dir_roc.setForeground(new java.awt.Color(102, 102, 102));
         dir_roc.setText("Dirección: ");
+        ges_roc.add(dir_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 154, -1, -1));
+        ges_roc.add(dir_rociadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 148, 460, -1));
 
         tel_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tel_roc.setForeground(new java.awt.Color(102, 102, 102));
         tel_roc.setText("Tel/Cel:");
+        ges_roc.add(tel_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 112, -1, -1));
+        ges_roc.add(tel_rociadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(541, 106, 241, -1));
 
         table_rociadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1313,114 +1351,59 @@ public final class inicio extends javax.swing.JFrame {
         table_rociadores.setSelectionBackground(new java.awt.Color(255, 0, 0));
         jScrollPane5.setViewportView(table_rociadores);
 
-        guardar_roc.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_roc.setText("NUEVO");
-
-        guardar_nuevo_roc.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_nuevo_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_nuevo_roc.setText("GUARDAR NUEVO");
-        guardar_nuevo_roc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                guardar_nuevo_rocActionPerformed(evt);
-            }
-        });
-
-        guardar_cambios_roc.setBackground(new java.awt.Color(51, 153, 255));
-        guardar_cambios_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        guardar_cambios_roc.setText("GUARDAR CAMBIOS");
-
-        eliminar_roc.setBackground(new java.awt.Color(51, 153, 255));
-        eliminar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        eliminar_roc.setText("ELIMINAR");
+        ges_roc.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 238, 826, 276));
 
         brig_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         brig_roc.setForeground(new java.awt.Color(102, 102, 102));
         brig_roc.setText("Brigada: ");
+        ges_roc.add(brig_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 196, -1, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ges_roc.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 190, 460, -1));
 
-        javax.swing.GroupLayout ges_rocLayout = new javax.swing.GroupLayout(ges_roc);
-        ges_roc.setLayout(ges_rocLayout);
-        ges_rocLayout.setHorizontalGroup(
-            ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_rocLayout.createSequentialGroup()
-                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(ges_rocLayout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nom_roc)
-                            .addComponent(ci_roc)
-                            .addComponent(dir_roc)
-                            .addComponent(brig_roc))
-                        .addGap(18, 18, 18)
-                        .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dir_rociadores)
-                            .addGroup(ges_rocLayout.createSequentialGroup()
-                                .addComponent(ci_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(tel_roc)
-                                .addGap(18, 18, 18)
-                                .addComponent(tel_rociadores))
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nombre_rociadores, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(ges_rocLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label_rociadores)
-                        .addGap(68, 68, 68)))
-                .addGap(218, 218, 218))
-            .addGroup(ges_rocLayout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ges_rocLayout.createSequentialGroup()
-                .addContainerGap(200, Short.MAX_VALUE)
-                .addComponent(guardar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(guardar_nuevo_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(guardar_cambios_roc)
-                .addGap(35, 35, 35)
-                .addComponent(eliminar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(193, 193, 193))
-        );
-        ges_rocLayout.setVerticalGroup(
-            ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ges_rocLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(label_rociadores)
-                .addGap(12, 12, 12)
-                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nom_roc)
-                    .addComponent(nombre_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ci_roc)
-                    .addComponent(ci_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tel_roc)
-                    .addComponent(tel_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dir_roc)
-                    .addComponent(dir_rociadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(brig_roc))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(ges_rocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(guardar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_nuevo_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(guardar_cambios_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eliminar_roc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
-        );
+        guardar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        guardar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardar_roc.setText("GUARDAR");
+        ges_roc.add(guardar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 530, 125, 30));
+
+        editar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        editar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editar_roc.setText("EDITAR");
+        editar_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editar_rocActionPerformed(evt);
+            }
+        });
+        ges_roc.add(editar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 125, 30));
+
+        guardarCambios_roc.setBackground(new java.awt.Color(51, 153, 255));
+        guardarCambios_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        guardarCambios_roc.setText("GUARDAR CAMBIOS");
+        ges_roc.add(guardarCambios_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, -1, 30));
+
+        actualizar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        actualizar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        actualizar_roc.setText("ACTUALIZAR");
+        actualizar_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualizar_rocActionPerformed(evt);
+            }
+        });
+        ges_roc.add(actualizar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 530, 125, 30));
+
+        eliminar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        eliminar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        eliminar_roc.setText("ELIMINAR");
+        ges_roc.add(eliminar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 125, 30));
+
+        limpiar_roc.setBackground(new java.awt.Color(51, 153, 255));
+        limpiar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        limpiar_roc.setText("LIMPIAR");
+        ges_roc.add(limpiar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 125, 30));
 
         gestion_brigadas.addTab("Gestion de Rociadores", ges_roc);
 
-        panel_brigadas.add(gestion_brigadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1000, 630));
+        panel_brigadas.add(gestion_brigadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 680));
 
         jPanel1.add(panel_brigadas, "card2");
 
@@ -2004,6 +1987,60 @@ public final class inicio extends javax.swing.JFrame {
         ivn_tabla_lista_usr.setModel(modeloTabla);
     }
     
+    public void mostrarJefesBrigada(){
+        JefeBrigadaDAO jefeBrigadaDao = new JefeBrigadaDAO();
+
+        // Obtener la lista de todos los jefeBrigadas desde la base de datos
+        List<JefeBrigada> jefeBrigadas = jefeBrigadaDao.obtenerTodosLosJefeBrigadas();
+
+        // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
+        DefaultTableModel modeloTabla = new DefaultTableModel();
+        modeloTabla.addColumn("ID");
+        modeloTabla.addColumn("Nombre");
+        modeloTabla.addColumn("CI");
+        modeloTabla.addColumn("dirección");
+        modeloTabla.addColumn("Telefono");
+        // Llenar el modelo de tabla con los datos de los jefeBrigadas
+        for (JefeBrigada jefeBrigadaAux : jefeBrigadas) {
+            modeloTabla.addRow(new Object[]{
+                jefeBrigadaAux.getId(),
+                jefeBrigadaAux.getNombre(),
+                jefeBrigadaAux.getCi(),
+                jefeBrigadaAux.getDireccion(),
+                jefeBrigadaAux.getTelefono()
+            });
+        }
+        // Asignar el modelo de tabla al JTable
+        table_jefes.setModel(modeloTabla);
+    }
+    
+    public void mostrarBrigadas(){
+        BrigadaDAO brigadadao = new BrigadaDAO();
+
+        // Obtener la lista de todos los brigadas desde la base de datos
+        List<Brigada> brigadas = brigadadao.obtenerTodosLasBrigadas();
+
+        // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
+        DefaultTableModel modeloTabla = new DefaultTableModel();
+        modeloTabla.addColumn("ID Brigada");
+        modeloTabla.addColumn("ID JefeBrigada");
+        modeloTabla.addColumn("Nombre JefeBrigada");
+        modeloTabla.addColumn("Nombre Brigada");
+        modeloTabla.addColumn("Zona Cobertura");
+        // Llenar el modelo de tabla con los datos de los brigadas
+        for (Brigada brigadaAux : brigadas) {
+            modeloTabla.addRow(new Object[]{
+                brigadaAux.getId(),
+                brigadaAux.getJefeBrigada().getId(),
+                brigadaAux.getJefeBrigada().getNombre(),
+                brigadaAux.getNombre(),
+                brigadaAux.getZona_cobertura()
+            });
+        }
+        // Asignar el modelo de tabla al JTable
+        table_brigadas.setModel(modeloTabla);
+    }
+    
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         // TODO add your handling code here:
         
@@ -2207,17 +2244,9 @@ public final class inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void guardar_jefe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_jefe1ActionPerformed
+    private void editar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_brigActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_guardar_jefe1ActionPerformed
-
-    private void guardar_nuevo_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_nuevo_brigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_guardar_nuevo_brigActionPerformed
-
-    private void guardar_nuevo_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_nuevo_rocActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_guardar_nuevo_rocActionPerformed
+    }//GEN-LAST:event_editar_brigActionPerformed
 
     private void ivn_cb_rosiador_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cb_rosiador_formActionPerformed
         // TODO add your handling code here:
@@ -2735,6 +2764,311 @@ public final class inicio extends javax.swing.JFrame {
             break;
         }
     }//GEN-LAST:event_ivn_btn_usr_buscarActionPerformed
+
+    private void limpiar_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_jefeActionPerformed
+        // TODO add your handling code here:
+        limpiarEntradasJefeBrigada();
+    }//GEN-LAST:event_limpiar_jefeActionPerformed
+    
+    private void limpiarEntradasJefeBrigada(){
+        nombre_jefe.setText("");  
+        ci_jefe_brig.setText("");
+        dir_jefe_brig.setText("");
+        tel_jefe_brig.setText("");
+    }
+    
+    private void actualizar_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizar_jefeActionPerformed
+        // TODO add your handling code here:
+        mostrarJefesBrigada();
+        // Actualizar ComboBox de Jefes
+        llenarJefesComboBox();
+    }//GEN-LAST:event_actualizar_jefeActionPerformed
+
+    private void editar_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_jefeActionPerformed
+        // TODO add your handling code here:
+        int filaSeleccionada = table_jefes.getSelectedRow();
+        int columnaSeleccionada = table_jefes.getSelectedColumn();
+        Object valorCelda;
+        // Verifica si se hizo clic en la columna que deseas editar (por ejemplo, la columna del nombre)
+        switch (columnaSeleccionada) {
+            case 1:
+            // Obtén el valor de la celda seleccionada
+            valorCelda = table_jefes.getValueAt(filaSeleccionada, columnaSeleccionada);
+            // Asigna el valor al JTextField y coloca el cursor en el JTextField
+            nombre_jefe.setText(valorCelda.toString());
+            nombre_jefe.requestFocus();
+            nombre_jefe.selectAll(); // Seleciona todo el texto en el JTextField
+            break;
+            case 2:
+
+            valorCelda = table_jefes.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ci_jefe_brig.setText(valorCelda.toString());
+            ci_jefe_brig.requestFocus();
+            ci_jefe_brig.selectAll();
+            break;
+            case 3:
+
+            valorCelda = table_jefes.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            dir_jefe_brig.setText(valorCelda.toString());
+            dir_jefe_brig.requestFocus();
+            dir_jefe_brig.selectAll();
+            break;
+            case 4:
+
+            valorCelda = table_jefes.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            tel_jefe_brig.setText(valorCelda.toString());
+            tel_jefe_brig.requestFocus();
+            tel_jefe_brig.selectAll();
+            break;
+            default:
+            JOptionPane.showMessageDialog(this, "Seleccione una celda para editar :)");
+            break;
+        }
+    }//GEN-LAST:event_editar_jefeActionPerformed
+
+    private void nombre_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombre_jefeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombre_jefeActionPerformed
+
+    private void guardar_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_jefeActionPerformed
+        // TODO add your handling code here:
+        String nombreJefe = nombre_jefe.getText().trim();
+        String ciJefe = ci_jefe_brig.getText().trim();
+        String direccionJefe = dir_jefe_brig.getText().trim();
+        String telefonoJefe = tel_jefe_brig.getText().trim();
+
+        // Verificar que ninguno de los campos esté en blanco
+        if (nombreJefe.isEmpty() || ciJefe.isEmpty() || direccionJefe.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.");
+            return;  // No continuar si hay campos en blanco
+        }
+
+        // Crear una instancia del JefeBrigadaDAO
+        jefeBrigadadao = new JefeBrigadaDAO();
+
+        // Crear un nuevo JefeBrigada si todos los campos están completos
+        JefeBrigada jefeBrigadaGuardado  = new JefeBrigada();
+        jefeBrigadaGuardado.setNombre(nombreJefe);
+        jefeBrigadaGuardado.setCi(ciJefe);
+        jefeBrigadaGuardado.setDireccion(direccionJefe);
+        jefeBrigadaGuardado.setTelefono(telefonoJefe);
+
+        // Insertar el JefeBrigada en la base de datos
+        boolean exito = jefeBrigadadao.insertarJefeBrigada(jefeBrigadaGuardado );
+        if (exito) {
+            // Mostrar un mensaje de confirmación al usuario
+            JOptionPane.showMessageDialog(this, "El jefe Brigada se ha guardado exitosamente.");
+
+            // Limpiar los campos después de la inserción exitosa
+            limpiarEntradasJefeBrigada();
+
+            // Actualizar la tabla de jefeBrigada
+            mostrarJefesBrigada();
+            
+            // Actualizar ComboBox de Jefes
+            llenarJefesComboBox();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al guardar el jefe Brigada.");
+        }
+    }//GEN-LAST:event_guardar_jefeActionPerformed
+
+    private void ivn_cb_lista_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cb_lista_usrActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ivn_cb_lista_usrActionPerformed
+
+    private void actualizar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizar_brigActionPerformed
+        // TODO add your handling code here:
+        mostrarBrigadas();
+        // Actualizar ComboBox de Jefes
+        llenarJefesComboBox();
+    }//GEN-LAST:event_actualizar_brigActionPerformed
+
+    private void editar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_rocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editar_rocActionPerformed
+
+    private void actualizar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizar_rocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actualizar_rocActionPerformed
+
+    private void guardar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_brigActionPerformed
+        // TODO add your handling code here:
+        String nombreJefe = nombre_Brigada.getText().trim();
+        String zonaBrigada = zona_brigada.getText().trim();
+        
+        // recuperamos al Jefe seleccionado
+        int posicionSeleccionada = cb_jefe_brigada.getSelectedIndex();
+        JefeBrigada jefeSeleccionado = listaJefesBrigada.get(posicionSeleccionada);
+        
+        // Verificar que ninguno de los campos esté en blanco
+        if (nombreJefe.isEmpty() || zonaBrigada.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.");
+            return;  // No continuar si hay campos en blanco
+        }
+
+        // Crear una instancia del brigadadao
+        brigadadao = new BrigadaDAO();
+
+        // Crear un nuevo Brigada si todos los campos están completos
+        Brigada brigadaGuardado  = new Brigada();
+        
+        brigadaGuardado.setJefeBrigada(jefeSeleccionado);
+        brigadaGuardado.setNombre(nombreJefe);
+        brigadaGuardado.setZona_cobertura(zonaBrigada);
+
+        // Insertar el Brigada en la base de datos
+        boolean exito = brigadadao.insertarBrigada(brigadaGuardado);
+        if (exito) {
+            // Mostrar un mensaje de confirmación al usuario
+            JOptionPane.showMessageDialog(this, "El jefeBrigada se ha guardado exitosamente.");
+
+            // Limpiar los campos después de la inserción exitosa
+            limpiarEntradasBrigadas();
+
+            // Actualizar la tabla de jefeBrigada
+            mostrarJefesBrigada();
+            
+            // Actualizar ComboBox de Jefes
+            llenarJefesComboBox();
+            
+            mostrarBrigadas();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al guardar el jefeBrigada.");
+        }
+    }//GEN-LAST:event_guardar_brigActionPerformed
+
+    private void table_jefesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_jefesMouseClicked
+        // TODO add your handling code here:
+        // Obtiene el modelo de la JTable
+        DefaultTableModel model = (DefaultTableModel) table_jefes.getModel();
+
+        // Obtiene el índice de la fila seleccionada
+        int RowSelect = table_jefes.getSelectedRow();
+
+        if (RowSelect != -1) {
+            // Recupera los valores de la fila seleccionada
+            String columna1 = model.getValueAt(RowSelect, 0).toString();
+            String columna2 = model.getValueAt(RowSelect, 1).toString();            
+            String columna3 = model.getValueAt(RowSelect, 2).toString();
+            String columna4 = model.getValueAt(RowSelect, 3).toString();
+            String columna5 = model.getValueAt(RowSelect, 4).toString();
+            // Inserta los valores en los JTextFields
+            nombre_jefe.setText(columna2);
+            ci_jefe_brig.setText(columna3);
+            dir_jefe_brig.setText(columna4);
+            tel_jefe_brig.setText(columna5);
+
+            // guardamos datos en un objeto clase
+            jefeBrigada.setId(Integer.parseInt(columna1));
+            jefeBrigada.setNombre(columna2);
+            jefeBrigada.setCi(columna3);
+            jefeBrigada.setDireccion(columna4);
+            jefeBrigada.setTelefono(columna5);
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione una fila que contenga datos :)");
+        }
+    }//GEN-LAST:event_table_jefesMouseClicked
+
+    private void guardarCambios_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambios_jefeActionPerformed
+        // TODO add your handling code here:
+        jefeBrigada.setNombre(nombre_jefe.getText().trim());
+        jefeBrigada.setCi(ci_jefe_brig.getText().trim());
+        jefeBrigada.setDireccion(dir_jefe_brig.getText().trim());
+        jefeBrigada.setTelefono(tel_jefe_brig.getText().trim());
+
+        jefeBrigadadao.actualizarJefeBrigada(jefeBrigada);
+        // actulizar tabla
+        mostrarJefesBrigada();
+        // Actualizar ComboBox de Jefes
+        llenarJefesComboBox();
+    }//GEN-LAST:event_guardarCambios_jefeActionPerformed
+
+    private void eliminar_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_jefeActionPerformed
+        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de eliminar este Usuario?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+
+        if (opcion == JOptionPane.YES_OPTION) {
+        // Si el jefeBrigada confirma la eliminación
+        jefeBrigadadao.eliminarJefeBrigada(jefeBrigada.getId());
+        mostrarJefesBrigada();
+        // Actualizar ComboBox de Jefes
+        llenarJefesComboBox();
+        }
+    
+    }//GEN-LAST:event_eliminar_jefeActionPerformed
+
+    private void limpiar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_brigActionPerformed
+        // TODO add your handling code here:
+        limpiarEntradasBrigadas();
+    }//GEN-LAST:event_limpiar_brigActionPerformed
+
+    private void guardarCambios_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambios_brigActionPerformed
+        // TODO add your handling code here:
+        // recuperamos al Jefe seleccionado
+        int posicionSeleccionada = cb_jefe_brigada.getSelectedIndex();
+        JefeBrigada jefeSeleccionado = listaJefesBrigada.get(posicionSeleccionada);
+        
+        brigada.setNombre(nombre_Brigada.getText().trim());
+        brigada.setJefeBrigada(jefeSeleccionado);
+        brigada.setZona_cobertura(zona_brigada.getText().trim());
+
+        brigadadao.actualizarBrigada(brigada);
+        // actulizar tabla
+        mostrarBrigadas();
+        // Actualizar ComboBox de Jefes
+        llenarJefesComboBox();
+    }//GEN-LAST:event_guardarCambios_brigActionPerformed
+
+    private void table_brigadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_brigadasMouseClicked
+        // TODO add your handling code here:
+         DefaultTableModel model = (DefaultTableModel) table_brigadas.getModel();
+        int RowSelect = table_brigadas.getSelectedRow();
+
+        if (RowSelect != -1) {
+            String columna3 = model.getValueAt(RowSelect, 2).toString();  // Nombre del jefe de brigada
+
+            // Buscar el nombre del jefe de brigada en el JComboBox y seleccionarlo si se encuentra
+            for (int i = 0; i < cb_jefe_brigada.getItemCount(); i++) {
+                if (cb_jefe_brigada.getItemAt(i).equals(columna3)) {
+                    cb_jefe_brigada.setSelectedIndex(i);
+                    break;  // Terminar la búsqueda una vez que se haya encontrado
+                }
+            }
+
+            String columna1 = model.getValueAt(RowSelect, 0).toString(); //ID Brigada
+            String columna2 = model.getValueAt(RowSelect, 1).toString(); //ID Jefe
+            String columna4 = model.getValueAt(RowSelect, 3).toString(); //Nombre Brigada
+            String columna5 = model.getValueAt(RowSelect, 4).toString(); //Zona Cobertura
+            
+            // Inserta los valores en los JTextFields
+            nombre_Brigada.setText(columna4);
+            zona_brigada.setText(columna5);  
+
+            // guardamos datos en un objeto clase
+            
+            brigada.setId(Integer.parseInt(columna1));
+            brigada.setNombre(columna4);
+            brigada.setZona_cobertura(columna5);
+            
+            /*// recuperamos al Jefe seleccionado
+            int posicionSeleccionada = cb_jefe_brigada.getSelectedIndex();
+            JefeBrigada jefeSeleccionado = listaJefesBrigada.get(posicionSeleccionada);
+            
+            brigada.setJefeBrigada(jefeSeleccionado);*/
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione una fila que contenga datos :)");
+        }
+    }//GEN-LAST:event_table_brigadasMouseClicked
+    
+    private void limpiarEntradasBrigadas(){
+        nombre_Brigada.setText("");
+        zona_brigada.setText("");
+    }
     
     private void limpiarEntradasUsuario(){
         ivn_nombre_usr.setText("");
@@ -2802,8 +3136,12 @@ public final class inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton actualizar_brig;
+    private javax.swing.JButton actualizar_jefe;
+    private javax.swing.JButton actualizar_roc;
     private javax.swing.JLabel brig_roc;
     private javax.swing.JButton buscar_viv;
+    private javax.swing.JComboBox<String> cb_jefe_brigada;
     private javax.swing.JLabel ci_brig;
     private javax.swing.JLabel ci_jefe;
     private javax.swing.JTextField ci_jefe_brig;
@@ -2815,22 +3153,22 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField dir_jefe_brig;
     private javax.swing.JLabel dir_roc;
     private javax.swing.JTextField dir_rociadores;
+    private javax.swing.JButton editar_brig;
+    private javax.swing.JButton editar_jefe;
+    private javax.swing.JButton editar_roc;
     private javax.swing.JButton eliminar_brig;
+    private javax.swing.JButton eliminar_jefe;
     private javax.swing.JButton eliminar_roc;
     private javax.swing.JButton eliminar_viv;
-    private javax.swing.JComboBox<String> est_jefe_brigada;
     private javax.swing.JPanel ges_brig;
     private javax.swing.JPanel ges_jefes;
     private javax.swing.JPanel ges_roc;
     private javax.swing.JTabbedPane gestion_brigadas;
+    private javax.swing.JButton guardarCambios_brig;
+    private javax.swing.JButton guardarCambios_jefe;
+    private javax.swing.JButton guardarCambios_roc;
     private javax.swing.JButton guardar_brig;
-    private javax.swing.JButton guardar_cambios_roc;
     private javax.swing.JButton guardar_jefe;
-    private javax.swing.JButton guardar_jefe1;
-    private javax.swing.JButton guardar_jefe2;
-    private javax.swing.JButton guardar_jefe3;
-    private javax.swing.JButton guardar_nuevo_brig;
-    private javax.swing.JButton guardar_nuevo_roc;
     private javax.swing.JButton guardar_roc;
     private javax.swing.JButton guardar_viv;
     private javax.swing.JTextField ivn_año_form;
@@ -2992,6 +3330,9 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel label_jefes;
     private javax.swing.JLabel label_rociadores;
     private javax.swing.JLabel label_viviendas;
+    private javax.swing.JButton limpiar_brig;
+    private javax.swing.JButton limpiar_jefe;
+    private javax.swing.JButton limpiar_roc;
     private javax.swing.JTabbedPane lis_viv;
     private interfaces.PanelRound menu;
     private javax.swing.JLabel n_habitaciones;
@@ -2999,10 +3340,9 @@ public final class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel nom_brig;
     private javax.swing.JLabel nom_jefe;
     private javax.swing.JLabel nom_roc;
+    private javax.swing.JTextField nombre_Brigada;
     private javax.swing.JTextField nombre_jefe;
-    private javax.swing.JTextField nombre_jefe1;
     private javax.swing.JTextField nombre_rociadores;
-    private javax.swing.JButton nuevo_brig;
     private javax.swing.JButton nuevo_viv;
     private interfaces.PanelRound panelRound2;
     private javax.swing.JPanel panel_act_viv;
