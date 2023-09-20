@@ -14,18 +14,22 @@ public class Rociador {
     private String ci;
     private String direccion;
     private String telefono;
+    private Brigada brigada;
 
     public Rociador() {
     }
 
-    public Rociador(int id, String nombre, String ci, String direccion, String telefono) {
+    public Rociador(int id, String nombre, String ci, String direccion, String telefono, Brigada brigada) {
         this.id = id;
         this.nombre = nombre;
         this.ci = ci;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.brigada = brigada;
     }
 
+    
+    
     public void setId(int id) {
         this.id = id;
     }
@@ -64,5 +68,13 @@ public class Rociador {
 
     public String getTelefono() {
         return telefono;
+    }
+
+    public void setBrigada(Brigada brigada) {
+        this.brigada = brigada;
+    }
+
+    public Brigada getBrigada() {
+        return brigada;
     }
 }

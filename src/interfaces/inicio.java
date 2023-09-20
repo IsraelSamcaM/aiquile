@@ -12,7 +12,6 @@ import desplazable.Desface;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -43,6 +42,7 @@ public final class inicio extends javax.swing.JFrame {
     BrigadaDAO brigadadao = new BrigadaDAO();
     
     List<JefeBrigada> listaJefesBrigada;
+    List<Brigada> listaBrigadas;
     
     public inicio() {
         initComponents();
@@ -53,8 +53,9 @@ public final class inicio extends javax.swing.JFrame {
         ivn_tabla_lista_centros.setAutoCreateRowSorter(true);
         mostrarJefesBrigada();
         llenarJefesComboBox();
-        
         mostrarBrigadas();
+        mostrarRociadores();
+        llenarBrigadasComboBox();
         
         
     }
@@ -80,11 +81,31 @@ public final class inicio extends javax.swing.JFrame {
         cb_jefe_brigada.setModel(comboBoxModel);
         
         listaJefesBrigada = jefesCB;
-        
-        //int posicionSeleccionada = cb_jefe_brigada.getSelectedIndex();
-        //JefeBrigada jefeSeleccionado = listaJefesBrigada.get(posicionSeleccionada);
     }
-  
+    
+    public void llenarBrigadasComboBox() {
+        // Limpiar el JComboBox antes de agregar nuevos elementos
+        jComboBox1.removeAllItems();
+
+        // Obtener los datos desde la base de datos
+        List<Brigada> brigadasCB = brigadadao.obtenerTodosLasBrigadas();
+
+        // Crear lista para almacenar los nombres
+        List<String> nombresBrigadas = new ArrayList<>();
+
+
+        // Llenar el JComboBox con los nombres de las brigadas
+        for (Brigada brigada : brigadasCB) {
+            nombresBrigadas.add(brigada.getNombre());
+        }
+
+        // Llenar el JComboBox con los nombres
+        DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(nombresBrigadas.toArray(new String[0]));
+        jComboBox1.setModel(comboBoxModel);
+
+        listaBrigadas = brigadasCB;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1245,7 +1266,7 @@ public final class inicio extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(table_brigadas);
 
-        ges_brig.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 196, 823, 319));
+        ges_brig.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 196, 890, 319));
 
         guardar_brig.setBackground(new java.awt.Color(51, 153, 255));
         guardar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -1291,6 +1312,11 @@ public final class inicio extends javax.swing.JFrame {
         eliminar_brig.setBackground(new java.awt.Color(51, 153, 255));
         eliminar_brig.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         eliminar_brig.setText("ELIMINAR");
+        eliminar_brig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminar_brigActionPerformed(evt);
+            }
+        });
         ges_brig.add(eliminar_brig, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 125, 30));
 
         limpiar_brig.setBackground(new java.awt.Color(51, 153, 255));
@@ -1349,9 +1375,14 @@ public final class inicio extends javax.swing.JFrame {
             }
         ));
         table_rociadores.setSelectionBackground(new java.awt.Color(255, 0, 0));
+        table_rociadores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_rociadoresMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(table_rociadores);
 
-        ges_roc.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 238, 826, 276));
+        ges_roc.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 238, 890, 276));
 
         brig_roc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         brig_roc.setForeground(new java.awt.Color(102, 102, 102));
@@ -1364,6 +1395,11 @@ public final class inicio extends javax.swing.JFrame {
         guardar_roc.setBackground(new java.awt.Color(51, 153, 255));
         guardar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         guardar_roc.setText("GUARDAR");
+        guardar_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardar_rocActionPerformed(evt);
+            }
+        });
         ges_roc.add(guardar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 530, 125, 30));
 
         editar_roc.setBackground(new java.awt.Color(51, 153, 255));
@@ -1379,6 +1415,11 @@ public final class inicio extends javax.swing.JFrame {
         guardarCambios_roc.setBackground(new java.awt.Color(51, 153, 255));
         guardarCambios_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         guardarCambios_roc.setText("GUARDAR CAMBIOS");
+        guardarCambios_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarCambios_rocActionPerformed(evt);
+            }
+        });
         ges_roc.add(guardarCambios_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, -1, 30));
 
         actualizar_roc.setBackground(new java.awt.Color(51, 153, 255));
@@ -1394,12 +1435,22 @@ public final class inicio extends javax.swing.JFrame {
         eliminar_roc.setBackground(new java.awt.Color(51, 153, 255));
         eliminar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         eliminar_roc.setText("ELIMINAR");
+        eliminar_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminar_rocActionPerformed(evt);
+            }
+        });
         ges_roc.add(eliminar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 125, 30));
 
         limpiar_roc.setBackground(new java.awt.Color(51, 153, 255));
         limpiar_roc.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         limpiar_roc.setText("LIMPIAR");
-        ges_roc.add(limpiar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 125, 30));
+        limpiar_roc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiar_rocActionPerformed(evt);
+            }
+        });
+        ges_roc.add(limpiar_roc, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 530, 120, 30));
 
         gestion_brigadas.addTab("Gestion de Rociadores", ges_roc);
 
@@ -1995,11 +2046,11 @@ public final class inicio extends javax.swing.JFrame {
 
         // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
         DefaultTableModel modeloTabla = new DefaultTableModel();
-        modeloTabla.addColumn("ID");
-        modeloTabla.addColumn("Nombre");
-        modeloTabla.addColumn("CI");
-        modeloTabla.addColumn("dirección");
-        modeloTabla.addColumn("Telefono");
+        modeloTabla.addColumn("ID JefeBrigada");
+        modeloTabla.addColumn("Nombre JefeBrigada");
+        modeloTabla.addColumn("CI JefeBrigada");
+        modeloTabla.addColumn("dirección JefeBrigada");
+        modeloTabla.addColumn("Telefono JefeBrigada");
         // Llenar el modelo de tabla con los datos de los jefeBrigadas
         for (JefeBrigada jefeBrigadaAux : jefeBrigadas) {
             modeloTabla.addRow(new Object[]{
@@ -2015,10 +2066,10 @@ public final class inicio extends javax.swing.JFrame {
     }
     
     public void mostrarBrigadas(){
-        BrigadaDAO brigadadao = new BrigadaDAO();
+        BrigadaDAO brigadadaoMostrar = new BrigadaDAO();
 
         // Obtener la lista de todos los brigadas desde la base de datos
-        List<Brigada> brigadas = brigadadao.obtenerTodosLasBrigadas();
+        List<Brigada> brigadas = brigadadaoMostrar.obtenerTodosLasBrigadas();
 
         // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
         DefaultTableModel modeloTabla = new DefaultTableModel();
@@ -2039,6 +2090,38 @@ public final class inicio extends javax.swing.JFrame {
         }
         // Asignar el modelo de tabla al JTable
         table_brigadas.setModel(modeloTabla);
+    }
+    
+    public void mostrarRociadores(){
+        RociadorDAO rociadordaoMostrar = new RociadorDAO();
+
+        // Obtener la lista de todos los rociadores desde la base de datos
+        List<Rociador> rociadores = rociadordaoMostrar.obtenerTodosLosRociadores();
+
+        // Configurar las columnas de la tabla (ID, Nombre, Dirección, etc.)
+        DefaultTableModel modeloTabla = new DefaultTableModel();
+        modeloTabla.addColumn("ID Rociador");
+        modeloTabla.addColumn("ID Brigada");
+        modeloTabla.addColumn("Nombre Brigada");
+        modeloTabla.addColumn("Nombre Rociador");
+        modeloTabla.addColumn("CI Rociador");
+        modeloTabla.addColumn("Dirección Rociador");
+        modeloTabla.addColumn("Telefono Rociador");
+
+        // Llenar el modelo de tabla con los datos de los rociadores
+        for (Rociador rociadorAux : rociadores) {
+            modeloTabla.addRow(new Object[]{
+                rociadorAux.getId(),
+                rociadorAux.getBrigada().getId(),
+                rociadorAux.getBrigada().getNombre(),
+                rociadorAux.getNombre(),
+                rociadorAux.getCi(),
+                rociadorAux.getDireccion(),
+                rociadorAux.getTelefono()
+            });
+        }
+        // Asignar el modelo de tabla al JTable
+        table_rociadores.setModel(modeloTabla);
     }
     
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
@@ -2246,6 +2329,32 @@ public final class inicio extends javax.swing.JFrame {
 
     private void editar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_brigActionPerformed
         // TODO add your handling code here:
+        int filaSeleccionada = table_brigadas.getSelectedRow();
+        int columnaSeleccionada = table_brigadas.getSelectedColumn();
+        Object valorCelda;
+        // Verifica si se hizo clic en la columna que deseas editar (por ejemplo, la columna del nombre)
+        switch (columnaSeleccionada) {
+            case 3:
+            // Obtén el valor de la celda seleccionada
+            valorCelda = table_brigadas.getValueAt(filaSeleccionada, columnaSeleccionada);
+            // Asigna el valor al JTextField y coloca el cursor en el JTextField
+            nombre_Brigada.setText(valorCelda.toString());
+            nombre_Brigada.requestFocus();
+            nombre_Brigada.selectAll(); // Seleciona todo el texto en el JTextField
+            break;
+            case 4:
+
+            valorCelda = table_brigadas.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            zona_brigada.setText(valorCelda.toString());
+            zona_brigada.requestFocus();
+            zona_brigada.selectAll();
+            break;
+            default:
+            JOptionPane.showMessageDialog(this, "Seleccione una celda "
+                    + "de Nombre de brigada o Zona de cobertura para editar :)");
+            break;
+        }
     }//GEN-LAST:event_editar_brigActionPerformed
 
     private void ivn_cb_rosiador_formActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ivn_cb_rosiador_formActionPerformed
@@ -2782,6 +2891,7 @@ public final class inicio extends javax.swing.JFrame {
         mostrarJefesBrigada();
         // Actualizar ComboBox de Jefes
         llenarJefesComboBox();
+        llenarBrigadasComboBox();
     }//GEN-LAST:event_actualizar_jefeActionPerformed
 
     private void editar_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_jefeActionPerformed
@@ -2824,7 +2934,7 @@ public final class inicio extends javax.swing.JFrame {
             tel_jefe_brig.selectAll();
             break;
             default:
-            JOptionPane.showMessageDialog(this, "Seleccione una celda para editar :)");
+            JOptionPane.showMessageDialog(this, "Seleccione una celda para editar, menos el ID JefeBrigada :)");
             break;
         }
     }//GEN-LAST:event_editar_jefeActionPerformed
@@ -2882,17 +2992,64 @@ public final class inicio extends javax.swing.JFrame {
 
     private void actualizar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizar_brigActionPerformed
         // TODO add your handling code here:
+        mostrarRociadores();
         mostrarBrigadas();
         // Actualizar ComboBox de Jefes
+        llenarJefesComboBox();
         llenarJefesComboBox();
     }//GEN-LAST:event_actualizar_brigActionPerformed
 
     private void editar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_rocActionPerformed
         // TODO add your handling code here:
+        int filaSeleccionada = table_rociadores.getSelectedRow();
+        int columnaSeleccionada = table_rociadores.getSelectedColumn();
+        Object valorCelda;
+        // Verifica si se hizo clic en la columna que deseas editar (por ejemplo, la columna del nombre)
+        switch (columnaSeleccionada) {
+            case 3:
+            // Obtén el valor de la celda seleccionada
+            valorCelda = table_rociadores.getValueAt(filaSeleccionada, columnaSeleccionada);
+            // Asigna el valor al JTextField y coloca el cursor en el JTextField
+            nombre_rociadores.setText(valorCelda.toString());
+            nombre_rociadores.requestFocus();
+            nombre_rociadores.selectAll(); // Seleciona todo el texto en el JTextField
+            break;
+            case 4: 
+
+            valorCelda = table_rociadores.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            ci_rociadores.setText(valorCelda.toString());
+            ci_rociadores.requestFocus();
+            ci_rociadores.selectAll();
+            break;
+            case 5: 
+
+            valorCelda = table_rociadores.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            dir_rociadores.setText(valorCelda.toString());
+            dir_rociadores.requestFocus();
+            dir_rociadores.selectAll();
+            break;
+            case 6: 
+
+            valorCelda = table_rociadores.getValueAt(filaSeleccionada, columnaSeleccionada);
+
+            tel_rociadores.setText(valorCelda.toString());
+            tel_rociadores.requestFocus();
+            tel_rociadores.selectAll();
+            break;
+            default:
+            JOptionPane.showMessageDialog(this, "Seleccione una celda "
+                    + "que no sea ID Rociador, ID Brigada, Nombre Brigada :)");
+            break;
+        }
     }//GEN-LAST:event_editar_rocActionPerformed
 
     private void actualizar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizar_rocActionPerformed
         // TODO add your handling code here:
+        mostrarRociadores();
+        llenarBrigadasComboBox();
+        llenarJefesComboBox();
     }//GEN-LAST:event_actualizar_rocActionPerformed
 
     private void guardar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_brigActionPerformed
@@ -2934,6 +3091,8 @@ public final class inicio extends javax.swing.JFrame {
             
             // Actualizar ComboBox de Jefes
             llenarJefesComboBox();
+            
+            llenarBrigadasComboBox();
             
             mostrarBrigadas();
         } else {
@@ -2998,7 +3157,6 @@ public final class inicio extends javax.swing.JFrame {
         // Actualizar ComboBox de Jefes
         llenarJefesComboBox();
         }
-    
     }//GEN-LAST:event_eliminar_jefeActionPerformed
 
     private void limpiar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_brigActionPerformed
@@ -3021,6 +3179,8 @@ public final class inicio extends javax.swing.JFrame {
         mostrarBrigadas();
         // Actualizar ComboBox de Jefes
         llenarJefesComboBox();
+        
+        llenarBrigadasComboBox();
     }//GEN-LAST:event_guardarCambios_brigActionPerformed
 
     private void table_brigadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_brigadasMouseClicked
@@ -3040,7 +3200,7 @@ public final class inicio extends javax.swing.JFrame {
             }
 
             String columna1 = model.getValueAt(RowSelect, 0).toString(); //ID Brigada
-            String columna2 = model.getValueAt(RowSelect, 1).toString(); //ID Jefe
+                                                                         //ID Jefe
             String columna4 = model.getValueAt(RowSelect, 3).toString(); //Nombre Brigada
             String columna5 = model.getValueAt(RowSelect, 4).toString(); //Zona Cobertura
             
@@ -3054,16 +3214,151 @@ public final class inicio extends javax.swing.JFrame {
             brigada.setNombre(columna4);
             brigada.setZona_cobertura(columna5);
             
-            /*// recuperamos al Jefe seleccionado
-            int posicionSeleccionada = cb_jefe_brigada.getSelectedIndex();
-            JefeBrigada jefeSeleccionado = listaJefesBrigada.get(posicionSeleccionada);
-            
-            brigada.setJefeBrigada(jefeSeleccionado);*/
-            
         } else {
             JOptionPane.showMessageDialog(this, "Seleccione una fila que contenga datos :)");
         }
     }//GEN-LAST:event_table_brigadasMouseClicked
+
+    private void limpiar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_rocActionPerformed
+        // TODO add your handling code here:
+        limpiarEntradasRociadores();
+    }//GEN-LAST:event_limpiar_rocActionPerformed
+
+    private void guardar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardar_rocActionPerformed
+        // TODO add your handling code here:
+        String nombreRociador = nombre_rociadores.getText().trim();
+        String ciRociador = ci_rociadores.getText().trim();
+        String direccionRociador = dir_rociadores.getText().trim();
+        String telefonoRociador = tel_rociadores.getText().trim();
+
+        // recuperamos a la Brigada seleccionada
+        int posicionSeleccionada = jComboBox1.getSelectedIndex();
+        Brigada brigadaSeleccionado = listaBrigadas.get(posicionSeleccionada);
+        
+        // Verificar que ninguno de los campos esté en blanco
+        if (nombreRociador.isEmpty() || ciRociador.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete los campos de nombre y ci del Rociador");
+            return;  // No continuar si hay campos en blanco
+        }
+
+        // Crear una instancia del rociadordao
+        rociadordao = new RociadorDAO();
+
+        // Crear un nuevo Rociador si todos los campos están completos
+        Rociador rociadorGuardado  = new Rociador();
+
+        rociadorGuardado.setBrigada(brigadaSeleccionado);
+        rociadorGuardado.setNombre(nombreRociador);
+        rociadorGuardado.setCi(ciRociador);
+        rociadorGuardado.setDireccion(direccionRociador);
+        rociadorGuardado.setTelefono(telefonoRociador);
+
+        // Insertar el Rociador en la base de datos
+        boolean exito = rociadordao.insertarRociador(rociadorGuardado);
+        if (exito) {
+            // Mostrar un mensaje de confirmación al usuario
+            JOptionPane.showMessageDialog(this, "El Rociador se ha guardado exitosamente.");
+
+            // Limpiar los campos después de la inserción exitosa
+            limpiarEntradasRociadores();
+
+            // Actualizar la tabla de Rociador
+            mostrarRociadores();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al guardar el Rociador.");
+        }
+    }//GEN-LAST:event_guardar_rocActionPerformed
+
+    private void eliminar_brigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_brigActionPerformed
+        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de eliminar esta Brigada?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+
+        if (opcion == JOptionPane.YES_OPTION) {
+            // Si el jefeBrigada confirma la eliminación
+            brigadadao.eliminarBrigada(jefeBrigada.getId());
+            mostrarBrigadas();
+            llenarBrigadasComboBox();
+        }
+    }//GEN-LAST:event_eliminar_brigActionPerformed
+
+    private void table_rociadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_rociadoresMouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) table_rociadores.getModel();
+        int RowSelect = table_rociadores.getSelectedRow();
+
+        if (RowSelect != -1) {
+            String columna3 = model.getValueAt(RowSelect, 2).toString();  // Nombre de la rociador
+
+            // Buscar el nombre de la rociador en el JComboBox y seleccionarlo si se encuentra
+            for (int i = 0; i < jComboBox1.getItemCount(); i++) {
+                if (jComboBox1.getItemAt(i).equals(columna3)) {
+                    jComboBox1.setSelectedIndex(i);
+                    break;  // Terminar la búsqueda una vez que se haya encontrado
+                }
+            }
+
+            String columna1 = model.getValueAt(RowSelect, 0).toString(); //ID Brigada
+                                                                         //ID Rociador
+            String columna4 = model.getValueAt(RowSelect, 3).toString(); //Nombre Rociador
+            String columna5 = model.getValueAt(RowSelect, 4).toString(); //Ci Rociador 
+            String columna6 = model.getValueAt(RowSelect, 5).toString(); //Dir Rociador 
+            String columna7 = model.getValueAt(RowSelect, 6).toString(); //Telf Rociador
+
+
+            // Inserta los valores en los JTextFields
+            nombre_rociadores.setText(columna4);
+            ci_rociadores.setText(columna5);  
+            dir_rociadores.setText(columna6);
+            tel_rociadores.setText(columna7);
+
+            // guardamos datos en un objeto clase
+
+            rociador.setId(Integer.parseInt(columna1));
+            rociador.setNombre(columna4);
+            rociador.setCi(columna5);
+            rociador.setDireccion(columna6);
+            rociador.setTelefono(columna7);        
+        } else {
+            JOptionPane.showMessageDialog(this, "Seleccione una fila que contenga datos :)");
+        }
+    }//GEN-LAST:event_table_rociadoresMouseClicked
+
+    private void guardarCambios_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambios_rocActionPerformed
+        // TODO add your handling code here:
+        // recuperamos la Brigada Seleccionada
+        int posicionSeleccionada = jComboBox1.getSelectedIndex();
+        Brigada brigadaSeleccionado = listaBrigadas.get(posicionSeleccionada);
+
+        rociador.setNombre(nombre_rociadores.getText().trim());
+        rociador.setBrigada(brigadaSeleccionado);
+        rociador.setCi(ci_rociadores.getText().trim());
+        rociador.setDireccion(dir_rociadores.getText().trim());
+        rociador.setTelefono(tel_rociadores.getText().trim());
+
+        rociadordao.actualizarRociador(rociador);
+        // actulizar tabla
+        mostrarRociadores();
+        // Actualizar ComboBox de Jefes
+        llenarBrigadasComboBox();
+    }//GEN-LAST:event_guardarCambios_rocActionPerformed
+
+    private void eliminar_rocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_rocActionPerformed
+        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de eliminar este Rociador?", "Confirmar Eliminación", JOptionPane.YES_NO_OPTION);
+
+        if (opcion == JOptionPane.YES_OPTION) {
+            // Si el rociador confirma la eliminación
+            rociadordao.eliminarRociador(rociador.getId());
+            mostrarRociadores();
+            llenarBrigadasComboBox();
+        }
+    }//GEN-LAST:event_eliminar_rocActionPerformed
+    private void limpiarEntradasRociadores(){
+        nombre_rociadores.setText("");
+        ci_rociadores.setText("");
+        tel_rociadores.setText("");
+        dir_rociadores.setText("");
+    }
     
     private void limpiarEntradasBrigadas(){
         nombre_Brigada.setText("");

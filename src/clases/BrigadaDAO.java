@@ -42,8 +42,10 @@ public class BrigadaDAO {
         String sql = "UPDATE brigada SET id_jefebrigada = ?, nombre_brigada = ?, zona_cobertura = ? WHERE id_brigada = ?";
         try (PreparedStatement statement = conexion.prepareStatement(sql)) {
             statement.setInt(1, brigada.getJefeBrigada().getId()); // ID Llave Foranea
+            
             statement.setString(2, brigada.getNombre());
             statement.setString(3, brigada.getZona_cobertura());
+            
             statement.setInt(4, brigada.getId()); // ID importante
 
             int filasAfectadas = statement.executeUpdate();
@@ -54,19 +56,31 @@ public class BrigadaDAO {
         }
     }
     
-    // Eliminar 
     public boolean eliminarBrigada(int idBrigada) {
-        String sql = "DELETE FROM brigada WHERE id_brigada = ?";
-        try (PreparedStatement statement = conexion.prepareStatement(sql)) {
-            statement.setInt(1, idBrigada);
+        String deleteJefesSQL = "DELETE FROM jefe_brigada WHERE id_jefe_brigada = ?";
+        String deleteBrigadaSQL = "DELETE FROM brigada WHERE id_brigada = ?";
 
-            int filasAfectadas = statement.executeUpdate();
-            return filasAfectadas > 0;
+        try {
+            // Eliminar los jefes relacionados
+            try (PreparedStatement deleteJefesStatement = conexion.prepareStatement(deleteJefesSQL)) {
+                deleteJefesStatement.setInt(1, idBrigada);
+                deleteJefesStatement.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println("No se borro");
+            }
+
+            // Eliminar la brigada
+            try (PreparedStatement deleteBrigadaStatement = conexion.prepareStatement(deleteBrigadaSQL)) {
+                deleteBrigadaStatement.setInt(1, idBrigada);
+                int filasAfectadas = deleteBrigadaStatement.executeUpdate();
+                return filasAfectadas > 0;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
+
     
     // Recuperar información
     public List<Brigada> obtenerTodosLasBrigadas() {
